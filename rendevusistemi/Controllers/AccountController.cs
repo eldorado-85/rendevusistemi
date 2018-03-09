@@ -20,6 +20,7 @@ namespace rendevusistemi.Controllers
 
         public AccountController()
         {
+           //// asasdadadasdas
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
