@@ -20,6 +20,7 @@ namespace rendevusistemi.Controllers
 
         public AccountController()
         {
+            //değişiklik 22:41
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
