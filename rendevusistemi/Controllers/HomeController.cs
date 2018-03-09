@@ -13,9 +13,16 @@ namespace rendevusistemi.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Tables()
         {
             ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Grafikler()
+        {
+            ViewBag.Message = "Your contact page.";
 
             return View();
         }
