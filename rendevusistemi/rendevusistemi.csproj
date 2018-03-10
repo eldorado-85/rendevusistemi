@@ -279,6 +279,7 @@
     <Folder Include="Content\bootstraptemple\pug\" />
     <Folder Include="Content\bootstraptemple\scss\" />
     <Folder Include="Content\bootstraptemple\vendor\" />
+    <Folder Include="startbootstrap-sb-admin-gh-pages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
