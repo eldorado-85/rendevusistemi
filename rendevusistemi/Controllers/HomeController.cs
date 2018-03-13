@@ -1,11 +1,16 @@
-﻿using System;
+﻿using rendevusistemi.Database;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace rendevusistemi.Controllers
 {
+    
+
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -37,6 +42,8 @@ namespace rendevusistemi.Controllers
         public ActionResult Register()
         {
             ViewBag.Message = "Your contact page.";
+
+            
 
             return View();
         }
