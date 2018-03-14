@@ -1,4 +1,5 @@
-﻿using rendevusistemi.Database;
+﻿
+using rendevusistemi.Database.Data;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -11,8 +12,8 @@ namespace rendevusistemi.Database
     {
 
 
-        public DbSet<Kisiler> Kisilers { get; set; }
-        public DbSet<IslemGruplari> IslemGruplaris { get; set; }
-        public DbSet <Islemler> Islemlers { get; set; }
+        public DbSet<Job> Jobs { get; set; }
+        public DbSet<Emploies> Employes { get; set; }
+        
     }
 }

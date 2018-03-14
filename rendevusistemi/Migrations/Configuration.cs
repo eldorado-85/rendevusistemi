@@ -10,8 +10,7 @@ namespace rendevusistemi.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "rendevusistemi.Database.MyDbContext";
-            AutomaticMigrationDataLossAllowed = true;
+
         }
 
         protected override void Seed(rendevusistemi.Database.MyDbContext context)
