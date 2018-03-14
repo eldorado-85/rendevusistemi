@@ -38,21 +38,12 @@ namespace rendevusistemi.Controllers
 
             return View();
         }
-        [HttpGet]
+
         public ActionResult Register()
         {
             ViewBag.Message = "Your contact page.";
 
             
-
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Register(FormCollection employes)
-        {
-            ViewBag.Message = "Your contact page.";
-
-
 
             return View();
         }
