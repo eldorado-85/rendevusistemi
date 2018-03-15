@@ -5,43 +5,72 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-
-
-
 <body class="bg-dark">
     <div class="container">
         <div class="card card-register mx-auto mt-5">
             <div class="card-header">Kişi Kaydet</div>
             <div class="card-body">
                 <form >
+                    @*Ad soyad*@
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col-md-6">
-                                <label for="exampleInputName">Adı</label>
-                                <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder=" Adınızı giriniz.">
+                                @*<label for="exampleInputName" style="visibility:hidden">Adı</label>*@
+                                <input class="form-control" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Adı">
                             </div>
                             <div class="col-md-6">
-                                <label for="exampleInputLastName">Soyadı</label>
-                                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Soyad">
+                                @*<label for="exampleInputLastName" style="visibility:hidden">Soyadı</label>*@
+                                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Soyadı">
                             </div>
                         </div>
                     </div>
+                    @*TC kimllik Numarası*@
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email adresi</label>
-                        <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="email adresini giriniz">
+                        @*<label for="exampleInputEmail1">Email adresi</label>*@
+                        <input class="form-control" id="tcNo" type="text" aria-describedby="emailHelp" placeholder="TC Numarası">
                     </div>
+                    @*Adres*@
                     <div class="form-group">
                         <div class="form-row">
-                            <div class="col-md-6">
-                                <label for="exampleInputPassword1">Şifre</label>
-                                <input class="form-control" id="exampleInputPassword1" type="password" placeholder="şifrenizi giriniz">
+                            <div class="col-md-12">
+                                @*<label for="exampleInputPassword1">Şifre</label>*@
+                                <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Adres">
                             </div>
-                            <div class="col-md-6">
+                            @*<div class="col-md-6">
                                 <label for="exampleConfirmPassword">Şifre Tekrar</label>
                                 <input class="form-control" id="exampleConfirmPassword" type="password" placeholder="şifrenizi tekrar giriniz">
+                            </div>*@
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                @*<label for="exampleInputName" style="visibility:hidden">Adı</label>*@
+                                <input class="" id="exampleInputName" type="text" aria-describedby="nameHelp" placeholder="Kayıt Tarihi">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Action <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                @*<label for="exampleInputLastName" style="visibility:hidden">Soyadı</label>*@
+                                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Sıra numarası">
                             </div>
                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        @*<label for="exampleInputEmail1">Email adresi</label>*@
+                        <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="TC Numarası">
                     </div>
                     <a class="btn btn-primary btn-block" href=""> KAYDET </a>
 
