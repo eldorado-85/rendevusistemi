@@ -10,7 +10,7 @@
         <div class="card card-register mx-auto mt-5">
             <div class="card-header">Kişi Kaydet</div>
             <div class="card-body">
-                <form >
+                <form>
                     @*Ad soyad*@
                     <div class="form-group">
                         <div class="form-row">
@@ -22,12 +22,20 @@
                                 @*<label for="exampleInputLastName" style="visibility:hidden">Soyadı</label>*@
                                 <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Soyadı">
                             </div>
+
                         </div>
                     </div>
                     @*TC kimllik Numarası*@
                     <div class="form-group">
-                        @*<label for="exampleInputEmail1">Email adresi</label>*@
-                        <input class="form-control" id="tcNo" type="text" aria-describedby="emailHelp" placeholder="TC Numarası">
+                        <div class="form-row">
+                            <div class="col-md-8">
+                                @*<label for="exampleInputEmail1">Email adresi</label>*@
+                                <input class="form-control" id="tcNo" type="text" placeholder="TC Numarası">
+                            </div>
+                            <div class="col-md-4">
+                                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Sıra numarası">
+                            </div>
+                        </div>
                     </div>
                     @*Adres*@
                     <div class="form-group">
@@ -37,9 +45,9 @@
                                 <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Adres">
                             </div>
                             @*<div class="col-md-6">
-                                <label for="exampleConfirmPassword">Şifre Tekrar</label>
-                                <input class="form-control" id="exampleConfirmPassword" type="password" placeholder="şifrenizi tekrar giriniz">
-                            </div>*@
+                                    <label for="exampleConfirmPassword">Şifre Tekrar</label>
+                                    <input class="form-control" id="exampleConfirmPassword" type="password" placeholder="şifrenizi tekrar giriniz">
+                                </div>*@
                         </div>
                     </div>
 
@@ -47,15 +55,12 @@
                         <div class="form-row">
                             <div class="col-md-3">
                                 <label class="form-control" for="kayitTarihi">Kayıt Tarihi</label>
-                                
+
                             </div>
                             <div class="col-md-3">
                                 <input class="form-control" id="kayitTarihi" type="date" aria-describedby="nameHelp" placeholder="Kayıt Tarihi">
                             </div>
-                            <div class="col-md-6">
-                                
-                                <input class="form-control" id="exampleInputLastName" type="text" aria-describedby="nameHelp" placeholder="Sıra numarası">
-                            </div>
+                            
                         </div>
                     </div>
                     <a class="btn btn-primary btn-block" href=""> KAYDET </a>
@@ -67,7 +72,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
