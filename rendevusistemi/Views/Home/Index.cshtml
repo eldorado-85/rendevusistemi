@@ -19,6 +19,7 @@
 
 </head>
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
     <!-- Navigation-->
     @*<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
         <a class="navbar-brand" href="index.html">Start Bootstrap</a>
@@ -228,6 +229,7 @@
             </ul>
         </div>
     </nav>*@
+
     <div class="content-wrapper">
         <div class="container-fluid">
             <!-- Breadcrumbs-->
@@ -308,60 +310,116 @@
             <div class="mb-0 mt-4">
                 <i class="fa fa-newspaper-o"></i> News Feed
             </div>
-            <div class="month">
-                <ul>
-                    <li class="prev">&#10094;</li>
-                    <li class="next">&#10095;</li>
+
+            
+            <div class="calender">
+                <ul class="month">
                     <li>
-                        August<br>
-                        <span style="font-size:18px">2017</span>
+                        <h1>January</h1>
+                        <h2>2016</h2>
                     </li>
+                    <span class="prev">&#10094;</span>
+                    <span class="next">&#10095;</span>
                 </ul>
+                <ul class="weeks">
+                    <li>Sa</li>
+                    <li>Su</li>
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                </ul>
+                <ul class="days"></ul>
             </div>
 
-            <ul class="weekdays">
-                <li>Mo</li>
-                <li>Tu</li>
-                <li>We</li>
-                <li>Th</li>
-                <li>Fr</li>
-                <li>Sa</li>
-                <li>Su</li>
-            </ul>
+            <script>
+                /*global console*/
+                //calender
+                //month
+                //prev
+                //next
+                //weeks
+                //days
 
-            <ul class="days">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-                <li>9</li>
-                <li><span class="active">10</span></li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15</li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22</li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29</li>
-                <li>30</li>
-                <li>31</li>
-            </ul>
+                //punblic variables
+                var calender = document.querySelector(".calender"),//container of calender
+                    topDiv = document.querySelector('.month'),
+                    monthDiv = calender.querySelector("h1"),//h1 of monthes
+                    yearDiv = calender.querySelector('h2'),//h2 for years
+                    weekDiv = calender.querySelector(".weeks"),//week container
+                    dayNames = weekDiv.querySelectorAll("li"),//dayes name
+                    dayItems = calender.querySelector(".days"),//date of day container
+                    prev = calender.querySelector(".prev"),
+                    next = calender.querySelector(".next"),
+
+                    // date variables
+                    years = new Date().getFullYear(),
+                    monthes = new Date(new Date().setFullYear(years)).getMonth(),
+                    lastDayOfMonth = new Date(new Date(new Date().setMonth(monthes + 1)).setDate(0)).getDate(),
+                    dayOfFirstDateOfMonth = new Date(new Date(new Date().setMonth(monthes)).setDate(1)).getDay(),
+
+                    // array to define name of monthes
+                    monthNames = ["January", "February", "March", "April", "May", "June",
+                                  "July", "August", "September", "October", "November", "December"],
+                    colors = ['#FFA549', '#ABABAB', '#1DABB8', '#953163', '#E7DF86', '#E01931', '#92F22A', '#FEC606', '#563D28', '#9E58DC', '#48AD01', '#0EBB9F'],
+                    i,//counter for day before month first day in week
+                    x,//counter for prev , next
+                    counter;//counter for day of month  days;
+
+
+                //display dayes of month in items
+                function days(x) {
+                    'use strict';
+                    dayItems.innerHTML = "";
+                    monthes = monthes + x;
+
+                    /////////////////////////////////////////////////
+                    //test for last month useful while prev ,max prevent go over array
+                    if (monthes > 11) {
+                        years = years + 1;
+                        monthes = new Date(new Date(new Date().setFullYear(years)).setMonth(0)).getMonth();
+                    }
+                    if (monthes < 0) {
+                        years = years - 1;
+                        monthes = new Date(new Date(new Date().setFullYear(years)).setMonth(11)).getMonth();
+                    }
+                    
+                    lastDayOfMonth = new Date(new Date(new Date(new Date().setFullYear(years)).setMonth(monthes + 1)).setDate(0)).getDate();
+                    dayOfFirstDateOfMonth = new Date(new Date(new Date(new Date().setFullYear(years)).setMonth(monthes)).setDate(1)).getDay();
+                    /////////////////////////////////////////////////
+                    yearDiv.innerHTML = years;
+                    monthDiv.innerHTML = monthNames[monthes];
+                    for (i = 0; i <= dayOfFirstDateOfMonth; i = i + 1) {
+                        if (dayOfFirstDateOfMonth === 6) { break; }
+                        dayItems.innerHTML += "<li> - </li>";
+                    }
+                    for (counter = 1; counter <= lastDayOfMonth; counter = counter + 1) {
+                        dayItems.innerHTML += "<li>" + (counter) + "</li>";
+
+
+                    }
+                    topDiv.style.background = colors[monthes];
+                    dayItems.style.background = colors[monthes];
+                    
+                    if (monthes === new Date().getMonth() && years === new Date().getFullYear()) {
+                        
+                        dayItems.children[new Date().getDate() + dayOfFirstDateOfMonth].style.background = "#2ecc71";
+                    }
+                }
+                prev.onclick = function () {
+                    'use strict';
+                    days(-1);//decrement monthes
+                };
+                next.onclick = function () {
+                    'use strict';
+                    days(1);//increment monthes
+                };
+                days(0);
+
+                //end
+            </script>
+
 
             <hr class="mt-2">
             <div class="card-columns">
@@ -669,7 +727,7 @@
     <!-- Custom scripts for this page-->
     <script src="~/content/bootstraptemple/js/sb-admin-datatables.min.js"></script>
     <script src="~/content/bootstraptemple/js/sb-admin-charts.min.js"></script>
-    </div>
+    
 
 
 
