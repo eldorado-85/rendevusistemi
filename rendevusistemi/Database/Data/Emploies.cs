@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -11,6 +12,8 @@ namespace rendevusistemi.Database.Data
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string Adress { get; set; }
-        public int Phone  { get; set; }
+      
+        public int Number { get; set; }
+
     }
 }

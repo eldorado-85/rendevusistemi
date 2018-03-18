@@ -1,4 +1,5 @@
 ﻿using rendevusistemi.Database;
+using rendevusistemi.Database.Data;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -9,10 +10,13 @@ using System.Web.Mvc;
 
 namespace rendevusistemi.Controllers
 {
-    
+
+
+
 
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
             return View();
@@ -38,29 +42,44 @@ namespace rendevusistemi.Controllers
 
             return View();
         }
-        [HttpGet]
+
         public ActionResult Register()
         {
-            ViewBag.Message = "Your contact page.";
-
-            
-
+         
             return View();
         }
         [HttpPost]
-        public ActionResult Register(FormCollection employes)
+        public ActionResult Register(Emploies emp)
         {
-            ViewBag.Message = "Your contact page.";
 
+            using (MyDbContext db = new MyDbContext())
+            {
+              
+                db.Employes.Add(emp);
+                db.SaveChanges();
+                  return RedirectToAction("goster");
+            }
 
-
-            return View();
+           
         }
+
+
         public ActionResult Entry()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
+     
+
+        public ActionResult goster()
+        {
+            MyDbContext db = new MyDbContext();
+            List<Emploies> emp = db.Employes.ToList();
+       
+
+            return View(emp);
+        }
     }
 }
+
