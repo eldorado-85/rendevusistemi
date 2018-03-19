@@ -57,10 +57,18 @@ namespace rendevusistemi.Controllers
               
                 db.Employes.Add(emp);
                 db.SaveChanges();
-                  return RedirectToAction("goster");
+                  return RedirectToAction("RegisterView");
             }
 
            
+        }
+        public ActionResult RegisterView()
+        {
+            MyDbContext db = new MyDbContext();
+            List<Emploies> emp = db.Employes.ToList();
+
+
+            return View(emp);
         }
 
 
@@ -72,14 +80,7 @@ namespace rendevusistemi.Controllers
         }
      
 
-        public ActionResult goster()
-        {
-            MyDbContext db = new MyDbContext();
-            List<Emploies> emp = db.Employes.ToList();
-       
-
-            return View(emp);
-        }
+      
     }
 }
 
