@@ -71,6 +71,12 @@ namespace rendevusistemi.Controllers
             return View(emp);
         }
 
+        public ActionResult RegisterEdit()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
 
         public ActionResult Entry()
         {
