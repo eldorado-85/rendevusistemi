@@ -22,3 +22,69 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*can*/
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style-type: none;
+  text-align: center;
+  font-family: Verdana, sans-serif;
+}
+li:not(:first-child){
+  cursor: pointer;
+}
+.calender{
+  width: 90%;
+  margin: auto;
+  box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+}
+.calender .month{
+  background-color: #2ecc71;
+  padding: 40px;
+  color: #ecf0f1;
+  width: 100%;
+  position: relative;
+}
+.calender .month .next,.calender .month .prev{
+  position: absolute;
+  top: calc(50% - 15px);
+  cursor: pointer;
+  padding: 5px;
+  display: block;
+}
+.calender .month .prev{
+  left: 10px;
+}
+.calender .month .next{
+  right: 10px;
+}
+.calender .month .next:hover,.calender .month .prev:hover{
+  background-color: rgba(0,0,0,.2);
+}
+.calender .weeks{display: flex;}
+.calender .weeks li{
+  background-color: #bdc3c7;
+  flex: 1;
+  opacity: .5;
+  position: relative;
+  animation: motion 2s;
+  padding: 10px; 
+}
+.calender .weeks li:hover{background-color: rgba(0,0,0,.2);}
+
+.calender .days {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calender .days li{
+  flex-basis: calc(100% / 7);/*اقسم المساحه على سبعه اللى هى ايام الاسبوع فى كل صف*/
+  padding: 10px 0;
+  opacity: .7;
+  background-color: #bdc3c7;
+}
+.calender .days li:hover{background-color: rgba(0,0,0,.3);}
+
