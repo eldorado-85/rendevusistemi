@@ -71,11 +71,12 @@ namespace rendevusistemi.Controllers
             return View(emp);
         }
 
-        public ActionResult RegisterEdit()
+        public ActionResult RegisterEdit(int id)
         {
-            ViewBag.Message = "Your contact page.";
+            MyDbContext db = new MyDbContext();
+            List<Emploies> edit = db.Employes.Where(a => a.Id == id).ToList();
 
-            return View();
+            return View(edit);
         }
 
         public ActionResult Entry()

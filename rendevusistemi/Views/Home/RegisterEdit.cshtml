@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<rendevusistemi.Database.Data.Emploies>
 
 @{
-    ViewBag.Title = "goster";
+    ViewBag.Title = "RegisterEdit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>goster</h2>
+<h2>RegisterEdit</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -39,10 +39,10 @@
             @Html.DisplayFor(modelItem => item.Adress)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Number) 
+            @Html.DisplayFor(modelItem => item.Number)
         </td>
         <td>
-            @Html.ActionLink("Edit", "RegisterEdit", new { id=item.Id }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
