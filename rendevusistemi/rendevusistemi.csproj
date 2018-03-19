@@ -276,8 +276,7 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Entry.cshtml" />
-    <Content Include="Views\Home\Registe0r.cshtml" />
-    <Content Include="Views\Home\goster.cshtml" />
+    <Content Include="Views\Home\Goster.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
