@@ -74,9 +74,70 @@ namespace rendevusistemi.Controllers
         public ActionResult RegisterEdit(int id)
         {
             MyDbContext db = new MyDbContext();
-            List<Emploies> edit = db.Employes.Where(a => a.Id == id).ToList();
+             var  edit = db.Employes.Where(a => a.Id == id).FirstOrDefault();
 
             return View(edit);
+        }
+        [HttpPost]
+        public ActionResult RegisterEdit(Emploies UpdEmp)
+        {
+            MyDbContext db = new MyDbContext();
+            var update = db.Employes.Where(a => a.Id == UpdEmp.Id).FirstOrDefault();
+            update.Lastname = UpdEmp.Lastname;
+            update.Firstname = UpdEmp.Lastname;
+            update.Adress = UpdEmp.Adress;
+            update.Number = UpdEmp.Number;
+            db.SaveChanges();
+            return RedirectToAction("RegisterView");
+        }
+
+      
+
+        public ActionResult TestKayit()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult TestKayit(Job myjob)
+        {
+            MyDbContext db = new MyDbContext();
+            db.Jobs.Add(myjob);
+            db.SaveChanges();
+            return RedirectToAction("TestView");
+
+          
+        }
+
+        public ActionResult TestView()
+        {
+            MyDbContext db = new MyDbContext();
+            var list = db.Jobs.ToList();
+
+
+            return View(list);
+        }
+
+        public ActionResult TestEdit(int id)
+        {
+            MyDbContext db = new MyDbContext();
+            var list = db.Jobs.Where(a => a.Id == id).FirstOrDefault();
+
+
+            return View(list);
+        }
+        [HttpPost]
+        public ActionResult TestEdit(Job UpdateJob)
+        {
+            MyDbContext db = new MyDbContext();
+
+            var update = db.Jobs.Where(a => a.Id == UpdateJob.Id).FirstOrDefault();
+            update.Name = UpdateJob.Name;
+            db.SaveChanges();
+
+
+            return RedirectToAction("TestView");
         }
 
         public ActionResult Entry()
@@ -92,8 +153,6 @@ namespace rendevusistemi.Controllers
 
             return View();
         }
-
-
     }
 }
 
