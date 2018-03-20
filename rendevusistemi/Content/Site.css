@@ -87,4 +87,3 @@ li:not(:first-child){
   background-color: #bdc3c7;
 }
 .calender .days li:hover{background-color: rgba(0,0,0,.3);}
-
