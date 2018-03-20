@@ -74,7 +74,7 @@ namespace rendevusistemi.Controllers
         public ActionResult RegisterEdit(int id)
         {
             MyDbContext db = new MyDbContext();
-            var edit = db.Employes.Where(a => a.Id == id).ToList();
+            List<Emploies> edit = db.Employes.Where(a => a.Id == id).ToList();
 
             return View(edit);
         }
