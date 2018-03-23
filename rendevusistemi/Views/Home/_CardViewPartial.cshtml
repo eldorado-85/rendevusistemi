@@ -1,0 +1,31 @@
+@{
+	var cardView = Html.DevExpress().CardView(settings => {
+        settings.Name = "CardView";
+        settings.CallbackRouteValues = new { Controller = "Home", Action = "CardViewPartial" };
+		
+				settings.SettingsEditing.AddNewCardRouteValues = new { Controller = "Home", Action = "CardViewPartialAddNew" };
+        settings.SettingsEditing.UpdateCardRouteValues = new { Controller = "Home", Action = "CardViewPartialUpdate" };
+        settings.SettingsEditing.DeleteCardRouteValues = new { Controller = "Home", Action = "CardViewPartialDelete" };
+        settings.SettingsEditing.Mode = CardViewEditingMode.EditForm;
+        settings.SettingsBehavior.ConfirmDelete = true;
+				
+		settings.KeyFieldName = "Id";
+		
+		settings.SettingsPager.Visible = true;
+				settings.Settings.ShowHeaderPanel = true;
+		settings.Settings.ShowHeaderFilterButton = true;
+				settings.SettingsBehavior.AllowSelectByCardClick = true;
+		
+		
+				settings.CardLayoutProperties.Items.AddCommandItem(i => {
+			i.ShowNewButton = true;
+			i.ShowEditButton = true;
+			i.ShowDeleteButton = true;
+		});
+		settings.CardLayoutProperties.Items.AddEditModeCommandItem();
+					});
+		if (ViewData["EditError"] != null){
+        cardView.SetEditErrorText((string)ViewData["EditError"]);
+    }
+	}
+@cardView.Bind(Model).GetHtml()
