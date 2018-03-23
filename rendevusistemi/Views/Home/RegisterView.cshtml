@@ -4,49 +4,69 @@
     ViewBag.Title = "goster";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Kayıt Edilen Müşteriler</a>
+            </li>
+            <li class="breadcrumb-item active">@Html.ActionLink("Yeni Oluştur", "Register")</li>
+        </ol>
+        <h2></h2>
 
-<h2>goster</h2>
+        <p>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Firstname)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Lastname)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Adress)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Number)
-        </th>
-        <th></th>
-    </tr>
+        </p>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hover" width="100%">
+                    <thead>
+                        <tr>
+                            <th>İsim</th>
+                            <th>Soyisim</th>
+                            <th>Adres</th>
+                            <th>Numara</th>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Firstname)
-        </td> 
-        <td>
-            @Html.DisplayFor(modelItem => item.Lastname)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Adress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Number) 
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "RegisterEdit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>İsim</th>
+                            <th>Soyisim</th>
+                            <th>Adres</th>
+                            <th>Numara</th>
+                        </tr>
+                    </tfoot>
 
-</table>
+                    @foreach (var item in Model)
+            {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Firstname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Lastname)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Adress)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Number)
+                            </td>
+                            <td>
+                                <i class="fa fa-fw fa-edit" style="font-size:24px"></i>
+                                @Html.ActionLink("Düzenle", "RegisterEdit", new { id = item.Id }) |
+                                <i class="fa fa-fw fa-address-card-o" style="font-size:24px"></i>
+                                @Html.ActionLink("Detay", "Details", new { id = item.Id }) |
+                                <i class="fa fa-fw fa-close" style="font-size:24px;color:red"></i>
+                                @Html.ActionLink("Sil", "Delete", new { id = item.Id })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
