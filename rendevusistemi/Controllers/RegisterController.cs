@@ -52,9 +52,9 @@ namespace rendevusistemi.Controllers
             MyDbContext db = new MyDbContext();
             var update = db.Employes.Where(a => a.Id == UpdEmp.Id).FirstOrDefault();
             update.Lastname = UpdEmp.Lastname;
-            update.Firstname = UpdEmp.Lastname;
+            update.Firstname = UpdEmp.Firstname;
             update.Adress = UpdEmp.Adress;
-            update.Number = UpdEmp.Number;
+            update.DateTime = UpdEmp.DateTime;
             db.SaveChanges();
             return RedirectToAction("RegisterView");
         }

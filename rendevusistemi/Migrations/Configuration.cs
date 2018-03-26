@@ -10,6 +10,7 @@ namespace rendevusistemi.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            //ContextKey = "rendevusistemi.Database.MyDbContext";
 
         }
 

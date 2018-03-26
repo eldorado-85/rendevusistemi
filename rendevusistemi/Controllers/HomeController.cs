@@ -1,4 +1,5 @@
-﻿using rendevusistemi.Database;
+﻿using DevExpress.Web.Mvc;
+using rendevusistemi.Database;
 using rendevusistemi.Database.Data;
 using System;
 using System.Collections.Generic;
@@ -60,6 +61,10 @@ namespace rendevusistemi.Controllers
 
             return View();
         }
+       
+
+
     }
+
 }
 

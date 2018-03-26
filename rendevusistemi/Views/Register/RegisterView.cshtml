@@ -36,7 +36,7 @@
                                     <th>İsim</th>
                                     <th>Soyisim</th>
                                     <th>Adres</th>
-                                    <th>Numara</th>
+                                  
                                 </tr>
                             </tfoot>
 
@@ -52,9 +52,7 @@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Adress)
                                 </td>
-                                <td>
-                                    @Html.DisplayFor(modelItem => item.Number)
-                                </td>
+                             
                                 <td>
                                     <i class="fa fa-fw fa-edit" style="font-size:24px"></i>
                                     @Html.ActionLink("Düzenle", "RegisterEdit", new { id = item.Id }) |

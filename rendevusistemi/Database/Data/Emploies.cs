@@ -12,8 +12,9 @@ namespace rendevusistemi.Database.Data
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string Adress { get; set; }
-      
-        public int Number { get; set; }
+        public DateTime DateTime { get; set; }
+    
+        
 
     }
 }
