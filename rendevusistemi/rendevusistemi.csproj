@@ -215,6 +215,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803271945551_AddFullname.cs" />
+    <Compile Include="Migrations\201803271945551_AddFullname.Designer.cs">
+      <DependentUpon>201803271945551_AddFullname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803271950010_Deletedeneme.cs" />
+    <Compile Include="Migrations\201803271950010_Deletedeneme.Designer.cs">
+      <DependentUpon>201803271950010_Deletedeneme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803271959392_Deleteemployeıd.cs" />
+    <Compile Include="Migrations\201803271959392_Deleteemployeıd.Designer.cs">
+      <DependentUpon>201803271959392_Deleteemployeıd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803282012119_addemployeıd.cs" />
+    <Compile Include="Migrations\201803282012119_addemployeıd.Designer.cs">
+      <DependentUpon>201803282012119_addemployeıd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803282022327_delemploies_ıd.cs" />
+    <Compile Include="Migrations\201803282022327_delemploies_ıd.Designer.cs">
+      <DependentUpon>201803282022327_delemploies_ıd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -319,6 +339,23 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803271945551_AddFullname.resx">
+      <DependentUpon>201803271945551_AddFullname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803271950010_Deletedeneme.resx">
+      <DependentUpon>201803271950010_Deletedeneme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803271959392_Deleteemployeıd.resx">
+      <DependentUpon>201803271959392_Deleteemployeıd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803282012119_addemployeıd.resx">
+      <DependentUpon>201803282012119_addemployeıd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803282022327_delemploies_ıd.resx">
+      <DependentUpon>201803282022327_delemploies_ıd.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

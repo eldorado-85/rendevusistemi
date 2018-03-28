@@ -65,14 +65,14 @@ namespace rendevusistemi.Controllers
                     appointmentStorage.Mappings.End = "DateTimeEnd";
                     appointmentStorage.Mappings.Subject = "Name";
                     appointmentStorage.Mappings.Description = "Description";
-                    appointmentStorage.Mappings.Location = "";
-                    appointmentStorage.Mappings.AllDay = "";
-                    appointmentStorage.Mappings.Type = "Id";
-                    appointmentStorage.Mappings.RecurrenceInfo = "";
-                    appointmentStorage.Mappings.ReminderInfo = "";
-                    appointmentStorage.Mappings.Label = "Id";
-                    appointmentStorage.Mappings.Status = "";
-                    appointmentStorage.Mappings.ResourceId = "Emloiess";
+                    //appointmentStorage.Mappings.Location = "";
+                    //appointmentStorage.Mappings.AllDay = "";
+                    //appointmentStorage.Mappings.Type = "Id";
+                    //appointmentStorage.Mappings.RecurrenceInfo = "";
+                    //appointmentStorage.Mappings.ReminderInfo = "";
+                    //appointmentStorage.Mappings.Label = "Id";
+                    //appointmentStorage.Mappings.Status = "";
+                    appointmentStorage.Mappings.ResourceId = "EmployeId";
                 }
                 return appointmentStorage;
             }
@@ -87,7 +87,7 @@ namespace rendevusistemi.Controllers
                 {
                     resourceStorage = new DevExpress.Web.Mvc.MVCxResourceStorage();
                     resourceStorage.Mappings.ResourceId = "Id";
-                    resourceStorage.Mappings.Caption = "Firstname";
+                    resourceStorage.Mappings.Caption = "Fullname";
                 }
                 return resourceStorage;
             }
@@ -103,7 +103,7 @@ namespace rendevusistemi.Controllers
         static void InsertAppointments(rendevusistemi.Database.MyDbContext appointmentContext, rendevusistemi.Database.MyDbContext resourceContext)
         {
             var appointments = appointmentContext.Appointmenties.ToList();
-            var resources = resourceContext.Employes;
+            var resources = resourceContext.Employes.ToList();
 
             var newAppointments = DevExpress.Web.Mvc.SchedulerExtension.GetAppointmentsToInsert<rendevusistemi.Database.Data.Appointments>("Scheduler1", appointments, resources,
                 AppointmentStorage, ResourceStorage);
