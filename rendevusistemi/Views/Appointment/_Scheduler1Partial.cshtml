@@ -7,8 +7,10 @@
         settings.EditAppointmentRouteValues = new { Controller = "Appointment", Action = "Scheduler1PartialEditAppointment" };
 
         settings.Storage.EnableReminders = false;
-		settings.Storage.Appointments.Assign(AppointmentControllerScheduler1Settings.AppointmentStorage);
+        settings.Storage.Appointments.Assign(AppointmentControllerScheduler1Settings.AppointmentStorage);
         settings.Storage.Resources.Assign(AppointmentControllerScheduler1Settings.ResourceStorage);
+     
+
     });
     if (ViewData["SchedulerErrorText"] != null) {
         scheduler.SetErrorText((string)ViewData["SchedulerErrorText"]);
