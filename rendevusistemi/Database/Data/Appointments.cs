@@ -17,5 +17,7 @@ namespace rendevusistemi.Database.Data
      
         public virtual List<Job> Jobs { get; set; }
 
+        public int MyProperty { get; set; }
+
     }
 }
