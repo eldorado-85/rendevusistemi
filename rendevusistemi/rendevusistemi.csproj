@@ -235,6 +235,10 @@
     <Compile Include="Migrations\201803282022327_delemploies_ıd.Designer.cs">
       <DependentUpon>201803282022327_delemploies_ıd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804061938224_addupdatedatabase.cs" />
+    <Compile Include="Migrations\201804061938224_addupdatedatabase.Designer.cs">
+      <DependentUpon>201804061938224_addupdatedatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -355,6 +359,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803282022327_delemploies_ıd.resx">
       <DependentUpon>201803282022327_delemploies_ıd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804061938224_addupdatedatabase.resx">
+      <DependentUpon>201804061938224_addupdatedatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
