@@ -243,6 +243,10 @@
     <Compile Include="Migrations\201804062010555_addupdatedatabase1.Designer.cs">
       <DependentUpon>201804062010555_addupdatedatabase1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804070938096_deletefieldappointmen.cs" />
+    <Compile Include="Migrations\201804070938096_deletefieldappointmen.Designer.cs">
+      <DependentUpon>201804070938096_deletefieldappointmen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -369,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804062010555_addupdatedatabase1.resx">
       <DependentUpon>201804062010555_addupdatedatabase1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804070938096_deletefieldappointmen.resx">
+      <DependentUpon>201804070938096_deletefieldappointmen.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
