@@ -255,6 +255,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Entry.css" />
+    <Content Include="Content\Image\01.jpg" />
+    <Content Include="Content\Image\02.jpg" />
+    <Content Include="Content\Image\03.jpg" />
+    <Content Include="Content\Image\04.jpg" />
+    <Content Include="Content\Image\05.jpg" />
+    <Content Include="Content\Image\ceylinSalon.jpeg" />
     <Content Include="Content\Image\guzel.jpg" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\Takvim.js" />
