@@ -19,14 +19,17 @@ namespace rendevusistemi.Controllers
 
         rendevusistemi.Database.MyDbContext appointmentContext = new rendevusistemi.Database.MyDbContext();
         rendevusistemi.Database.MyDbContext resourceContext = new rendevusistemi.Database.MyDbContext();
+        rendevusistemi.Database.MyDbContext jobs = new rendevusistemi.Database.MyDbContext();
 
         public ActionResult Scheduler1Partial()
         {
             var appointments = appointmentContext.Appointmenties;
             var resources = resourceContext.Employes;
+            var aa = jobs.Jobs;
 
             ViewData["Appointments"] = appointments.ToList();
             ViewData["Resources"] = resources.ToList();
+           
 
             return PartialView("_Scheduler1Partial");
         }
@@ -59,6 +62,7 @@ namespace rendevusistemi.Controllers
             {
                 if (appointmentStorage == null)
                 {
+                    
                     appointmentStorage = new DevExpress.Web.Mvc.MVCxAppointmentStorage();
                     appointmentStorage.Mappings.AppointmentId = "Id";
                     appointmentStorage.Mappings.Start = "DateTimeStart";
@@ -70,7 +74,7 @@ namespace rendevusistemi.Controllers
                     //appointmentStorage.Mappings.Type = "Id";
                     //appointmentStorage.Mappings.RecurrenceInfo = "";
                     //appointmentStorage.Mappings.ReminderInfo = "";
-                    //appointmentStorage.Mappings.Label = "Id";
+                    appointmentStorage.Mappings.Label = "JobId";
                     //appointmentStorage.Mappings.Status = "";
                     appointmentStorage.Mappings.ResourceId = "EmployeId";
                 }
@@ -81,6 +85,7 @@ namespace rendevusistemi.Controllers
         static DevExpress.Web.Mvc.MVCxResourceStorage resourceStorage;
         public static DevExpress.Web.Mvc.MVCxResourceStorage ResourceStorage
         {
+            
             get
             {
                 if (resourceStorage == null)
@@ -88,6 +93,7 @@ namespace rendevusistemi.Controllers
                     resourceStorage = new DevExpress.Web.Mvc.MVCxResourceStorage();
                     resourceStorage.Mappings.ResourceId = "Id";
                     resourceStorage.Mappings.Caption = "Fullname";
+                    
                 }
                 return resourceStorage;
             }
@@ -143,6 +149,9 @@ namespace rendevusistemi.Controllers
             }
             appointmentContext.SaveChanges();
         }
+
+
     }
+
 
 }
