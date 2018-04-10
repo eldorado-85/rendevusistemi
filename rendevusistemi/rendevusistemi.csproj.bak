@@ -44,13 +44,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Data.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.ASPxThemes.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.Mvc5.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Web.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Export, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Mvc5.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -200,17 +204,49 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AppointmentController.cs" />
+    <Compile Include="Controllers\AppointmentManuelController.cs" />
+    <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Database\Data\Appointments.cs" />
     <Compile Include="Database\Data\Emploies.cs" />
     <Compile Include="Database\Data\Job.cs" />
     <Compile Include="Database\MyDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803182141035_d.cs" />
-    <Compile Include="Migrations\201803182141035_d.Designer.cs">
-      <DependentUpon>201803182141035_d.cs</DependentUpon>
+    <Compile Include="Migrations\201803271945551_AddFullname.cs" />
+    <Compile Include="Migrations\201803271945551_AddFullname.Designer.cs">
+      <DependentUpon>201803271945551_AddFullname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803271950010_Deletedeneme.cs" />
+    <Compile Include="Migrations\201803271950010_Deletedeneme.Designer.cs">
+      <DependentUpon>201803271950010_Deletedeneme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803271959392_Deleteemployeıd.cs" />
+    <Compile Include="Migrations\201803271959392_Deleteemployeıd.Designer.cs">
+      <DependentUpon>201803271959392_Deleteemployeıd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803282012119_addemployeıd.cs" />
+    <Compile Include="Migrations\201803282012119_addemployeıd.Designer.cs">
+      <DependentUpon>201803282012119_addemployeıd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803282022327_delemploies_ıd.cs" />
+    <Compile Include="Migrations\201803282022327_delemploies_ıd.Designer.cs">
+      <DependentUpon>201803282022327_delemploies_ıd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804061938224_addupdatedatabase.cs" />
+    <Compile Include="Migrations\201804061938224_addupdatedatabase.Designer.cs">
+      <DependentUpon>201804061938224_addupdatedatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804062010555_addupdatedatabase1.cs" />
+    <Compile Include="Migrations\201804062010555_addupdatedatabase1.Designer.cs">
+      <DependentUpon>201804062010555_addupdatedatabase1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804070938096_deletefieldappointmen.cs" />
+    <Compile Include="Migrations\201804070938096_deletefieldappointmen.Designer.cs">
+      <DependentUpon>201804070938096_deletefieldappointmen.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -219,6 +255,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Entry.css" />
+    <Content Include="Content\Image\01.jpg" />
+    <Content Include="Content\Image\02.jpg" />
+    <Content Include="Content\Image\03.jpg" />
+    <Content Include="Content\Image\04.jpg" />
+    <Content Include="Content\Image\05.jpg" />
+    <Content Include="Content\Image\ceylinSalon.jpeg" />
     <Content Include="Content\Image\guzel.jpg" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\Takvim.js" />
@@ -285,17 +328,17 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\RegisterView.cshtml" />
     <Content Include="Views\Home\Entry.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\RegisterEdit.cshtml" />
-    <Content Include="Views\Home\Register.cshtml" />
-    <Content Include="Views\Home\TestKayit.cshtml" />
-    <Content Include="Views\Home\TestView.cshtml" />
-    <Content Include="Views\Home\TestEdit.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\Register\RegisterEdit.cshtml" />
     <Content Include="Views\Register\RegisterView.cshtml" />
+    <Content Include="Views\Job\JobEdit.cshtml" />
+    <Content Include="Views\Job\Job.cshtml" />
+    <Content Include="Views\Job\JobView.cshtml" />
+    <Content Include="Views\Appointment\Appointment.cshtml" />
+    <Content Include="Views\Appointment\_Scheduler1Partial.cshtml" />
+    <Content Include="Views\AppointmentManuel\AppointmentManuView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -306,6 +349,7 @@
     <Folder Include="Content\bootstraptemple\vendor\" />
     <Folder Include="Models\" />
     <Folder Include="startbootstrap-sb-admin-gh-pages\" />
+    <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -316,8 +360,32 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803182141035_d.resx">
-      <DependentUpon>201803182141035_d.cs</DependentUpon>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803271945551_AddFullname.resx">
+      <DependentUpon>201803271945551_AddFullname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803271950010_Deletedeneme.resx">
+      <DependentUpon>201803271950010_Deletedeneme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803271959392_Deleteemployeıd.resx">
+      <DependentUpon>201803271959392_Deleteemployeıd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803282012119_addemployeıd.resx">
+      <DependentUpon>201803282012119_addemployeıd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803282022327_delemploies_ıd.resx">
+      <DependentUpon>201803282022327_delemploies_ıd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804061938224_addupdatedatabase.resx">
+      <DependentUpon>201804061938224_addupdatedatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804062010555_addupdatedatabase1.resx">
+      <DependentUpon>201804062010555_addupdatedatabase1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804070938096_deletefieldappointmen.resx">
+      <DependentUpon>201804070938096_deletefieldappointmen.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
