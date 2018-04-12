@@ -15,7 +15,7 @@ namespace rendevusistemi.Database.Data
         public DateTime DateTimeEnd { get; set; }
         public int EmployeId { get; set; }
      
-        public virtual List<Job> Jobs { get; set; }
+        
 
 
     }

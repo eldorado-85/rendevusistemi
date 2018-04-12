@@ -18,7 +18,7 @@
 </head>
 <body class="fixed-nav sticky-footer " id="page-top">
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark text-info bg-danger fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="mainNav">
         <a class="navbar-brand"  href="@Url.Action("Index", "Home")">Ceylin Güzellik Salonu Müşteri Yönetim ve Randevu Sistemi</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -227,7 +227,16 @@
 
 
 
-
+    @Html.DevExpress().GetStyleSheets(
+        new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+        new StyleSheet { ExtensionSuite = ExtensionSuite.Editors },
+        new StyleSheet { ExtensionSuite = ExtensionSuite.Scheduler }
+    )
+    @Html.DevExpress().GetScripts(
+        new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+        new Script { ExtensionSuite = ExtensionSuite.Editors },
+        new Script { ExtensionSuite = ExtensionSuite.Scheduler }
+    )
 
 
     <div>
