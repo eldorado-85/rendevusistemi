@@ -263,6 +263,7 @@
     <Content Include="Content\Image\05.jpg" />
     <Content Include="Content\Image\ceylinSalon.jpeg" />
     <Content Include="Content\Image\guzel.jpg" />
+    <Content Include="Content\Image\icon.png" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\Takvim.js" />
     <Content Include="favicon.ico" />
