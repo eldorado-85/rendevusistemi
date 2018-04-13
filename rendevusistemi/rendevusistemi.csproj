@@ -339,6 +339,7 @@
     <Content Include="Views\Appointment\Appointment.cshtml" />
     <Content Include="Views\Appointment\_Scheduler1Partial.cshtml" />
     <Content Include="Views\AppointmentManuel\AppointmentManuView.cshtml" />
+    <Content Include="Views\Home\Giris.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
