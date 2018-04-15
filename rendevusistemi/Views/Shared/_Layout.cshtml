@@ -27,24 +27,24 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Yeni Randevu">
-                    <a class="nav-link" href="@Url.Action("Register", "Register")">
+                    <a class="nav-link" style="color:aliceblue" href="@Url.Action("Register", "Register")">
                         <i class="fa fa-fw fa-address-card-o "></i>
                         <span class="nav-link-text">Yeni Kayıt</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Randevu Listesi">
-                    <a class="nav-link" href="@Url.Action("RegisterView", "Register")">
+                    <a class="nav-link" style="color:aliceblue" href="@Url.Action("RegisterView", "Register")">
                         <i class="fa fa-fw fa fa-address-card-o"></i>
                         <span class="nav-link-text">Kayıtlı Müşteriler</span>
                     </a>
                 </li>
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Randevular">
-                    <a class="nav-link" href="@Url.Action("Appointment", "Appointment")">
+                    <a class="nav-link" style="color:aliceblue" href="@Url.Action("Appointment", "Appointment")">
                         <i class="fa fa-fw fa-area-chart"></i>
                         <span class="nav-link-text">Randevular</span>
                     </a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                @*<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
                         <i class="fa fa-fw fa-wrench"></i>
                         <span class="nav-link-text">Components</span>
@@ -114,7 +114,7 @@
                         <i class="fa fa-fw fa-link"></i>
                         <span class="nav-link-text">Link</span>
                     </a>
-                </li>
+                </li>*@
             </ul>
             <ul class="navbar-nav sidenav-toggler">
                 <li class="nav-item">
@@ -228,7 +228,7 @@
 
 
 
-    @Html.DevExpress().GetStyleSheets(
+    @*@Html.DevExpress().GetStyleSheets(
         new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
         new StyleSheet { ExtensionSuite = ExtensionSuite.Editors },
         new StyleSheet { ExtensionSuite = ExtensionSuite.Scheduler }
@@ -237,7 +237,7 @@
         new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
         new Script { ExtensionSuite = ExtensionSuite.Editors },
         new Script { ExtensionSuite = ExtensionSuite.Scheduler }
-    )
+    )*@
 
 
     <div>

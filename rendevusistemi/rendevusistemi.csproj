@@ -255,6 +255,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstraptemple\css\sb-admin.css" />
+    <Content Include="Content\bootstraptemple\css\sb-admin.min.css" />
     <Content Include="Content\Entry.css" />
     <Content Include="Content\Image\01.jpg" />
     <Content Include="Content\Image\02.jpg" />
@@ -344,7 +346,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\bootstraptemple\css\" />
     <Folder Include="Content\bootstraptemple\js\" />
     <Folder Include="Content\bootstraptemple\pug\" />
     <Folder Include="Content\bootstraptemple\scss\" />

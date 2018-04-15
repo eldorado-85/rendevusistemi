@@ -55,7 +55,6 @@
 </head>
 <body>
 
-
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#f6cfbd">
         <div class="container">
             <a class="navbar-brand" href="#" style="font-size:20px"><p style="font-size:28px;font-family:'Berlin Sans FB'"> Ceylin Güzellik Salonu</p> </a>
@@ -92,15 +91,15 @@
         <div class="row">
 
             
-            <div class="col-sm-12">
-                <div class="w3-content w3-section" style="max-width:800px">
-                    <img class="mySlides w3-animate-fading" src="~/Content/Image/ceylinGuzellik1.png" style="width:100%">
-                    <img class="mySlides w3-animate-fading" src="~/Content/Image/04.jpg" style="width:100%">
-                    <img class="mySlides w3-animate-fading" src="~/Content/Image/ceylinSalon.jpeg" style="width:100%">
-                    <img class="mySlides w3-animate-fading" src="~/Content/Image/ceylinArka.png" style="width:100%">
-                    <img class="mySlides w3-animate-fading" src="~/Content/Image/02.jpg" style="width:100%">
-                    <img class="mySlides w3-animate-fading" src="~/Content/Image/01.jpg" style="width:100%">
-                    <img class="mySlides w3-animate-fading" src="~/Content/Image/03.jpg" style="width:100%">
+            <div class="col-sm-12" style="margin-top:50px">
+                <div class="w3-content w3-section" style="max-width:1200px">
+                    <img class="mySlides w3-animate-fading" width="100%" height="100%" src="~/Content/Image/ceylinGuzellik1.png">
+                    <img class="mySlides w3-animate-fading" width="100%" height="100%" src="~/Content/Image/04.jpg">
+                    <img class="mySlides w3-animate-fading" width="100%" height="100%" src="~/Content/Image/ceylinSalon.jpeg">
+                    <img class="mySlides w3-animate-fading" width="100%" height="100%" src="~/Content/Image/ceylinArka.png">
+                    <img class="mySlides w3-animate-fading" width="100%" height="100%" src="~/Content/Image/02.jpg">
+                    <img class="mySlides w3-animate-fading" width="100%" height="100%" src="~/Content/Image/01.jpg">
+                    <img class="mySlides w3-animate-fading" width="100%" height="100%"    src="~/Content/Image/03.jpg">
 
                     <script>
                             var myIndex = 0;
@@ -158,6 +157,15 @@
                 <div class="col-md-3">
 
                     <div class="w3-container">
+                        <img class="img-thumbnail" src="~/Content/Image/04.jpg"
+                             onclick="document.getElementById('modal04').style.display='block'">
+                        <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+                            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                            <div class="w3-modal-content w3-animate-zoom">
+                                <img src="~/Content/Image/04.jpg" style="width:100%">
+                            </div>
+                        </div>
+                        <hr />
                         <img class="img-thumbnail" src="~/Content/Image/ceylinGuzellik1.png"
                              onclick="document.getElementById('modal01').style.display='block'">
                         <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
@@ -171,7 +179,15 @@
                 <div class="col-md-3">
 
                     <div class="w3-container">
-
+                        <img class="img-thumbnail" src="~/Content/Image/05.jpg"
+                             onclick="document.getElementById('modal05').style.display='block'">
+                        <div id="modal05" class="w3-modal" onclick="this.style.display='none'">
+                            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                            <div class="w3-modal-content w3-animate-zoom">
+                                <img src="~/Content/Image/05.jpg" style="width:100%">
+                            </div>
+                        </div>
+                        <hr />
                         <img class="img-thumbnail" src="~/Content/Image/ceylinArka.png"
                              onclick="document.getElementById('modal02').style.display='block'">
                         <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
