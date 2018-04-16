@@ -14,8 +14,8 @@ namespace rendevusistemi.Database.Data
         public DateTime DateTimeStart { get; set; }
         public DateTime DateTimeEnd { get; set; }
         public int EmployeId { get; set; }
-     
-        
+    
+
 
 
     }

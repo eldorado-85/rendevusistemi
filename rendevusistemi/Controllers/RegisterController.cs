@@ -54,7 +54,7 @@ namespace rendevusistemi.Controllers
             update.Lastname = UpdEmp.Lastname;
             update.Firstname = UpdEmp.Firstname;
             update.Adress = UpdEmp.Adress;
-            update.DateTime = UpdEmp.DateTime;
+        
             db.SaveChanges();
             return RedirectToAction("RegisterView");
         }
