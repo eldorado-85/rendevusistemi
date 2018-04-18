@@ -216,37 +216,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803271945551_AddFullname.cs" />
-    <Compile Include="Migrations\201803271945551_AddFullname.Designer.cs">
-      <DependentUpon>201803271945551_AddFullname.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803271950010_Deletedeneme.cs" />
-    <Compile Include="Migrations\201803271950010_Deletedeneme.Designer.cs">
-      <DependentUpon>201803271950010_Deletedeneme.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803271959392_Deleteemployeıd.cs" />
-    <Compile Include="Migrations\201803271959392_Deleteemployeıd.Designer.cs">
-      <DependentUpon>201803271959392_Deleteemployeıd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803282012119_addemployeıd.cs" />
-    <Compile Include="Migrations\201803282012119_addemployeıd.Designer.cs">
-      <DependentUpon>201803282012119_addemployeıd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803282022327_delemploies_ıd.cs" />
-    <Compile Include="Migrations\201803282022327_delemploies_ıd.Designer.cs">
-      <DependentUpon>201803282022327_delemploies_ıd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804061938224_addupdatedatabase.cs" />
-    <Compile Include="Migrations\201804061938224_addupdatedatabase.Designer.cs">
-      <DependentUpon>201804061938224_addupdatedatabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804062010555_addupdatedatabase1.cs" />
-    <Compile Include="Migrations\201804062010555_addupdatedatabase1.Designer.cs">
-      <DependentUpon>201804062010555_addupdatedatabase1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804070938096_deletefieldappointmen.cs" />
-    <Compile Include="Migrations\201804070938096_deletefieldappointmen.Designer.cs">
-      <DependentUpon>201804070938096_deletefieldappointmen.cs</DependentUpon>
+    <Compile Include="Migrations\201804161925565_deletecolumuns.cs" />
+    <Compile Include="Migrations\201804161925565_deletecolumuns.Designer.cs">
+      <DependentUpon>201804161925565_deletecolumuns.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -279,6 +251,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\CeylinGüzellikSalonu.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -366,29 +339,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803271945551_AddFullname.resx">
-      <DependentUpon>201803271945551_AddFullname.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803271950010_Deletedeneme.resx">
-      <DependentUpon>201803271950010_Deletedeneme.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803271959392_Deleteemployeıd.resx">
-      <DependentUpon>201803271959392_Deleteemployeıd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803282012119_addemployeıd.resx">
-      <DependentUpon>201803282012119_addemployeıd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803282022327_delemploies_ıd.resx">
-      <DependentUpon>201803282022327_delemploies_ıd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804061938224_addupdatedatabase.resx">
-      <DependentUpon>201804061938224_addupdatedatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804062010555_addupdatedatabase1.resx">
-      <DependentUpon>201804062010555_addupdatedatabase1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804070938096_deletefieldappointmen.resx">
-      <DependentUpon>201804070938096_deletefieldappointmen.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201804161925565_deletecolumuns.resx">
+      <DependentUpon>201804161925565_deletecolumuns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
