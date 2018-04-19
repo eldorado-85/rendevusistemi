@@ -58,5 +58,27 @@ namespace rendevusistemi.Controllers
 
             return RedirectToAction("JobView");
         }
+
+
+        public ActionResult JobDel(int id)
+        {
+            MyDbContext db = new MyDbContext();
+            var list = db.Jobs.Where(a => a.Id == id).FirstOrDefault();
+
+
+            return View(list);
+        }
+        [HttpPost]
+        public ActionResult JobDel(Job UpdateJob)
+        {
+            MyDbContext db = new MyDbContext();
+
+            var update = db.Jobs.Where(a => a.Id == UpdateJob.Id).FirstOrDefault();
+            update.Name = UpdateJob.Name;
+            db.SaveChanges();
+
+
+            return RedirectToAction("JobView");
+        }
     }
 }

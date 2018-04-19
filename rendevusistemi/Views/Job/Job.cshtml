@@ -1,39 +1,55 @@
-﻿@model rendevusistemi.Database.Data.Job
+﻿
 
-@{
-    ViewBag.Title = "OperasyonKayit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+@model rendevusistemi.Database.Data.Job
 
-<div class="content-wrapper">
-    <div class="container-fluid">
 
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
 
-            <div class="form-horizontal">
-                <h4>Operasyon Ekle</h4>
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="container">
+    <div class="card card-register mx-auto mt-5" style="background-color:#646262">
+        <div class="card-header">
+
+            <span class="label label-default" style="color:gold"> Operasyon Kaydet</span>
+            @* Sistem tarihi bu kodlarla çekilip gösterilecek ve hangi saatte hangi tarihte kayıt edildi bilgisi tutulacak.
+                labelID.Text = DateTime.Now.ToLongTimeString();
+                labelID.Text = DateTime.Now.ToShortDateString();*@
+        </div>
+        <div class="card-body">
+            @using (@Html.BeginForm())
+            {
                 <div class="form-group">
-                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @id = "exampleInputName", @type = "text", @placeholder = "Operasyon Adı" })
+                        </div>
+                    </div>
+                   
+
+                   
+                    
+                    <div class="text-center">
+                        <br>
+                        <input type="submit" value="KAYDET" class="btn btn-primary btn-block" />
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="KAYDET" class="btn btn-default" />
-                    </div>
-                </div>
+
+            }
+            <div class="text-center">
+            <a class="d-block small mt-3" style="color:gold" href="@Url.Action("index","Home")">Ana Sayfa</a>
             </div>
-        }
-
-        <div>
-            @Html.ActionLink("Ana Sayfa", "Home")
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin Java1Script-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
