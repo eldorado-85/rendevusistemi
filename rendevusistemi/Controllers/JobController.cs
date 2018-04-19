@@ -69,16 +69,23 @@ namespace rendevusistemi.Controllers
             return View(list);
         }
         [HttpPost]
-        public ActionResult JobDel(Job UpdateJob)
+        public ActionResult JobDel(Job Deloper)
         {
             MyDbContext db = new MyDbContext();
 
-            var update = db.Jobs.Where(a => a.Id == UpdateJob.Id).FirstOrDefault();
-            update.Name = UpdateJob.Name;
-            db.SaveChanges();
-
-
-            return RedirectToAction("JobView");
+           
+            try
+            {
+               
+                Job DelOper = db.Jobs.Where(o => o.Id == Deloper.Id).FirstOrDefault();
+                db.Jobs.Remove(DelOper);
+                db.SaveChanges();
+                return RedirectToAction("JobView");
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }
