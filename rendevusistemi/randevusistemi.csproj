@@ -227,8 +227,11 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstraptemple\css\modern-business.css" />
     <Content Include="Content\bootstraptemple\css\sb-admin.css" />
     <Content Include="Content\bootstraptemple\css\sb-admin.min.css" />
+    <Content Include="Content\bootstraptemple\js\contact_me.js" />
+    <Content Include="Content\bootstraptemple\js\jqBootstrapValidation.js" />
     <Content Include="Content\bootstraptemple\js\sb-admin-charts.js" />
     <Content Include="Content\bootstraptemple\js\sb-admin-charts.min.js" />
     <Content Include="Content\bootstraptemple\js\sb-admin-datatables.js" />
@@ -268,6 +271,8 @@
     <Content Include="Content\Image\03.jpg" />
     <Content Include="Content\Image\04.jpg" />
     <Content Include="Content\Image\05.jpg" />
+    <Content Include="Content\Image\07.jpg" />
+    <Content Include="Content\Image\10.jpg" />
     <Content Include="Content\Image\ceylinArka.PNG" />
     <Content Include="Content\Image\ceylinGuzellik.png" />
     <Content Include="Content\Image\ceylinGuzellikKesik.PNG" />
@@ -278,6 +283,7 @@
     <Content Include="Content\Image\icon.png" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\Takvim.js" />
+    <Content Include="Content\w3.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -374,7 +380,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\Home\index.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -428,6 +433,7 @@
     <Content Include="Views\AppointmentManuel\AppointmentManuView.cshtml" />
     <Content Include="Views\Job\JobDel.cshtml" />
     <Content Include="Views\Register\RegisterDel.cshtml" />
+    <Content Include="Views\Home\Giris.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

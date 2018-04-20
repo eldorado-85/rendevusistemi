@@ -74,17 +74,18 @@
 <body>
     <div class="wrapper">
         <form class="form-signin">
-            <h6 style="float:right;margin-right:20px">
-                <a class="nav-link" href="@Url.Action("Entry", "Home")">
-                    Geri Dön
-                </a>
-            </h6>
+            
             <h2 class="form-signin-heading"></h2><br />
             <input type="text" class="form-control" name="username" placeholder="Kullanıcı adınızı yazınız" required="" autofocus="" /><br />
             <input type="password" class="form-control" name="password" placeholder="Şifrenizi yazınız" required="" /><br />
             <label class="checkbox">
                 <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
             </label><br />
+            <h6 style="float:right;margin-right:20px">
+                <a class="nav-link" href="@Url.Action("Entry", "Home")">
+                    Geri Dön
+                </a>
+            </h6>
             <button class="btn btn-lg  btn-block" type="submit">
                 <a href="@Url.Action("Appointment", "Appointment")">
                     Giriş
