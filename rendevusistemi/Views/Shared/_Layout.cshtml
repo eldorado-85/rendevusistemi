@@ -203,7 +203,7 @@
                     </form>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("Entry", "Home")" data-toggle="modal" data-target="#exampleModal">
+                    <a class="nav-link" href="@Url.Action("Entry", "Home")" >
                         <i class="fa fa-fw fa-sign-out"></i>Çıkış
                     </a>
                 </li>
@@ -234,7 +234,7 @@
 
 
 
-    @Html.DevExpress().GetStyleSheets(
+    @*@Html.DevExpress().GetStyleSheets(
         new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
         new StyleSheet { ExtensionSuite = ExtensionSuite.Editors },
         new StyleSheet { ExtensionSuite = ExtensionSuite.Scheduler }
@@ -243,7 +243,7 @@
         new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
         new Script { ExtensionSuite = ExtensionSuite.Editors },
         new Script { ExtensionSuite = ExtensionSuite.Scheduler }
-    )
+    )*@
 
 
     <div>

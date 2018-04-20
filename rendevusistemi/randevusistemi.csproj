@@ -268,8 +268,13 @@
     <Content Include="Content\Image\03.jpg" />
     <Content Include="Content\Image\04.jpg" />
     <Content Include="Content\Image\05.jpg" />
+    <Content Include="Content\Image\ceylinArka.PNG" />
+    <Content Include="Content\Image\ceylinGuzellik.png" />
+    <Content Include="Content\Image\ceylinGuzellikKesik.PNG" />
     <Content Include="Content\Image\ceylinSalon.jpeg" />
     <Content Include="Content\Image\guzel.jpg" />
+    <Content Include="Content\Image\icon.jpeg" />
+    <Content Include="Content\Image\icon.jpg" />
     <Content Include="Content\Image\icon.png" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\Takvim.js" />
