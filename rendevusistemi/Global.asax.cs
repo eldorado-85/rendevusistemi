@@ -20,7 +20,12 @@ namespace rendevusistemi
 
                 db.Database.CreateIfNotExists();
             }
+<<<<<<< HEAD
             AreaRegistration.RegisterAllAreas();
+=======
+         
+                AreaRegistration.RegisterAllAreas();
+>>>>>>> 139ac4849f8354f7997c9c933c31f89a6ddf9702
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

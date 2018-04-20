@@ -1,0 +1,33 @@
+@using rendevusistemi.Controllers;
+@model rendevusistemi.Database.Data.Job
+
+@{
+    var scheduler = Html.DevExpress().Scheduler(settings => {
+        settings.Name = "Scheduler1";
+        settings.CallbackRouteValues = new { Controller = "Appointment", Action = "Scheduler1Partial" };
+        settings.EditAppointmentRouteValues = new { Controller = "Appointment", Action = "Scheduler1PartialEditAppointment" };
+
+        settings.Storage.EnableReminders = false;
+        settings.Storage.Appointments.Assign(AppointmentControllerScheduler1Settings.AppointmentStorage);
+        settings.Storage.Resources.Assign(AppointmentControllerScheduler1Settings.ResourceStorage);
+        settings.Storage.Appointments.Labels.Clear();
+
+
+        rendevusistemi.Database.MyDbContext db = new rendevusistemi.Database.MyDbContext();
+        var aa = (from a in db.Jobs select a.Name).ToList();
+
+        foreach (string item in aa)
+        {
+            settings.Storage.Appointments.Labels.Add(item);
+        }
+
+
+
+
+
+    });
+    if (ViewData["SchedulerErrorText"] != null) {
+        scheduler.SetErrorText((string)ViewData["SchedulerErrorText"]);
+    }
+}
+@scheduler.Bind(ViewData["Appointments"], ViewData["Resources"]).GetHtml()

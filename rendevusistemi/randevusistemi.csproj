@@ -44,6 +44,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Export, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.Mvc5.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Web.v17.2, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.2.Core, Version=17.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -193,12 +204,21 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AppointmentController.cs" />
+    <Compile Include="Controllers\AppointmentManuelController.cs" />
+    <Compile Include="Controllers\JobController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Database\Data\Appointments.cs" />
     <Compile Include="Database\Data\Emploies.cs" />
     <Compile Include="Database\Data\Job.cs" />
     <Compile Include="Database\MyDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804161925565_deletecolumuns.cs" />
+    <Compile Include="Migrations\201804161925565_deletecolumuns.Designer.cs">
+      <DependentUpon>201804161925565_deletecolumuns.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -207,7 +227,57 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstraptemple\css\sb-admin.css" />
+    <Content Include="Content\bootstraptemple\css\sb-admin.min.css" />
+    <Content Include="Content\bootstraptemple\js\sb-admin-charts.js" />
+    <Content Include="Content\bootstraptemple\js\sb-admin-charts.min.js" />
+    <Content Include="Content\bootstraptemple\js\sb-admin-datatables.js" />
+    <Content Include="Content\bootstraptemple\js\sb-admin-datatables.min.js" />
+    <Content Include="Content\bootstraptemple\js\sb-admin.js" />
+    <Content Include="Content\bootstraptemple\js\sb-admin.min.js" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\bootstraptemple\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Content\bootstraptemple\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Content\bootstraptemple\vendor\chart.js\Chart.js" />
+    <Content Include="Content\bootstraptemple\vendor\chart.js\Chart.min.js" />
+    <Content Include="Content\bootstraptemple\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Content\bootstraptemple\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Content\bootstraptemple\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\bootstraptemple\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="Content\bootstraptemple\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="Content\bootstraptemple\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="Content\bootstraptemple\vendor\jquery\jquery.js" />
+    <Content Include="Content\bootstraptemple\vendor\jquery\jquery.min.js" />
+    <Content Include="Content\bootstraptemple\vendor\jquery\jquery.slim.js" />
+    <Content Include="Content\bootstraptemple\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Content\Entry.css" />
+    <Content Include="Content\Image\01.jpg" />
+    <Content Include="Content\Image\02.jpg" />
+    <Content Include="Content\Image\03.jpg" />
+    <Content Include="Content\Image\04.jpg" />
+    <Content Include="Content\Image\05.jpg" />
+    <Content Include="Content\Image\ceylinArka.PNG" />
+    <Content Include="Content\Image\ceylinGuzellik.png" />
+    <Content Include="Content\Image\ceylinGuzellikKesik.PNG" />
+    <Content Include="Content\Image\ceylinSalon.jpeg" />
     <Content Include="Content\Image\guzel.jpg" />
+    <Content Include="Content\Image\icon.jpeg" />
+    <Content Include="Content\Image\icon.jpg" />
+    <Content Include="Content\Image\icon.png" />
+    <Content Include="Content\Login.css" />
+    <Content Include="Content\Takvim.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -219,6 +289,79 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\bootstraptemple\pug\blank.pug" />
+    <Content Include="Content\bootstraptemple\pug\cards.pug" />
+    <Content Include="Content\bootstraptemple\pug\charts.pug" />
+    <Content Include="Content\bootstraptemple\pug\forgot-password.pug" />
+    <Content Include="Content\bootstraptemple\pug\includes\css\core.pug" />
+    <Content Include="Content\bootstraptemple\pug\includes\css\custom.pug" />
+    <Content Include="Content\bootstraptemple\pug\includes\footer.pug" />
+    <Content Include="Content\bootstraptemple\pug\includes\js\core.pug" />
+    <Content Include="Content\bootstraptemple\pug\includes\js\custom.pug" />
+    <Content Include="Content\bootstraptemple\pug\includes\modals\logout.pug" />
+    <Content Include="Content\bootstraptemple\pug\includes\navbar.pug" />
+    <Content Include="Content\bootstraptemple\pug\includes\scroll-to-top.pug" />
+    <Content Include="Content\bootstraptemple\pug\index.pug" />
+    <Content Include="Content\bootstraptemple\pug\login.pug" />
+    <Content Include="Content\bootstraptemple\pug\navbar.pug" />
+    <Content Include="Content\bootstraptemple\pug\register.pug" />
+    <Content Include="Content\bootstraptemple\pug\tables.pug" />
+    <Content Include="Content\bootstraptemple\scss\navbar\_navbar_colors.scss" />
+    <Content Include="Content\bootstraptemple\scss\navbar\_navbar_fixed.scss" />
+    <Content Include="Content\bootstraptemple\scss\navbar\_navbar_global.scss" />
+    <Content Include="Content\bootstraptemple\scss\navbar\_navbar_static.scss" />
+    <Content Include="Content\bootstraptemple\scss\navbar\_navbar_toggle.scss" />
+    <Content Include="Content\bootstraptemple\scss\sb-admin.scss" />
+    <Content Include="Content\bootstraptemple\scss\_cards.scss" />
+    <Content Include="Content\bootstraptemple\scss\_footer.scss" />
+    <Content Include="Content\bootstraptemple\scss\_global.scss" />
+    <Content Include="Content\bootstraptemple\scss\_login.scss" />
+    <Content Include="Content\bootstraptemple\scss\_mixins.scss" />
+    <Content Include="Content\bootstraptemple\scss\_utilities.scss" />
+    <Content Include="Content\bootstraptemple\scss\_variables.scss" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Content\bootstraptemple\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\css\font-awesome.css.map" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\animated.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\core.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\icons.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\larger.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\list.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\mixins.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\path.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\stacked.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\less\variables.less" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\bootstraptemple\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\bootstraptemple\vendor\jquery\jquery.min.map" />
+    <Content Include="Content\bootstraptemple\vendor\jquery\jquery.slim.min.map" />
+    <None Include="Properties\PublishProfiles\CeylinGüzellikSalonu.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -231,6 +374,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Home\index.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -272,17 +416,24 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Entry.cshtml" />
-    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Register\Register.cshtml" />
+    <Content Include="Views\Register\RegisterEdit.cshtml" />
+    <Content Include="Views\Register\RegisterView.cshtml" />
+    <Content Include="Views\Job\JobEdit.cshtml" />
+    <Content Include="Views\Job\Job.cshtml" />
+    <Content Include="Views\Job\JobView.cshtml" />
+    <Content Include="Views\Appointment\Appointment.cshtml" />
+    <Content Include="Views\Appointment\_Scheduler1Partial.cshtml" />
+    <Content Include="Views\AppointmentManuel\AppointmentManuView.cshtml" />
+    <Content Include="Views\Job\JobDel.cshtml" />
+    <Content Include="Views\Register\RegisterDel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\bootstraptemple\css\" />
-    <Folder Include="Content\bootstraptemple\js\" />
-    <Folder Include="Content\bootstraptemple\pug\" />
-    <Folder Include="Content\bootstraptemple\scss\" />
-    <Folder Include="Content\bootstraptemple\vendor\" />
     <Folder Include="Models\" />
     <Folder Include="startbootstrap-sb-admin-gh-pages\" />
+    <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -291,6 +442,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201804161925565_deletecolumuns.resx">
+      <DependentUpon>201804161925565_deletecolumuns.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

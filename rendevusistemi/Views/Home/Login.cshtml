@@ -1,0 +1,97 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Bootstrap core CSS-->
+    <link href="~/content/bootstraptemple/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="~/content/bootstraptemple/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="~/content/bootstraptemple/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link rel="shortcut icon" href="~/Content/Image/icon.png" />
+    <style>
+        body {
+            background: #fffcfc;
+            background-image:url(../../Content/Image/ceylinGuzellikKesik.PNG);
+            background-repeat:no-repeat;
+            background-size:contain;
+            background-position:top;
+        }
+        .wrapper {
+            margin-top: 150px;
+            margin-bottom: 80px;
+        }
+
+        .form-signin {
+            max-width: 450px;
+            width:100%;
+            min-width:250px;
+            padding: 15px 35px 45px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.78);
+            border: 0px solid rgba(0,0,0,0.1);
+        }
+
+        .checkbox {
+            font-weight: normal;
+        }
+
+        .form-control {
+            position: relative;
+            font-size: 16px;
+            height: auto;
+            padding: 10px;
+          
+
+        }
+
+        input[type="text"] {
+            margin-bottom: -1px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        input[type="password"] {
+            margin-bottom: 20px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+    </style>
+    <title>Giriş</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form class="form-signin">
+            <h6 style="float:right;margin-right:20px">
+                <a class="nav-link" href="@Url.Action("Entry", "Home")">
+                    Geri Dön
+                </a>
+            </h6>
+            <h2 class="form-signin-heading"></h2><br />
+            <input type="text" class="form-control" name="username" placeholder="Kullanıcı adınızı yazınız" required="" autofocus="" /><br />
+            <input type="password" class="form-control" name="password" placeholder="Şifrenizi yazınız" required="" /><br />
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+            </label><br />
+            <button class="btn btn-lg  btn-block" type="submit">
+                <a href="@Url.Action("Appointment", "Appointment")">
+                    Giriş
+                </a>
+            </button>
+
+        </form>
+    </div>
+</body>
+</html>

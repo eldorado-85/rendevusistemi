@@ -1,0 +1,51 @@
+﻿@model rendevusistemi.Database.Data.Emploies
+
+
+
+     <div class="container" >
+         <div class="card card-register mx-auto mt-5" style="background-color:#646262">
+             <div class="card-header">
+                
+                 <span class="label label-default" style="color:gold"> Kişi Kaydet</span>
+                 @* Sistem tarihi bu kodlarla çekilip gösterilecek ve hangi saatte hangi tarihte kayıt edildi bilgisi tutulacak.
+                    labelID.Text = DateTime.Now.ToLongTimeString();
+                    labelID.Text = DateTime.Now.ToShortDateString();*@
+             </div>
+             <div class="card-body" >
+                 @using (@Html.BeginForm())
+                 {
+                     <div class="form-group">
+                         <div class="form-row">
+                             <div class="col-md-6">
+                                 @Html.TextBoxFor(model => model.Firstname, new { @class = "form-control", @id = "exampleInputLastName", @type = "text", @placeholder = "İsim" })
+                             </div>
+                             <div class="col-md-6">
+                                 @Html.TextBoxFor(model => model.Lastname, new { @class = "form-control", @id = "exampleInputLastName", @type = "text", @placeholder = "Soyisim" })
+                             </div>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         @Html.TextBoxFor(model => model.Adress, new { @class = "form-control", @id = "exampleInputAdress", @type = "Adress", @placeholder = " Adres" })
+                     </div>
+                     <div class="form-group">
+                         <div class="form-row">
+                             <div class="col-md-8">
+                                 @Html.TextBoxFor(model => model.Adress, new { @class = "form-control", @id = "exampleInputAdress", @type = "tel", @placeholder = "Telefon numarası" })
+                             </div>
+
+                         </div>
+                     </div>
+                     <input type="submit" value="KAYDET" class="btn btn-primary btn-block" />
+                 }
+                 <div class="text-center">
+                     <a class="d-block small mt-3" style="color:gold" href="@Url.Action("index","Home")">Ana Sayfa</a>
+                 </div>
+             </div>
+         </div>
+     </div>
+  
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin Java1Script-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>

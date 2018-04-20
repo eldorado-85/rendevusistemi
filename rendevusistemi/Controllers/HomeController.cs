@@ -1,4 +1,6 @@
-﻿using rendevusistemi.Database;
+﻿using DevExpress.Web.Mvc;
+using rendevusistemi.Database;
+using rendevusistemi.Database.Data;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -9,10 +11,13 @@ using System.Web.Mvc;
 
 namespace rendevusistemi.Controllers
 {
-    
+
+
+
 
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
             return View();
@@ -38,29 +43,23 @@ namespace rendevusistemi.Controllers
 
             return View();
         }
-        [HttpGet]
-        public ActionResult Register()
-        {
-            ViewBag.Message = "Your contact page.";
 
-            
-
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Register(FormCollection employes)
-        {
-            ViewBag.Message = "Your contact page.";
-
-
-
-            return View();
-        }
         public ActionResult Entry()
         {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
+
+        public ActionResult Login()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        
+
     }
+
 }
+

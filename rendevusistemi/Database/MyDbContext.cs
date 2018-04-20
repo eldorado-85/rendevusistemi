@@ -14,6 +14,7 @@ namespace rendevusistemi.Database
 
         public DbSet<Job> Jobs { get; set; }
         public DbSet<Emploies> Employes { get; set; }
-        
+        public DbSet<Appointments> Appointmenties { get; set; }
+       
     }
 }

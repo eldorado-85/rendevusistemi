@@ -22,8 +22,11 @@ select,
 textarea {
     max-width: 280px;
 }
+/*takvim için*/
 
-/*can*/
+
+
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -43,9 +46,9 @@ li:not(:first-child){
   box-shadow: 2px 2px 4px rgba(0,0,0,.5);
 }
 .calender .month{
-  background-color: #2ecc71;
+  background-color: #bdc3c7;
   padding: 40px;
-  color: #ecf0f1;
+  color: azure;
   width: 100%;
   position: relative;
 }
@@ -63,28 +66,29 @@ li:not(:first-child){
   right: 10px;
 }
 .calender .month .next:hover,.calender .month .prev:hover{
-  background-color: rgba(0,0,0,.2);
+  background-color: azure;
 }
 .calender .weeks{display: flex;}
 .calender .weeks li{
-  background-color: #bdc3c7;
+  background-color: aliceblue;
   flex: 1;
   opacity: .5;
   position: relative;
   animation: motion 2s;
   padding: 10px; 
 }
-.calender .weeks li:hover{background-color: rgba(0,0,0,.2);}
+.calender .weeks li:hover{background-color: antiquewhite;}
 
 .calender .days {
   display: flex;
   flex-wrap: wrap;
 }
 .calender .days li{
-  flex-basis: calc(100% / 7);/*اقسم المساحه على سبعه اللى هى ايام الاسبوع فى كل صف*/
+  flex-basis: calc(100% / 7);
   padding: 10px 0;
-  opacity: .7;
-  background-color: #bdc3c7;
+  opacity: .9;
+  background-color: azure;
 }
-.calender .days li:hover{background-color: rgba(0,0,0,.3);}
+.calender .days li:hover{background-color: aliceblue;}
 
+/*deneme takvim*/
