@@ -57,6 +57,37 @@ namespace rendevusistemi.Controllers
         
             db.SaveChanges();
             return RedirectToAction("RegisterView");
+
+
+        }
+
+
+        public ActionResult RegisterDel(int id)
+        {
+            MyDbContext db = new MyDbContext();
+            var list = db.Employes.Where(a => a.Id == id).FirstOrDefault();
+
+
+            return View(list);
+        }
+        [HttpPost]
+        public ActionResult RegisterDel(Emploies Deloper)
+        {
+            MyDbContext db = new MyDbContext();
+
+
+            try
+            {
+
+                Emploies DelEmp = db.Employes.Where(o => o.Id == Deloper.Id).FirstOrDefault();
+                db.Employes.Remove(DelEmp);
+                db.SaveChanges();
+                return RedirectToAction("RegisterView");
+            }
+            catch
+            {
+                return View();
+            }
         }
 
     }
