@@ -424,6 +424,7 @@
     <Content Include="Views\Job\JobDel.cshtml" />
     <Content Include="Views\Register\RegisterDel.cshtml" />
     <Content Include="Views\Appointment\AppointmentView.cshtml" />
+    <Content Include="Views\Appointment\AppointmentEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

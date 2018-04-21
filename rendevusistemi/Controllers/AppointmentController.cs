@@ -1,5 +1,6 @@
 ﻿using DevExpress.Web.Mvc;
 using rendevusistemi.Database;
+using rendevusistemi.Database.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,64 +17,65 @@ namespace rendevusistemi.Controllers
             return View();
         }
 
-        public ActionResult AppView()
+        public ActionResult AppointmentView()
         {
             MyDbContext db = new MyDbContext();
-            var list = db.Jobs.ToList();
+            var list = db.Appointmenties.ToList();
 
 
             return View(list);
         }
 
-        public ActionResult JobEdit(int id)
+        public ActionResult AppointmentEdit(int id)
         {
             MyDbContext db = new MyDbContext();
-            var list = db.Jobs.Where(a => a.Id == id).FirstOrDefault();
+            var list = db.Appointmenties.Where(a => a.Id == id).FirstOrDefault();
 
 
             return View(list);
         }
-        //[HttpPost]
-        //public ActionResult JobEdit(aa UpdateJob)
-        //{
-        //    MyDbContext db = new MyDbContext();
+        [HttpPost]
+        public ActionResult AppointmentEdit(Appointments UpdateApp)
+        {
+            MyDbContext db = new MyDbContext();
 
-        //    var update = db.Jobs.Where(a => a.Id == UpdateJob.Id).FirstOrDefault();
-        //    update.Name = UpdateJob.Name;
-        //    db.SaveChanges();
-
-
-        //    return RedirectToAction("JobView");
-        //}
+            var update = db.Appointmenties.Where(a => a.Id == UpdateApp.Id).FirstOrDefault();
+            update.Description = UpdateApp.Description;
+            update.DateTimeStart = UpdateApp.DateTimeStart;
+            db.SaveChanges();
 
 
-        //public ActionResult JobDel(int id)
-        //{
-        //    MyDbContext db = new MyDbContext();
-        //    var list = db.Jobs.Where(a => a.Id == id).FirstOrDefault();
+            return RedirectToAction("AppointmentView");
+        }
 
 
-        //    return View(list);
-        //}
-        //[HttpPost]
-        //public ActionResult JobDel(Job Deloper)
-        //{
-        //    MyDbContext db = new MyDbContext();
+        public ActionResult AppointmentDel(int id)
+        {
+            MyDbContext db = new MyDbContext();
+            var list = db.Appointments.Where(a => a.Id == id).FirstOrDefault();
 
 
-        //    try
-        //    {
+            return View(list);
+        }
+        [HttpPost]
+        public ActionResult AppointmentDel(Appointments DelApp)
+        {
+            MyDbContext db = new MyDbContext();
 
-        //        Job DelOper = db.Jobs.Where(o => o.Id == Deloper.Id).FirstOrDefault();
-        //        db.Jobs.Remove(DelOper);
-        //        db.SaveChanges();
-        //        return RedirectToAction("JobView");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
+
+            try
+            {
+
+                Job DelOper = db.Appointments.Where(o => o.Id == DelApp.Id).FirstOrDefault();
+                db.Appointments.Remove(DelOper);
+                db.SaveChanges();
+                return RedirectToAction("JobView");
+            }
+            catch
+            {
+                return View();
+            }
+        }
 
 
         rendevusistemi.Database.MyDbContext appointmentContext = new rendevusistemi.Database.MyDbContext();
