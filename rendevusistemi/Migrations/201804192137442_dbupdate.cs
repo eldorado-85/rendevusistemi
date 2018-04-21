@@ -3,16 +3,16 @@ namespace rendevusistemi.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class deletecolumuns : DbMigration
+    public partial class dbupdate : DbMigration
     {
         public override void Up()
         {
-            DropColumn("dbo.Emploies", "DateTime");
+            DropColumn("dbo.Jobs", "LastName");
         }
         
         public override void Down()
         {
-            AddColumn("dbo.Emploies", "DateTime", c => c.DateTime(nullable: false));
+            AddColumn("dbo.Jobs", "LastName", c => c.String());
         }
     }
 }

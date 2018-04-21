@@ -7,18 +7,18 @@ namespace rendevusistemi.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class deletecolumuns : IMigrationMetadata
+    public sealed partial class dbupdate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(deletecolumuns));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(dbupdate));
         
         string IMigrationMetadata.Id
         {
-            get { return "201804161925565_deletecolumuns"; }
+            get { return "201804192137442_dbupdate"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target
