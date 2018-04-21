@@ -47,11 +47,11 @@
 
                     <div class="col-md-10">
                         @Html.Label("TARİH-SAAT")
-                      
-                        @*@Html.EditorFor(model => model.DateTimeStart, new { htmlAttributes = new { @class = "datepicker", @Value = Model.DateTimeStart.ToString("yyyy/MM/dd") } })*@
-                     
 
-                        @Html.EditorFor(model => model.DateTimeStart, new { htmlAttributes = new { @class = "form-control oso", @type = "date" , @Value = Model.DateTimeStart.ToString("yyyy/MM/dd") } })
+                        @*@Html.EditorFor(model => model.DateTimeStart, new { htmlAttributes = new { @class = "datepicker", @Value = Model.DateTimeStart.ToString("yyyy/MM/dd") } })*@
+
+
+                        @Html.EditorFor(model => model.DateTimeStart, new { htmlAttributes = new { @class = "form-control oso", @type = "date", @Value = Model.DateTimeStart.ToString("yyyy/MM/dd") } })
                         @Html.ValidationMessageFor(model => model.DateTimeStart, "", new { @class = "text-danger" })
                     </div>
                 </div>

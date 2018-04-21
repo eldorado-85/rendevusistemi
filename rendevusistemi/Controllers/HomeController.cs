@@ -57,7 +57,14 @@ namespace rendevusistemi.Controllers
 
             return View();
         }
-        
+
+        public ActionResult Giris()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
 
     }
 

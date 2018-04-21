@@ -52,7 +52,7 @@ namespace rendevusistemi.Controllers
         public ActionResult AppointmentDel(int id)
         {
             MyDbContext db = new MyDbContext();
-            var list = db.Appointments.Where(a => a.Id == id).FirstOrDefault();
+            var list = db.Appointmenties.Where(a => a.Id == id).FirstOrDefault();
 
 
             return View(list);
@@ -66,8 +66,8 @@ namespace rendevusistemi.Controllers
             try
             {
 
-                Job DelOper = db.Appointments.Where(o => o.Id == DelApp.Id).FirstOrDefault();
-                db.Appointments.Remove(DelOper);
+                var DelOper = db.Appointmenties.Where(o => o.Id == DelApp.Id).FirstOrDefault();
+                db.Appointmenties.Remove(DelOper);
                 db.SaveChanges();
                 return RedirectToAction("JobView");
             }
@@ -90,7 +90,7 @@ namespace rendevusistemi.Controllers
 
             ViewData["Appointments"] = appointments.ToList();
             ViewData["Resources"] = resources.ToList();
-           
+
 
             return PartialView("_Scheduler1Partial");
         }
@@ -123,7 +123,7 @@ namespace rendevusistemi.Controllers
             {
                 if (appointmentStorage == null)
                 {
-                    
+
                     appointmentStorage = new DevExpress.Web.Mvc.MVCxAppointmentStorage();
                     appointmentStorage.Mappings.AppointmentId = "Id";
                     appointmentStorage.Mappings.Start = "DateTimeStart";
@@ -146,7 +146,7 @@ namespace rendevusistemi.Controllers
         static DevExpress.Web.Mvc.MVCxResourceStorage resourceStorage;
         public static DevExpress.Web.Mvc.MVCxResourceStorage ResourceStorage
         {
-            
+
             get
             {
                 if (resourceStorage == null)
@@ -154,7 +154,7 @@ namespace rendevusistemi.Controllers
                     resourceStorage = new DevExpress.Web.Mvc.MVCxResourceStorage();
                     resourceStorage.Mappings.ResourceId = "Id";
                     resourceStorage.Mappings.Caption = "Fullname";
-                    
+
                 }
                 return resourceStorage;
             }

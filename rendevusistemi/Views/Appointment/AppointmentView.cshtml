@@ -32,8 +32,8 @@
 
                             </tr>
                         </thead>
-                      
-                    
+
+
                         <tfoot>
                             <tr>
                                 <th>Müşteri</th>
@@ -48,7 +48,7 @@
                         @foreach (var item in Model)
                         {
                             <tr>
-                               
+
                                 <td>
                                     @Html.DisplayFor(modelItem => item.EmployeId)
                                 </td>
@@ -61,13 +61,13 @@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.DateTimeStart)
                                 </td>
-                              
+
 
 
                                 <td>
                                     <i class="fa fa-fw fa-edit" style="font-size:15px"></i>
                                     @Html.ActionLink("Düzenle", "AppointmentEdit", new { id = item.Id }) |
-                               
+
                                     <i class="fa fa-fw fa-close" style="font-size:15px;color:red"></i>
                                     @Html.ActionLink("Sil", "AppointmentDel", new { id = item.Id })
                                 </td>
@@ -108,16 +108,16 @@
 </div>
 
 
-   
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateTimeStart)
-        </th>
-    
-        <th>
-            @Html.DisplayNameFor(model => model.EmployeId)
-        </th>
-        <th></th>
+
+<th>
+    @Html.DisplayNameFor(model => model.Description)
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.DateTimeStart)
+</th>
+
+<th>
+    @Html.DisplayNameFor(model => model.EmployeId)
+</th>
+<th></th>
     </tr>
