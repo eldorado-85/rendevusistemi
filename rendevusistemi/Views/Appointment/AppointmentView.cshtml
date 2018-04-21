@@ -25,25 +25,17 @@
                     <table class="table table-hover" id="dataTable" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>Müşteri</th>
-                                <th>Operasyon</th>
-                                <th>Açıklama</th>
-                                <th>Tarih-Saat</th>
+                                <th>Operasyon Adı </th>
 
                             </tr>
                         </thead>
-                      
-                    
                         <tfoot>
                             <tr>
-                                <th>Müşteri</th>
-                                <th>Operasyon</th>
-                                <th>Açıklama</th>
-                                <th>Tarih-Saat</th>
+                                <th>Operasyon Adı </th>
+
 
                             </tr>
                         </tfoot>
-
 
                         @foreach (var item in Model)
                         {
@@ -66,10 +58,10 @@
 
                                 <td>
                                     <i class="fa fa-fw fa-edit" style="font-size:15px"></i>
-                                    @Html.ActionLink("Düzenle", "AppointmentEdit", new { id = item.Id }) |
+                                    @Html.ActionLink("Düzenle", "AppEdit", new { id = item.Id }) |
                                
                                     <i class="fa fa-fw fa-close" style="font-size:15px;color:red"></i>
-                                    @Html.ActionLink("Sil", "AppointmentDel", new { id = item.Id })
+                                    @Html.ActionLink("Sil", "AppDel", new { id = item.Id })
                                 </td>
                             </tr>
                         }
