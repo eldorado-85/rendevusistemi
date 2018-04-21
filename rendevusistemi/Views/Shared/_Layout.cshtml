@@ -26,41 +26,67 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Yeni Randevu">
-                    <a class="nav-link" style="color:aliceblue" href="@Url.Action("Register", "Register")">
-                        <i class="fa fa-fw fa-address-card-o "></i>
-                        <span class="nav-link-text">Yeni Kayıt</span>
-                    </a>
-                </li>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Randevu Listesi">
-                    <a class="nav-link" style="color:aliceblue" href="@Url.Action("RegisterView", "Register")">
-                        <i class="fa fa-fw fa fa-address-card-o"></i>
-                        <span class="nav-link-text">Kayıtlı Müşteriler</span>
-                    </a>
-                </li>
+               
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Randevular">
                     <a class="nav-link" style="color:aliceblue" href="@Url.Action("Appointment", "Appointment")">
                         <i class="fa fa-fw fa-area-chart"></i>
                         <span class="nav-link-text">Randevular</span>
                     </a>
                 </li>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Operasyonlar">
-                    <a class="nav-link" style="color:aliceblue" href="@Url.Action("Job", "Job")">
-                        <i class="fa fa-fw fa-area-chart"></i>
-                        <span class="nav-link-text">Operasyon Ekle </span>
-                    </a>
-                </li>
-                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="RANDEVULAR">
                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-                        <i class="fa fa-fw fa-wrench"></i>
-                        <span class="nav-link-text">Components</span>
+                        <i class="fa fa-fw fa-address-card-o "></i>
+                        <span class="nav-link-text" style="color:aliceblue">RANDEVULAR</span>
                     </a>
                     <ul class="sidenav-second-level collapse" id="collapseComponents">
                         <li>
-                            <a href="navbar.html">Navbar</a>
+                            <a class="nav-link" style="color:aliceblue" href="@Url.Action("Appointment", "Appointment")">
+
+                                <span class="nav-link-text">Randevu Ekle </span>
+                            </a>
                         </li>
                         <li>
-                            <a href="cards.html">Cards</a>
+                            <a class="nav-link" style="color:aliceblue" href="@Url.Action("AppointmentView", "Appointment")">
+                                <span class="nav-link-text">Randevu Listesi </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="MÜŞTERİLER">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-address-card-o "></i>
+                        <span class="nav-link-text" style="color:aliceblue">MÜŞTERİLER</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseComponents">
+                        <li>
+                            <a class="nav-link" style="color:aliceblue" href="@Url.Action("Register", "Register")">
+
+                                <span class="nav-link-text">Müşteri Ekle </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" style="color:aliceblue" href="@Url.Action("RegisterView", "Register")">
+                                <span class="nav-link-text">Müşteri Listesi </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="OPERASYONLAR">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-wrench"></i>
+                        <span class="nav-link-text" style="color:aliceblue" >OPERASYONLAR</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseComponents">
+                        <li>
+                            <a class="nav-link" style="color:aliceblue" href="@Url.Action("Job", "Job")">
+                             
+                                <span class="nav-link-text">Operasyon Ekle </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" style="color:aliceblue" href="@Url.Action("JobView", "Job")">
+                                <span class="nav-link-text">Operasyon Listesi </span>
+                            </a>
                         </li>
                     </ul>
                 </li>

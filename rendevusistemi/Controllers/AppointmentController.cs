@@ -1,4 +1,5 @@
 ﻿using DevExpress.Web.Mvc;
+using rendevusistemi.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,64 @@ namespace rendevusistemi.Controllers
             return View();
         }
 
+        public ActionResult AppView()
+        {
+            MyDbContext db = new MyDbContext();
+            var list = db.Jobs.ToList();
+
+
+            return View(list);
+        }
+
+        public ActionResult JobEdit(int id)
+        {
+            MyDbContext db = new MyDbContext();
+            var list = db.Jobs.Where(a => a.Id == id).FirstOrDefault();
+
+
+            return View(list);
+        }
+        //[HttpPost]
+        //public ActionResult JobEdit(aa UpdateJob)
+        //{
+        //    MyDbContext db = new MyDbContext();
+
+        //    var update = db.Jobs.Where(a => a.Id == UpdateJob.Id).FirstOrDefault();
+        //    update.Name = UpdateJob.Name;
+        //    db.SaveChanges();
+
+
+        //    return RedirectToAction("JobView");
+        //}
+
+
+        //public ActionResult JobDel(int id)
+        //{
+        //    MyDbContext db = new MyDbContext();
+        //    var list = db.Jobs.Where(a => a.Id == id).FirstOrDefault();
+
+
+        //    return View(list);
+        //}
+        //[HttpPost]
+        //public ActionResult JobDel(Job Deloper)
+        //{
+        //    MyDbContext db = new MyDbContext();
+
+
+        //    try
+        //    {
+
+        //        Job DelOper = db.Jobs.Where(o => o.Id == Deloper.Id).FirstOrDefault();
+        //        db.Jobs.Remove(DelOper);
+        //        db.SaveChanges();
+        //        return RedirectToAction("JobView");
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
 
 
         rendevusistemi.Database.MyDbContext appointmentContext = new rendevusistemi.Database.MyDbContext();
