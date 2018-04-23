@@ -20,42 +20,56 @@
     <!-- Custom styles for this template -->
     <link href="~/Content/bootstraptemple/css/modern-business.css" rel="stylesheet" />
 </head>
-<body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="~/Content/Image/icon.jpeg" /></a>
-            <button class="navbar-toggler  navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<body style="background-image: url('../../Content/Image/backBeyaz.jpg');background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed-top" style="background: rgba(255,255,255,1);
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,217,186,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(30%, rgba(255,255,255,1)), color-stop(100%, rgba(255,217,186,1)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,217,186,1) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,217,186,1) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,217,186,1) 100%);
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,217,186,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffd9ba', GradientType=1 );">
+        <img src="~/Content/Image/icon.png" width="50" style="margin-left:1%" />
+        <a class="navbar-brand" href="index.html" style="margin-left:5%"><img src="~/Content/Image/icon.jpeg" /></a>
+        <button class="navbar-toggler  navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">Hakkımızda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Hizmetlerimiz</a>
-                    </li>
+        <div class="collapse navbar-collapse " id="navbarResponsive" style="background-image: url('../../Content/Image/backBeyaz11.jpg');background-attachment:fixed;background-position:center;background-repeat:space;background-size:contain">
+            <ul class="navbar-nav ml-auto" style="font-weight:900">
+                <li class="nav-item active">
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Salonumuz
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                            <a class="dropdown-item" href="~/Content/Image/ceylinSalon.jpeg">Salon Giriş</a>
-                            <a class="dropdown-item" href="~/Content/Image/01.jpg">1 Column Portfolio</a>
+                    <a class="nav-link" href="#Hakkımızda">Hakkımızda</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="services.html">Hizmetlerimiz</a>
+                </li>
 
-                            <a class="dropdown-item" href="~/Content/Image/02.jpg">3 Column Portfolio</a>
-                            <a class="dropdown-item" href="~/Content/Image/07.jpg">4 Column Portfolio</a>
-                            <a class="dropdown-item" href="~/Content/Image/05.jpg">Single Portfolio Item</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">İletişim</a>
-                    </li>
-                </ul>
-            </div>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Salonumuz
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                        <a class="dropdown-item" href="~/Content/Image/ceylinSalon.jpeg">Salon Giriş</a>
+                        <a class="dropdown-item" href="~/Content/Image/01.jpg">1 Column Portfolio</a>
+
+                        <a class="dropdown-item" href="~/Content/Image/02.jpg">3 Column Portfolio</a>
+                        <a class="dropdown-item" href="~/Content/Image/07.jpg">4 Column Portfolio</a>
+                        <a class="dropdown-item" href="~/Content/Image/05.jpg">Single Portfolio Item</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">İletişim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Login", "Home")" style="float:right">
+                        Kullanıcı Girişi
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
         </div>
+
     </nav>
     <header>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -71,8 +85,10 @@
                     <div class="carousel-caption d-none d-md-block">
                         <div style="background-color:rgba(255, 216, 198, 0.81);width:50%;margin:auto">
                             <h4 style="color:#461910">Ceylin Güzellik Salonu</h4>
-                            <p style="color:#461910"> Şimdi Tam Zamanı
-                        Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..</p>
+                            <p style="color:#461910">
+                                Şimdi Tam Zamanı
+                                Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..
+                            </p>
                         </div>
 
                     </div>
@@ -80,8 +96,10 @@
                 <div class="carousel-item" style="background-image: url('../../Content/Image/07.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3 style="color:#461910">Ceylin Güzellik Salonu</h3>
-                        <p style="color:#461910">Şimdi Tam Zamanı
-                        Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..</p>
+                        <p style="color:#461910">
+                            Şimdi Tam Zamanı
+                            Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..
+                        </p>
                     </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
@@ -89,8 +107,10 @@
                     <div class="carousel-caption d-none d-md-block">
                         <div style="background-color:rgba(255, 216, 198, 0.81);width:50%;margin:auto">
                             <h3>Ceylin Güzellik Salonu</h3>
-                            <p>Şimdi Tam Zamanı
-                        Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..</p>
+                            <p>
+                                Şimdi Tam Zamanı
+                                Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -98,8 +118,10 @@
                 <div class="carousel-item" style="background-image: url('../../Content/Image/10.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                         <h3>Ceylin Güzellik Salonu</h3>
-                        <p>Şimdi Tam Zamanı
-                        Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..</p>
+                        <p>
+                            Şimdi Tam Zamanı
+                            Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..
+                        </p>
                     </div>
                 </div>
 
@@ -121,9 +143,9 @@
         <div class="row">
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <h4 class="card-header">Card Title</h4>
+                    <h4 class="card-header">Başlık</h4>
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                        <p class="card-text">İçerik.</p>
                     </div>
                     <div class="card-footer">
                         <a href="#" class="btn btn-light">Learn More</a>
@@ -132,9 +154,9 @@
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <h4 class="card-header">Card Title</h4>
+                    <h4 class="card-header">Başlık</h4>
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+                        <p class="card-text">İçerik.</p>
                     </div>
                     <div class="card-footer">
                         <a href="#" class="btn btn-warning">Learn More</a>
@@ -143,9 +165,9 @@
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <h4 class="card-header">Card Title</h4>
+                    <h4 class="card-header">Başlık</h4>
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                        <p class="card-text">İçerik.</p>
                     </div>
                     <div class="card-footer">
                         <a href="#" class="btn btn-danger">Learn More</a>
@@ -162,9 +184,9 @@
                     <a href="#"><img class="card-img-top" src="~/Content/Image/05.jpg" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project One</a>
+                            <a href="#">Epilasyon</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                        <p class="card-text">İçerik</p>
                     </div>
                 </div>
             </div>
@@ -173,53 +195,53 @@
                     <a href="#"><img class="card-img-top" src="~/Content/Image/04.jpg" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project Two</a>
+                            <a href="#">Epilasyon</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                        <p class="card-text">İçerik.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <a href="#"><img class="card-img-top" src="~/Content/Image/guzel.jpg" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project Three</a>
+                            <a href="#">Hizmet</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+                        <p class="card-text">İçerik!</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <a href="#"><img class="card-img-top" src="~/Content/Image/ceylinGuzellik.png" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project Four</a>
+                            <a href="#">Başlık</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                        <p class="card-text">İçerik.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <a href="#"><img class="card-img-top" src="~/Content/Image/ceylinArka.PNG" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project Five</a>
+                            <a href="#">Hizmet</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                        <p class="card-text">İçerik</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                    <a href="#"><img class="card-img-top" src="~/Content/Image/ceylinGuzellikKesik.PNG" alt=""></a>
                     <div class="card-body">
                         <h4 class="card-title">
-                            <a href="#">Project Six</a>
+                            <a href="#">Başlık</a>
                         </h4>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
+                        <p class="card-text">İçerik</p>
                     </div>
                 </div>
             </div>
@@ -227,7 +249,11 @@
         <!-- /.row -->
         <!-- Features Section -->
         <div class="row">
-            <div class="col-lg-6">
+
+            <div class="col-lg-6" style="background-color:rgba(255, 233, 219, 0.70); border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px; 
+background-image:url(../../Content/Image/back12.jpg);background-position:center;background-size:contain">
                 <h2>Hizmetlerimiz</h2>
                 <p>Vucüt Bakım</p>
                 <span class="glyphicon glyphicon-asterisk"></span>&nbsp; Epilasyon
@@ -235,7 +261,7 @@
                 <span class="glyphicon glyphicon-asterisk"></span> &nbsp; Ağda
                 <span class="glyphicon glyphicon-asterisk"></span> &nbsp; İğneli Epilasyon
                 <hr />
-                <ul>
+                <ul style="background-image:url(../../Content/Image/icon.jpg); background-size:60%; background-position:center;background-position-x:right;background-repeat:no-repeat">
                     <li>
                         <strong>Bayanlarda</strong>
                     </li>
@@ -256,32 +282,38 @@
                         <li>Yanak</li>
                         <li>Boyun</li>
                     </ul>
-                    
+
                 </ul>
-                <p><span class="glyphicon glyphicon-map-marker"></span> Reyhan Mh. Haşim İşcan Cd. Safranlık Çıkmazı Burçin 1 İş hanı Kat:3 No:314 | 38000 Bursa</p>
-                <p><span style="color:crimson" class="glyphicon glyphicon-earphone"></span> 0538 251 33 83 &emsp;&emsp; <span class="glyphicon glyphicon-envelope"></span> e-mail</p>
-                
-                
+
 
             </div>
             <div class="col-lg-6">
                 <p style="font-size:20px">Harita | Ulaşım</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d761.9820834615623!2d29.061898629218163!3d40.18840832321772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3e09ec8d4f03%3A0xf297906deceb1d21!2zQnVyw6dpbiAxIMSwxZ8gTWVya2V6aQ!5e0!3m2!1str!2str!4v1523636750490" width="500" height="280" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                <p>
+                    <img src="~/Content/Image/konum.png" width="20" />&emsp;Reyhan Mh. Haşim İşcan Cd. Safranlık Çıkmazı Burçin 1 İş hanı Kat:3 No:314 | 38000 Bursa
+                </p>
+                <p>
+                    <img src="~/Content/Image/phone.png" width="20" />0538 251 33 83 &emsp;&emsp;
+                    <img src="~/Content/Image/mail.png" width="20" />  e-mail
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d761.9820834615623!2d29.061898629218163!3d40.18840832321772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3e09ec8d4f03%3A0xf297906deceb1d21!2zQnVyw6dpbiAxIMSwxZ8gTWVya2V6aQ!5e0!3m2!1str!2str!4v1523636750490" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <hr />
             </div>
         </div>
         <!-- /.row -->
         <!-- Call to Action Section -->
         <div class="row mb-4">
             <div class="col-md-8">
-                <p></p>
+
             </div>
         </div>
     </div>
     <!-- /.container -->
     <!-- Footer -->
-    <footer class="py-1 bg-light">
-        <div class="container">
-            <p class="m-0 text-center">Copyright &copy; Sahnedeki Muhendis</p>
+    <footer class="py-1">
+        <div style="background-color:rgba(255, 224, 225, 0.70); margin-right:20px">
+            <p class="m-0 text-right">Copyright &copy; Sahnedeki Muhendis</p>
         </div>
         <!-- /.container -->
     </footer>
