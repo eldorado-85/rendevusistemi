@@ -269,6 +269,11 @@
     <Content Include="Content\Image\05.jpg" />
     <Content Include="Content\Image\07.jpg" />
     <Content Include="Content\Image\10.jpg" />
+    <Content Include="Content\Image\back.jpg" />
+    <Content Include="Content\Image\back1.jpg" />
+    <Content Include="Content\Image\back12.jpg" />
+    <Content Include="Content\Image\backBeyaz.jpg" />
+    <Content Include="Content\Image\backKadın.jpg" />
     <Content Include="Content\Image\ceylinArka.PNG" />
     <Content Include="Content\Image\ceylinGuzellik.png" />
     <Content Include="Content\Image\ceylinGuzellikKesik.PNG" />
@@ -277,6 +282,9 @@
     <Content Include="Content\Image\icon.jpeg" />
     <Content Include="Content\Image\icon.jpg" />
     <Content Include="Content\Image\icon.png" />
+    <Content Include="Content\Image\konum.png" />
+    <Content Include="Content\Image\mail.png" />
+    <Content Include="Content\Image\phone.png" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\Takvim.js" />
     <Content Include="Content\w3.css" />
