@@ -16,6 +16,7 @@
     <!-- Custom styles for this template-->
     <link href="~/content/bootstraptemple/css/sb-admin.css" rel="stylesheet">
     <link rel="shortcut icon" href="~/Content/Image/icon.png" />
+
 </head>
 <body class="fixed-nav sticky-footer " id="page-top">
     <!-- Navigation-->
@@ -338,30 +339,34 @@
                     </form>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("Entry", "Home")" data-toggle="modal" data-target="#exampleModal">
-                        <i class="fa fa-fw fa-sign-out"></i>Çıkış
-                    </a>
+                    
+                    <button  class="btn btn-danger btn-sm" onclick="location.href='@Url.Action("Giris", "Home")'">
+                        <i class="fa fa-fw fa-sign-out"></i> Çıkış
+                    </button>
+                    
+                    <div class="modal fade" id="exampleModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Çıkış yapmak istediğinizden emin misiniz</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" onclick="location.href='@Url.Action("Home", "Giris")'" data-dismiss="modal">Çıkış</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </li>
 
             </ul>
-            <div class="modal fade" id="exampleModal" role="dialog">
-                <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Çıkış yapmak istediğinizden emin misiniz</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>...</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" onclick="location.href='@Url.Action("Home", "Giris")'" data-dismiss="modal">Çıkış</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </nav>
     <footer class="sticky-footer">
