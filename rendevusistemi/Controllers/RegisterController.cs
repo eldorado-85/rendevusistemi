@@ -23,16 +23,37 @@ namespace rendevusistemi.Controllers
 
             using (MyDbContext db = new MyDbContext())
             {
-                
-                
+                if (ModelState.IsValid)
+                {
                     db.Employes.Add(emp);
                     db.SaveChanges();
+
                     return RedirectToAction("RegisterView");
-                
-               
+                }
+                else
+                {
+                    ViewBag.Message = "Doğrulama başarısız..";
+                }
+                return View(emp);
+
+
+                //    if (ModelState.IsValid)
+                //    {
+                //        db.Employes.Add(emp);
+                //        db.SaveChanges();
+                //        return RedirectToAction("RegisterView");
+                //        //doğrulama olduğu zaman yapılacak işlemler,yönlendirilecek sayfa vb.
+
+                //    //doğrulama yapılmadığı takdirde ekrana aynı view getirilecek
+                //    return View();
+                //    db.Employes.Add(emp);
+                //        db.SaveChanges();
+                //        return RedirectToAction("RegisterView");
+
+
+                //}
+
             }
-
-
         }
         public ActionResult RegisterView()
         {
@@ -58,6 +79,7 @@ namespace rendevusistemi.Controllers
             update.Lastname = UpdEmp.Lastname;
             update.Firstname = UpdEmp.Firstname;
             update.Adress = UpdEmp.Adress;
+            update.Phone = UpdEmp.Phone;
 
             db.SaveChanges();
             return RedirectToAction("RegisterView");

@@ -27,6 +27,7 @@
                                     <th>İsim</th>
                                     <th>Soyisim</th>
                                     <th>Adres</th>
+                                    <th>Telefon</th>
                                    
 
                                 </tr>
@@ -36,6 +37,7 @@
                                     <th>İsim</th>
                                     <th>Soyisim</th>
                                     <th>Adres</th>
+                                    <th>Telefon</th>
                                   
                                 </tr>
                             </tfoot>
@@ -45,6 +47,8 @@
                             <tr>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Firstname)
+                                    @Html.ValidationMessageFor(modelItem => item.Firstname)
+
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Lastname)
@@ -52,6 +56,11 @@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Adress)
                                 </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Phone)
+                                    @Html.ValidationMessageFor(modelItem => item.Phone)
+                                </td>
+
                              
                                 <td>
                                     <i class="fa fa-fw fa-edit" style="font-size:15px"></i>

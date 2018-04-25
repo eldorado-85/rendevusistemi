@@ -14,6 +14,7 @@
              <div class="card-body" >
                  @using (@Html.BeginForm())
                  {
+                   @Html.ValidationSummary(false)
                      <div class="form-group">
                          <div class="form-row">
                              <div class="col-md-6">
@@ -30,11 +31,12 @@
                      <div class="form-group">
                          <div class="form-row">
                              <div class="col-md-8">
-                                 @Html.TextBoxFor(model => model.Adress, new { @class = "form-control", @id = "exampleInputAdress", @type = "tel", @placeholder = "Telefon numarası" })
+                                 @Html.TextBoxFor(model => model.Phone, new { @class = "form-control", @id = "exampleInputAdress", @type = "tel", @placeholder = "Telefon numarası" })
                              </div>
 
                          </div>
                      </div>
+
                      <input type="submit" value="KAYDET" class="btn btn-primary btn-block" />
                  }
                  <div class="text-center">

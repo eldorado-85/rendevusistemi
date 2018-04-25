@@ -49,10 +49,10 @@
                             <tr>
 
                                 <td>
-                                       @{ var kisi = Model.müsteriler.ToList();
+                                       @{ 
+                                          
+                                           string müst = Model.müsteriler.Where(a => a.Id == item.EmployeId).Select(a=>a.Fullname).FirstOrDefault();
 
-                                        string müst = kisi.Where(a => a.Id == item.EmployeId).Select(a=>a.Fullname).FirstOrDefault();
-                                       
                                         }
 
                                     <h6>@müst</h6>
@@ -60,8 +60,8 @@
                                 </td>
                                 <td>
                                     @{ 
-
-                                        string oper = Model.operasyonlar.Where(a => a.Id == item.JobId).Select(a => a.Name).FirstOrDefault();
+                                        int deger = item.JobId + 1;
+                                        string oper = Model.operasyonlar.Where(a => a.Id == deger).Select(a => a.Name).FirstOrDefault();
 
                                     }
 
@@ -78,9 +78,7 @@
 
 
                                 <td>
-                                    <i class="fa fa-fw fa-edit" style="font-size:15px"></i>
-                                    @Html.ActionLink("Düzenle", "AppointmentEdit", new { id = item.Id }) |
-
+                                    
                                     <i class="fa fa-fw fa-close" style="font-size:15px;color:red"></i>
                                     @Html.ActionLink("Sil", "AppointmentDel", new { id = item.Id })
                                 </td>

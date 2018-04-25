@@ -10,14 +10,16 @@ namespace rendevusistemi.Database.Data
     {
         [Key]
         public int Id { get; set; }
-        [RegularExpression(@"[A-Z]{3,50}$",
-         ErrorMessage = "Only uppercase Characters are allowed.")]
+        [Required(ErrorMessage = "Lütfen bir ad giriniz")]
         public string Firstname { get; set; }
+        [Required(ErrorMessage = "Lütfen bir soyad giriniz")]
         public string Lastname { get; set; }
         public string Fullname { get { return string.Format("{0} {1}", Firstname, Lastname); } }
         public string Adress { get; set; }
-       
-       
+        [DataType(DataType.PhoneNumber, ErrorMessage = "Telefon Numarası Giriniz")]
+        public string Phone { get; set; }
+
+
 
 
 
