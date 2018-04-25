@@ -7,166 +7,274 @@
 
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Ceylin Güzellik Salonu</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>Giris</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Modern Business - Start Bootstrap Template</title>
     <!-- Bootstrap core CSS -->
-    <link href="~/Content/bootstraptemple/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/bootstraptemple/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="~/Content/Entry.css" rel="stylesheet">
-    <link rel="shortcut icon" href="~/Content/Image/icon.png" />
-
-    <style>
-        body, h1 {
-            font-family: "Raleway", sans-serif;
-            font-size: 16px;
-        }
-
-        body, html {
-            height: 100%;
-        }
-
-        .bgimg {
-            background-image: url(../../Content/Image/guzel.jpg);
-            min-height: 100%;
-            background-position: right;
-            background-attachment: fixed;
-            background-repeat: space;
-            background-size: auto;
-        }
-
-        body {
-            background-color: #ffdccb;
-            /*background-image: url(../../Content/Image/icon.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;*/
-        }
-
-        #resimOrta {
-            position: relative;
-            margin: auto;
-        }
-
-        #oprasyonOrta {
-            position: relative;
-            margin: auto;
-        }
-
-        #ceylinSalonOrta {
-            position: relative;
-            margin: auto;
-        }
-        /****deneme****/
-    </style>
+    <link href="~/Content/bootstraptemple/css/modern-business.css" rel="stylesheet" />
 </head>
-<body>
+<body style="background-image: url('../../Content/Image/backBeyaz.jpg');background-attachment:fixed;background-position:center;background-repeat:no-repeat;background-size:cover">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light fixed-top" style="background: rgba(255,255,255,1);
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,217,186,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(30%, rgba(255,255,255,1)), color-stop(100%, rgba(255,217,186,1)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,217,186,1) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,217,186,1) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,217,186,1) 100%);
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,217,186,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffd9ba', GradientType=1 );">
+        <img src="~/Content/Image/icon.png" width="50" style="margin-left:1%" />
+        <a class="navbar-brand" href="index.html" style="margin-left:5%"><img src="~/Content/Image/icon.jpeg" /></a>
+        <button class="navbar-toggler  navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" style="background-color:#ffefe8">
-        <div class="container">
-            <a class="navbar-brand" href="#" style="font-size:20px"><p style="font-size:28px;font-family:'Berlin Sans FB'"> Ceylin Güzellik Salonu</p> </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse " id="navbarResponsive" style="background-image: url('../../Content/Image/backBeyaz11.jpg');background-attachment:fixed;background-position:center;background-repeat:space;background-size:contain">
+            <ul class="navbar-nav ml-auto" style="font-weight:900">
+                <li class="nav-item active">
 
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hizmet">Hizmetlerimiz |</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#iletisim">İletişim |</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="@Url.Action("Login", "Home")">
-                            Kullanıcı Girişi
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
+                    <a class="nav-link" href="#Hakkımızda">Hakkımızda</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="services.html">Hizmetlerimiz</a>
+                </li>
 
-                </ul>
-            </div>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Salonumuz
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                        <a class="dropdown-item" href="~/Content/Image/ceylinSalon.jpeg">Salon Giriş</a>
+                        <a class="dropdown-item" href="~/Content/Image/01.jpg">1 Column Portfolio</a>
+
+                        <a class="dropdown-item" href="~/Content/Image/02.jpg">3 Column Portfolio</a>
+                        <a class="dropdown-item" href="~/Content/Image/07.jpg">4 Column Portfolio</a>
+                        <a class="dropdown-item" href="~/Content/Image/05.jpg">Single Portfolio Item</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">İletişim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Login", "Home")" style="float:right">
+                        Kullanıcı Girişi
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
         </div>
 
-        
-            <h1 style="text-shadow:2px 2px 2px #333;text-align:right">
-                <a href="~/Content/">
-
-                </a>
-            </h1>
-        
-        <div class="w3-display-middle">
-            <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-            <hr class="w3-border-grey" style="margin:auto;width:40%">
-            <h2 class="w3-large w3-center" style="text-shadow:2px 2px 2px #333">CEYLİN GÜZELLİK SALONU </h2>
-            <p class="w3-large w3-center">a few days left</p>
-
     </nav>
+    <header>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Slide One - Set the background image for this slide in the line below -->
+                <div class="carousel-item active" style="background-image: url('../../Content/Image/03.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div style="background-color:rgba(255, 216, 198, 0.81);width:50%;margin:auto">
+                            <h4 style="color:#461910">Ceylin Güzellik Salonu</h4>
+                            <p style="color:#461910">
+                                Şimdi Tam Zamanı
+                                Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..
+                            </p>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('../../Content/Image/07.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 style="color:#461910">Ceylin Güzellik Salonu</h3>
+                        <p style="color:#461910">
+                            Şimdi Tam Zamanı
+                            Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..
+                        </p>
+                    </div>
+                </div>
+                <!-- Slide Two - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('../../Content/Image/02.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div style="background-color:rgba(255, 216, 198, 0.81);width:50%;margin:auto">
+                            <h3>Ceylin Güzellik Salonu</h3>
+                            <p>
+                                Şimdi Tam Zamanı
+                                Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide Three - Set the background image for this slide in the line below -->
+                <div class="carousel-item" style="background-image: url('../../Content/Image/10.jpg')">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Ceylin Güzellik Salonu</h3>
+                        <p>
+                            Şimdi Tam Zamanı
+                            Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..
+                        </p>
+                    </div>
+                </div>
 
-
-
-    <!-- Portfolio Item Heading -->
-    <h1 class="my-4"></h1>
-    <!-- Portfolio Item Row -->
-    <div>
-        <img id="resimOrta" class="mySlides w3-animate-fading" src="~/Content/Image/ceylinGuzellik1.png">
-        <img id="oprasyonOrta" class="mySlides w3-animate-fading" src="~/Content/Image/04.jpg">
-        <img id="" class="mySlides w3-animate-fading" src="~/Content/Image/ceylinSalon.jpeg">
-        @*<img class="mySlides w3-animate-fading" width="100%" height="100%" src="~/Content/Image/ceylinArka.png">*@
-        <img id="ceylinSalonOrta" class="mySlides w3-animate-fading" src="~/Content/Image/02.jpg">
-        <img class="mySlides w3-animate-fading" src="~/Content/Image/01.jpg">
-        <img class="mySlides w3-animate-fading" src="~/Content/Image/03.jpg">
-    </div>
-    <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 9000);
-        }
-    </script>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </header>
+    <!-- Page Content -->
     <div class="container">
-        <hr id="hizmet" />
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"> HİZMETLERİMİZ </h1>
-                    <h4 class="my-3">Vucüt Bakım</h4>
-                    <p>
-                        Şimdi Tam Zamanı
-                        Ceylin Güzellik Salonu'na Uğramadan Vücut Bakımına Karar Vermeyin..
-                    </p>
+        <h1 class="my-4">Hakkımızda</h1>
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Başlık</h4>
+                    <div class="card-body">
+                        <p class="card-text">İçerik.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-light">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Başlık</h4>
+                    <div class="card-body">
+                        <p class="card-text">İçerik.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-warning">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="card h-100">
+                    <h4 class="card-header">Başlık</h4>
+                    <div class="card-body">
+                        <p class="card-text">İçerik.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-danger">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- Portfolio Section -->
+        <h2>Hizmetlerimiz</h2>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="~/Content/Image/05.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Epilasyon</a>
+                        </h4>
+                        <p class="card-text">İçerik</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="~/Content/Image/04.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Epilasyon</a>
+                        </h4>
+                        <p class="card-text">İçerik.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="~/Content/Image/guzel.jpg" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Hizmet</a>
+                        </h4>
+                        <p class="card-text">İçerik!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="~/Content/Image/ceylinGuzellik.png" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Başlık</a>
+                        </h4>
+                        <p class="card-text">İçerik.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="~/Content/Image/ceylinArka.PNG" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Hizmet</a>
+                        </h4>
+                        <p class="card-text">İçerik</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="~/Content/Image/ceylinGuzellikKesik.PNG" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="#">Başlık</a>
+                        </h4>
+                        <p class="card-text">İçerik</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- Features Section -->
+        <div class="row">
 
-                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp; Epilasyon
-                    <span class="glyphicon glyphicon-asterisk"></span> &nbsp; Cilt Bakımı
-                    <span class="glyphicon glyphicon-asterisk"></span> &nbsp; Ağda
-                    <span class="glyphicon glyphicon-asterisk"></span> &nbsp; İğneli Epilasyon
-
-                    <h3 class="my-3">Bayanlarda</h3>
+            <div class="col-lg-6" style="background-color:rgba(255, 233, 219, 0.70); border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px; 
+background-image:url(../../Content/Image/back12.jpg);background-position:center;background-size:contain">
+                <h2>Hizmetlerimiz</h2>
+                <p>Vucüt Bakım</p>
+                <span class="glyphicon glyphicon-asterisk"></span>&nbsp; Epilasyon
+                <span class="glyphicon glyphicon-asterisk"></span> &nbsp; Cilt Bakımı
+                <span class="glyphicon glyphicon-asterisk"></span> &nbsp; Ağda
+                <span class="glyphicon glyphicon-asterisk"></span> &nbsp; İğneli Epilasyon
+                <hr />
+                <ul style="background-image:url(../../Content/Image/icon.jpg); background-size:60%; background-position:center;background-position-x:right;background-repeat:no-repeat">
+                    <li>
+                        <strong>Bayanlarda</strong>
+                    </li>
                     <ul>
                         <li>Koltuk altı</li>
                         <li>Kol</li>
                         <li>Özel Bölge</li>
                         <li>Alt bacak üst bacak</li>
-                        <li>Tam bacak</li>
+                        <li>Tam Bacak</li>
                     </ul>
-                    <h3 class="my-3">Erkeklerde</h3>
+                    <li>
+                        <strong>Erkeklerde</strong>
+                    </li>
                     <ul>
                         <li>Ense - Kulak</li>
                         <li>Omuz</li>
@@ -174,91 +282,43 @@
                         <li>Yanak</li>
                         <li>Boyun</li>
                     </ul>
-                </div>
-                <div class="col-md-3">
 
-                    <div class="w3-container">
-                        <img class="img-thumbnail" src="~/Content/Image/04.jpg"
-                             onclick="document.getElementById('modal04').style.display='block'">
-                        <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
-                            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-                            <div class="w3-modal-content w3-animate-zoom">
-                                <img src="~/Content/Image/04.jpg" style="width:100%">
-                            </div>
-                        </div>
-                        <hr />
-                        <img class="img-thumbnail" src="~/Content/Image/ceylinGuzellik1.png" style="position: absolute; bottom:20px;" width="200"   
-                             onclick="document.getElementById('modal01').style.display='block'">
-                        <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-                            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-                            <div class="w3-modal-content w3-animate-zoom">
-                                <img src="~/Content/Image/ceylinGuzellik1.png" style="width:100%">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
+                </ul>
 
-                    <div class="w3-container">
-                        <img class="img-thumbnail" src="~/Content/Image/05.jpg"
-                             onclick="document.getElementById('modal05').style.display='block'">
-                        <div id="modal05" class="w3-modal" onclick="this.style.display='none'">
-                            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-                            <div class="w3-modal-content w3-animate-zoom">
-                                <img src="~/Content/Image/05.jpg" style="width:100%">
-                            </div>
-                        </div>
-                        <hr />
-                        <img class="img-thumbnail" src="~/Content/Image/ceylinArka.png"  style="position: absolute; bottom:20px;" width="185"
-                             onclick="document.getElementById('modal02').style.display='block'">
-                        <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
-                            <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-                            <div class="w3-modal-content w3-animate-zoom">
-                                <img src="~/Content/Image/ceylinArka.png" style="width:100%">
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div>
+            <div class="col-lg-6">
+                <p style="font-size:20px">Harita | Ulaşım</p>
 
+                <p>
+                    <img src="~/Content/Image/konum.png" width="20" />&emsp;Reyhan Mh. Haşim İşcan Cd. Safranlık Çıkmazı Burçin 1 İş hanı Kat:3 No:314 | 38000 Bursa
+                </p>
+                <p>
+                    <img src="~/Content/Image/phone.png" width="20" />0538 251 33 83 &emsp;&emsp;
+                    <img src="~/Content/Image/mail.png" width="20" />  e-mail
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d761.9820834615623!2d29.061898629218163!3d40.18840832321772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3e09ec8d4f03%3A0xf297906deceb1d21!2zQnVyw6dpbiAxIMSwxZ8gTWVya2V6aQ!5e0!3m2!1str!2str!4v1523636750490" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <hr />
+            </div>
         </div>
-        <div id="iletisim" class="container-fluid">
-            <hr />
-            <p style="font-size:20px">İLETİŞİM</p>
-            <div class="row">
-                <div class="col-sm-6">
-                    <p>
-                    </p>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> Reyhan Mh. Haşim İşcan Cd. Safranlık Çıkmazı Burçin 1 İş hanı Kat:3 No:314 | 38000 Bursa</p>
-                    <p><span style="color:crimson" class="glyphicon glyphicon-earphone"></span> 0538 251 33 83 &emsp;&emsp; <span class="glyphicon glyphicon-envelope"></span> e-mail</p>
-                    <p>
-                        <span class="glyphicon-">
-
-                        </span>
-                    </p>
-                    <br />
-
-                </div>
-                <div class="col-md-4">
-
-                    <p style="font-size:20px">Harita | Ulaşım</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d761.9820834615623!2d29.061898629218163!3d40.18840832321772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3e09ec8d4f03%3A0xf297906deceb1d21!2zQnVyw6dpbiAxIMSwxZ8gTWVya2V6aQ!5e0!3m2!1str!2str!4v1523636750490" width="500" height="280" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-                </div>
+        <!-- /.row -->
+        <!-- Call to Action Section -->
+        <div class="row mb-4">
+            <div class="col-md-8">
 
             </div>
         </div>
     </div>
-
     <!-- /.container -->
     <!-- Footer -->
-    <footer class="py-1 bg-light">
-        <div class="container">
-            <p class="m-0 text-right">Copyright &copy; SahnedekiMuhendis</p>
+    <footer class="py-1">
+        <div style="background-color:rgba(255, 224, 225, 0.70); margin-right:20px">
+            <p class="m-0 text-right">Copyright &copy; Sahnedeki Muhendis</p>
         </div>
         <!-- /.container -->
     </footer>
-
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Content/bootstraptemple/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/bootstraptemple/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

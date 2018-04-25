@@ -212,6 +212,7 @@
     <Compile Include="Database\Data\Appointments.cs" />
     <Compile Include="Database\Data\Emploies.cs" />
     <Compile Include="Database\Data\Job.cs" />
+    <Compile Include="Database\Data\ViewModel.cs" />
     <Compile Include="Database\MyDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -424,7 +425,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Entry.cshtml" />
+    <Content Include="Views\Home\Entry__.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\Register\RegisterEdit.cshtml" />
@@ -437,9 +438,10 @@
     <Content Include="Views\AppointmentManuel\AppointmentManuView.cshtml" />
     <Content Include="Views\Job\JobDel.cshtml" />
     <Content Include="Views\Register\RegisterDel.cshtml" />
-    <Content Include="Views\Home\Giris.cshtml" />
+    <Content Include="Views\Home\Entry.cshtml" />
     <Content Include="Views\Appointment\AppointmentEdit.cshtml" />
     <Content Include="Views\Appointment\AppointmentView.cshtml" />
+    <Content Include="Views\Appointment\AppointmentDel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

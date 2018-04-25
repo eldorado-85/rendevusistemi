@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity.Validation;
 
 namespace rendevusistemi.Controllers
 {
@@ -22,10 +23,13 @@ namespace rendevusistemi.Controllers
 
             using (MyDbContext db = new MyDbContext())
             {
-
-                db.Employes.Add(emp);
-                db.SaveChanges();
-                return RedirectToAction("RegisterView");
+                
+                
+                    db.Employes.Add(emp);
+                    db.SaveChanges();
+                    return RedirectToAction("RegisterView");
+                
+               
             }
 
 
@@ -54,7 +58,7 @@ namespace rendevusistemi.Controllers
             update.Lastname = UpdEmp.Lastname;
             update.Firstname = UpdEmp.Firstname;
             update.Adress = UpdEmp.Adress;
-        
+
             db.SaveChanges();
             return RedirectToAction("RegisterView");
 

@@ -1,5 +1,4 @@
-﻿@model IEnumerable<rendevusistemi.Database.Data.Appointments>
-
+﻿@model rendevusistemi.Database.Data.ViewModel
 
 
 <div class="content-wrapper">
@@ -45,15 +44,29 @@
                         </tfoot>
 
 
-                        @foreach (var item in Model)
+                        @foreach (var item in Model.randevular)
                         {
                             <tr>
 
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.EmployeId)
+                                       @{ var kisi = Model.müsteriler.ToList();
+
+                                        string müst = kisi.Where(a => a.Id == item.EmployeId).Select(a=>a.Fullname).FirstOrDefault();
+                                       
+                                        }
+
+                                    <h6>@müst</h6>
+                                  
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem => item.JobId)
+                                    @{ 
+
+                                        string oper = Model.operasyonlar.Where(a => a.Id == item.JobId).Select(a => a.Name).FirstOrDefault();
+
+                                    }
+
+                                    <h6>@oper</h6>
+                                   
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Description)
@@ -88,7 +101,7 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fa fa-angle-up"></i>
 </a>
-     Logout Modal
+     
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -109,15 +122,3 @@
 
 
 
-<th>
-    @Html.DisplayNameFor(model => model.Description)
-</th>
-<th>
-    @Html.DisplayNameFor(model => model.DateTimeStart)
-</th>
-
-<th>
-    @Html.DisplayNameFor(model => model.EmployeId)
-</th>
-<th></th>
-    </tr>

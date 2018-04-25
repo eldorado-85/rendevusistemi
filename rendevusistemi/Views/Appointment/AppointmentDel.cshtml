@@ -1,34 +1,40 @@
-﻿@model rendevusistemi.Database.Data.Emploies
+﻿@model rendevusistemi.Database.Data.Appointments
+
 
 
 @{
-    ViewBag.Title = "Müşteri Sil";
+    ViewBag.Title = "Randevu Sil";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="content-wrapper">
     <div class="container-fluid">
         <h4>Silmek İstediğinizden Emin Misiniz?</h4>
         <div>
-          
-        
+
+
             <dl class="dl-horizontal">
                 <hr />
-              
+
 
 
                 <dd>
-                    @Html.DisplayFor(model => model.Firstname)
+                    @Html.DisplayFor(model => model.JobId)
                 </dd>
                 <hr />
-              
+
                 <dd>
-                    @Html.DisplayFor(model => model.Lastname)
+                    @Html.DisplayFor(model => model.EmployeId)
                 </dd>
 
                 <hr />
-
+                
                 <dd>
-                    @Html.DisplayFor(model => model.Adress)
+                    @Html.DisplayFor(model => model.DateTimeStart)
+             
+                </dd>
+                <hr />
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
                 </dd>
                 <hr />
             </dl>
@@ -39,7 +45,7 @@
 
                 <div class="form-actions no-color">
                     <input type="submit" value="SİL" class="btn btn-danger" /> |
-                    @Html.ActionLink("Geri Dön", "RegisterView")
+                    @Html.ActionLink("Geri Dön", "AppointmentView")
                 </div>
             }
         </div>

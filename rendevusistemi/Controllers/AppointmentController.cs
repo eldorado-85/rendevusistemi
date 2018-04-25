@@ -20,30 +20,37 @@ namespace rendevusistemi.Controllers
         public ActionResult AppointmentView()
         {
             MyDbContext db = new MyDbContext();
-            var list = db.Appointmenties.ToList();
 
-
-            return View(list);
+            ViewModel vm = new ViewModel();
+            vm.randevular= db.Appointmenties.ToList();
+            vm.müsteriler = db.Employes.ToList();
+            vm.operasyonlar = db.Jobs.ToList();
+          
+            return View(vm);
         }
 
         public ActionResult AppointmentEdit(int id)
         {
             MyDbContext db = new MyDbContext();
             var list = db.Appointmenties.Where(a => a.Id == id).FirstOrDefault();
-
-
+            
             return View(list);
+          
         }
         [HttpPost]
         public ActionResult AppointmentEdit(Appointments UpdateApp)
         {
             MyDbContext db = new MyDbContext();
 
-            var update = db.Appointmenties.Where(a => a.Id == UpdateApp.Id).FirstOrDefault();
+            Appointments update = db.Appointmenties.Where(a => a.Id == UpdateApp.Id).FirstOrDefault();
             update.Description = UpdateApp.Description;
             update.DateTimeStart = UpdateApp.DateTimeStart;
+            update.DateTimeEnd = UpdateApp.DateTimeEnd;
+            update.EmployeId = UpdateApp.EmployeId;
+            update.Id = UpdateApp.Id;
             db.SaveChanges();
 
+           
 
             return RedirectToAction("AppointmentView");
         }
@@ -69,7 +76,7 @@ namespace rendevusistemi.Controllers
                 var DelOper = db.Appointmenties.Where(o => o.Id == DelApp.Id).FirstOrDefault();
                 db.Appointmenties.Remove(DelOper);
                 db.SaveChanges();
-                return RedirectToAction("JobView");
+                return RedirectToAction("AppointmentView");
             }
             catch
             {
