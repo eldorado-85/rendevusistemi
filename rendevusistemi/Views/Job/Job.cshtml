@@ -7,8 +7,7 @@
     <div class="container">
     <div class="card card-register mx-auto mt-5" style="background-color:#646262">
         <div class="card-header">
-
-            <span class="label label-default" style="color:gold"> Operasyon Kaydet</span>
+            <span class="label label-default" style="color:#ffffff"> <h5 style="text-align:center"><i class="fa fa-spinner fa-pulse fa-x fa-fw"></i>&emsp;Operasyon Kaydet</h5></span>
             @* Sistem tarihi bu kodlarla çekilip gösterilecek ve hangi saatte hangi tarihte kayıt edildi bilgisi tutulacak.
                 labelID.Text = DateTime.Now.ToLongTimeString();
                 labelID.Text = DateTime.Now.ToShortDateString();*@
@@ -18,7 +17,10 @@
             {
                 <div class="form-group">
                     <div class="form-row">
-                        <div class="col-md-6">
+                        <div class="col-md-1">
+                            <i class="fa fa-medkit fa-2x" style="color:white" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-11">
                             @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @id = "exampleInputName", @type = "text", @placeholder = "Operasyon Adı" })
                         </div>
                     </div>
@@ -28,14 +30,14 @@
                     
                     <div class="text-center">
                         <br>
-                        <input type="submit" value="KAYDET" class="btn btn-primary btn-block" />
+                        <input type="submit" value="KAYDET"  class="btn btn-primary btn-block" />
                     </div>
                 </div>
 
 
             }
             <div class="text-center">
-            <a class="d-block small mt-3" style="color:gold" href="@Url.Action("index","Home")">Ana Sayfa</a>
+            <a class="d-block small mt-3" style="color:gold" href="@Url.Action("index","Home")"><i class="fa fa-home fa-2x" aria-hidden="true"></i>&emsp;Ana Sayfa</a>
             </div>
         </div>
     </div>

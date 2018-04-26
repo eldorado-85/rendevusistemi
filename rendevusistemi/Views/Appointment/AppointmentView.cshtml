@@ -18,6 +18,16 @@
         <div class="card mb-3">
             <div class="card-header">
                 <i class="fa fa-table"></i> Randevu Listesi
+                <div style="float:right">
+                    @using (Html.BeginForm())
+                    {
+                        <p>
+                            Arama Yap: @Html.TextBox("SearchString")
+                            <input type="submit" value="Ara" />
+                        </p>
+                    }
+                </div>
+                
             </div>
             <div class="card-body">
                 <div class="table-responsive">

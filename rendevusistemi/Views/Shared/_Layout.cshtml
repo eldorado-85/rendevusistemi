@@ -31,18 +31,20 @@
 
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="RANDEVULAR">
                         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-                            <i class="fa fa-fw fa-address-card-o "></i>
+                            <i class="fa fa-flag pull-left"></i>
                             <span class="nav-link-text" style="color:aliceblue">RANDEVULAR</span>
                         </a>
                         <ul class="sidenav-second-level collapse" id="collapseComponents">
                             <li>
                                 <a class="nav-link" style="color:aliceblue" href="@Url.Action("Appointment", "Appointment")">
+                                    <i class="fa fa-plus-square" aria-hidden="true"></i>
 
                                     <span class="nav-link-text">Randevu Ekle </span>
                                 </a>
                             </li>
                             <li>
                                 <a class="nav-link" style="color:aliceblue" href="@Url.Action("AppointmentView", "Appointment")">
+                                    <i class="fa fa-th-list" aria-hidden="true"></i>
                                     <span class="nav-link-text">Randevu Listesi </span>
                                 </a>
                             </li>
@@ -50,18 +52,20 @@
                     </li>
                     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="MÜŞTERİLER">
                         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents2" data-parent="#exampleAccordion">
-                            <i class="fa fa-fw fa-address-card-o "></i>
+                            <i class="fa fa-fw  fa-address-card-o "></i>
                             <span class="nav-link-text" style="color:aliceblue">MÜŞTERİLER</span>
                         </a>
                         <ul class="sidenav-second-level collapse" id="collapseComponents2">
                             <li>
                                 <a class="nav-link" style="color:aliceblue" href="@Url.Action("Register", "Register")">
+                                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
 
                                     <span class="nav-link-text">Müşteri Ekle </span>
                                 </a>
                             </li>
                             <li>
                                 <a class="nav-link" style="color:aliceblue" href="@Url.Action("RegisterView", "Register")">
+                                    <i class="fa fa-users" aria-hidden="true"></i>
                                     <span class="nav-link-text">Müşteri Listesi </span>
                                 </a>
                             </li>
@@ -69,18 +73,20 @@
                     </li>
                     <li class="nav-item" data-toggle="tooltip" data-placement="right" title="OPERASYONLAR">
                         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents3" data-parent="#exampleAccordion">
-                            <i class="fa fa-fw fa-wrench"></i>
+                            <i class="fa fa-spin  fa-fw fa-wrench"></i>
                             <span class="nav-link-text" style="color:aliceblue">OPERASYONLAR</span>
                         </a>
                         <ul class="sidenav-second-level collapse" id="collapseComponents3">
                             <li>
                                 <a class="nav-link" style="color:aliceblue" href="@Url.Action("Job", "Job")">
+                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
 
                                     <span class="nav-link-text">Operasyon Ekle </span>
                                 </a>
                             </li>
                             <li>
                                 <a class="nav-link" style="color:aliceblue" href="@Url.Action("JobView", "Job")">
+                                    <i class="fa fa-list" aria-hidden="true"></i>
                                     <span class="nav-link-text">Operasyon Listesi </span>
                                 </a>
                             </li>
@@ -320,7 +326,7 @@
 
 
 
-    @Html.DevExpress().GetStyleSheets(
+    @*@Html.DevExpress().GetStyleSheets(
         new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
         new StyleSheet { ExtensionSuite = ExtensionSuite.Editors },
         new StyleSheet { ExtensionSuite = ExtensionSuite.Scheduler }
@@ -329,7 +335,7 @@
         new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
         new Script { ExtensionSuite = ExtensionSuite.Editors },
         new Script { ExtensionSuite = ExtensionSuite.Scheduler }
-    )
+    )*@
 
 
     <div>
