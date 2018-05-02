@@ -227,6 +227,7 @@
     <Content Include="Content\bootstraptemple\css\modern-business.css" />
     <Content Include="Content\bootstraptemple\css\sb-admin.css" />
     <Content Include="Content\bootstraptemple\css\sb-admin.min.css" />
+    <Content Include="Content\bootstraptemple\css\scrolling-nav.css" />
     <Content Include="Content\bootstraptemple\js\contact_me.js" />
     <Content Include="Content\bootstraptemple\js\jqBootstrapValidation.js" />
     <Content Include="Content\bootstraptemple\js\sb-admin-charts.js" />
