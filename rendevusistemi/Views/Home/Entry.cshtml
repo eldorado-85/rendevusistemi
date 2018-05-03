@@ -78,12 +78,10 @@
                     <a class="nav-link" href="#hizmetlerimiz">Hizmetlerimiz</a>
                 </li>
                 <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link" href="#">
                         Salonumuz
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                        <a class="dropdown-item" href="~/Content/Image/ceylinSalon.jpeg">Salon Giriş</a>
-                    </div>
+
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#iletisim">İletişim</a>
@@ -175,15 +173,19 @@ background-position:center;background-size:contain">
 
                 <h1 class="my-4" style="color:aliceblue">Hakkımızda</h1>
 
-                <div class="w3-panel w3-leftbar w3-dark-grey w3-hover-sand w3-hover-text-black w3-large w3-serif" >
+                <div class="w3-panel w3-leftbar w3-dark-grey w3-hover-sand w3-hover-text-black w3-large w3-serif">
                     <p><i>Huzurlu atmosferi, güvenliği, teknolojik donanımı, deneyimli güler yüzlü ekibi ile estetik ve güzellik sektöründe Bursa’da merkezi konumuyla siz değerli müşterilerimizin hizmetinizdedir.</i></p>
                 </div>
                 <div class="w3-panel w3-rightbar w3-brown w3-hover-yellow w3-hover-text-black w3-large w3-serif">
-                    <p align="right"><i>Ailenizden biri olmayı amaçlayan Ceylin Güzellik Salonu; son derece güvenli, hijyenik ve modern olan ve aynı zamanda zevkli bir tasarıma sahip
-                         olan salonu ile değerli müşterilerine kendilerini evlerinde hissedecekleri sıcak, samimi ve konforlu bir ortam sunmaya devam ediyor.</i></p>
+                    <p align="right">
+                        <i>
+                            Ailenizden biri olmayı amaçlayan Ceylin Güzellik Salonu; son derece güvenli, hijyenik ve modern olan ve aynı zamanda zevkli bir tasarıma sahip
+                            olan salonu ile değerli müşterilerine kendilerini evlerinde hissedecekleri sıcak, samimi ve konforlu bir ortam sunmaya devam ediyor.
+                        </i>
+                    </p>
                 </div>
                 <hr />
-                
+
             </div>
         </div>
     </section>
@@ -197,71 +199,24 @@ background-position:center;background-size:contain">
 -webkit-border-radius: 10px 10px 10px 10px;
 background-position:center;background-size:contain">
             <div class="container">
-                <h2>Hizmetlerimiz</h2>
+                <h2 style="text-align:center">Salonumuz</h2><br />
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 portfolio-item">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="~/Content/Image/05.jpg" alt=""></a>
+                           <img class="card-img-top" src="~/Content/Image/ceylinSalon.jpeg" alt="" onclick="document.getElementById('modal04').style.display='block'"></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Epilasyon</a>
+                                    Salon Giriş
+
+                                    <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+                                        <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                                        <div class="w3-modal-content w3-animate-zoom">
+                                            <img src="~/Content/Image/ceylinSalon.jpeg" style="width:100%">
+                                        </div>
+                                    </div>
+                                    <hr />
+
                                 </h4>
-                                <p class="card-text">İçerik</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 portfolio-item">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="~/Content/Image/04.jpg" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a href="#">Epilasyon</a>
-                                </h4>
-                                <p class="card-text">İçerik.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 portfolio-item">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="~/Content/Image/guzel.jpg" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a href="#">Hizmet</a>
-                                </h4>
-                                <p class="card-text">İçerik!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 portfolio-item">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="~/Content/Image/ceylinGuzellik.png" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a href="#">Başlık</a>
-                                </h4>
-                                <p class="card-text">İçerik.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 portfolio-item">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="~/Content/Image/ceylinArka.PNG" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a href="#">Hizmet</a>
-                                </h4>
-                                <p class="card-text">İçerik</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 portfolio-item">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="~/Content/Image/ceylinGuzellikKesik.PNG" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a href="#">Başlık</a>
-                                </h4>
-                                <p class="card-text" >İçerik</p>
                             </div>
                         </div>
                     </div>
@@ -286,7 +241,7 @@ background-position:center;background-size:contain">
                             <div class="w3-card-4 w3-hover-shadow w3-center w3-animate-opacity w3-animate-bottom w3-hover-aqua w3-green">
                                 <h4 class="card-header">Epilasyon</h4>
                                 <div class="card-body">
-                                    <p class="card-text">İçerik.</p>
+                                    <p class="card-text"><img class="card-img-top" src="~/Content/Image/05.jpg" alt=""></p>
                                 </div>
                                 <div class="card-footer">
                                     <a href="#" class="btn btn-info" style="background-color:rgba(255, 196, 196, 0.00); border:0">Detaylı bilgi</a>
@@ -297,7 +252,7 @@ background-position:center;background-size:contain">
                             <div class="w3-card-4 w3-hover-shadow w3-center w3-animate-opacity w3-animate-bottom w3-hover-blue w3-deep-purple">
                                 <h4 class="card-header">Cilt Bakımı</h4>
                                 <div class="card-body">
-                                    <p class="card-text">İçerik.</p>
+                                    <p class="card-text"><img class="card-img-top" src="~/Content/Image/04.jpg" alt=""></p>
                                 </div>
                                 <div class="card-footer">
                                     <a href="#" class="btn btn-info" style="background-color:rgba(255, 196, 196, 0.00); border:0">Detaylı bilgi</a>
@@ -308,7 +263,7 @@ background-position:center;background-size:contain">
                             <div class="w3-card-4 w3-hover-shadow w3-center w3-animate-opacity w3-animate-bottom w3-hover-aqua w3-light-blue">
                                 <h4 class="card-header">Ağda</h4>
                                 <div class="card-body">
-                                    <p class="card-text">İçerik.</p>
+                                    <p class="card-text"><img class="card-img-top" src="~/Content/Image/10.jpg" alt=""></p>
                                 </div>
                                 <div class="card-footer">
                                     <a href="#" class="btn btn-default" style="background-color:rgba(255, 196, 196, 0.00)">Detaylı bilgi</a>
@@ -358,48 +313,46 @@ background-position:center;background-size:contain">
             </div>
         </div>
     </div>
-            <div style="background-color:rgba(96, 56, 69, 0.86); border-radius: 10px 10px 10px 10px;
+    <div style="background-color:rgba(96, 56, 69, 0.86); border-radius: 10px 10px 10px 10px;
 -moz-border-radius: 10px 10px 10px 10px;
 -webkit-border-radius: 10px 10px 10px 10px;
 background-position:center;background-size:contain">
-            <div class="container" style="color:aliceblue">
+        <div class="container" style="color:aliceblue">
 
-                <div class="row">
+            <div class="row">
 
-                    
 
-                    <div class="col-lg-12">
-                        <br />
-                        <p style="font-size:20px;font-weight:600;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align:center"><u>Harita & Ulaşım </u><hr /></p>
-                        <p>
-                            <img src="~/Content/Image/konum.png" width="20" />&emsp;Reyhan Mh. Haşim İşcan Cd. Safranlık Çıkmazı Burçin 1 İş hanı Kat:3 No:314 | 38000 Bursa
-                        
-                            <img src="~/Content/Image/phone.png" width="20" />0538 251 33 83 &emsp;&emsp;
-                            <img src="~/Content/Image/mail.png" width="20" />  e-mail
-                        </p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d761.9820834615623!2d29.061898629218163!3d40.18840832321772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3e09ec8d4f03%3A0xf297906deceb1d21!2zQnVyw6dpbiAxIMSwxZ8gTWVya2V6aQ!5e0!3m2!1str!2str!4v1523636750490" frameborder="0" style="border:0" width="100%" height="300" allowfullscreen></iframe>
-                        <hr />
-                        <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Hizmet Sözleşmesi</button>
-                        <hr />
 
-                        <!-- Modal -->
-                        <div id="myModal" class="modal fade" role="dialog">
-                            <div class="modal-dialog">
+                <div class="col-lg-12">
+                    <br />
+                    <p style="font-size:20px;font-weight:600;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align:center"><u>Harita & Ulaşım </u><hr /></p>
+                    <p>
+                        <img src="~/Content/Image/konum.png" width="20" />&emsp;Reyhan Mh. Haşim İşcan Cd. Safranlık Çıkmazı Burçin 1 İş hanı Kat:3 No:314 | 38000 Bursa
 
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title" style="color:black">Hizmet Sözleşmesi</h4>
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <img src="~/Content/Image/phone.png" width="20" />0538 251 33 83 &emsp;&emsp;
+                        <img src="~/Content/Image/mail.png" width="20" />  e-mail
+                    </p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d761.9820834615623!2d29.061898629218163!3d40.18840832321772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3e09ec8d4f03%3A0xf297906deceb1d21!2zQnVyw6dpbiAxIMSwxZ8gTWVya2V6aQ!5e0!3m2!1str!2str!4v1523636750490" frameborder="0" style="border:0" width="100%" height="300" allowfullscreen></iframe>
+                    <hr />
+                    <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">Hizmet Sözleşmesi</button>
+                    <hr />
 
-                                    </div>
-                                    <div class="modal-body">
-                                        <pre style="color:black">
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" style="color:black">Hizmet Sözleşmesi</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                                </div>
+                                <div class="modal-body">
+                                    <pre style="color:black">
        HIZMET SATIŞ SÖZLEŞMESi     Tarih: .. / .. / .. 
-
 1- Sarci bu hizmetleri ilgili yasa hükümlerine uygun 
 olarak ve uzman katro ile sunmayı taahhüt eder.
-
 2. Alict, un almuş olduğu hizmetlerin ve kullanılan 
 malzemeler konusunda ayrıntılı bilgi sahibi olarak, 
 satıcının iş yerinde görerek ve beğenerek sözleşmeyi
@@ -409,34 +362,31 @@ olmadığı, hamile olma ya da oluşabilecek I. Derece
 yanıklar, cilt alerjileri, kızanmalar, su toplamalar 
 ile ilgili ön bilgiler verilmiş aluci bunu kabul etmiş 
 ve teyit ettirilmiştir.
-
 3. Alıcınun bu süre içerisinde hizmetini engeller 
 bir sağlik problemi çıkması veya hamile olmasi hususların 
 hastane raporu ile belgelenmesi halinde, hizmet alıma
 tedavi veya doğum sonrasına ertelenir,
-
 4- Satıcı hizmetleri randevu sistemleri ile verir. 
 Ayrıca randevu değiştime taleplerini "en geç 2 gün 
 öncesinden bildirir ve işletme gün içinde uygun olan 
 gün ve saatte mutabakat ile randevu verir.
                                
             CEYLIN Güzellik Salonu
-
 ALICI                   SATICI
 Ad:     Soyadi:         Ad:     Soyadi:
                                         </pre>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
-                                    </div>
                                 </div>
-
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     <!-- /.row -->
     <!-- Call to Action Section -->
     <div class="row mb-4">
