@@ -70,7 +70,7 @@
             border-top-right-radius: 0;
         }
     </style>
-    <title>Giriş</title>
+    <title>Kullanıcı Giriş</title>
 </head>
 <body>
     <div class="wrapper">
@@ -78,21 +78,16 @@
         @using (Html.BeginForm("Login", "Home", FormMethod.Post))
         {
 
-            <div class="form col">
+            <div class="form col" style="text-align:center">
+                <div >
+                    @Html.LabelFor(f => f.Name):
+                    @Html.TextBoxFor(f => f.Name, new { title = "Kullanıcı adınızı giriniz.", @Value = @ViewBag.Name })<br />
+                </div>
+                 
+                
 
-
-                @Html.LabelFor(f => f.Name)
-                @Html.TextBoxFor(f => f.Name, new { title = "Kullanıcı adınızı giriniz.", @Value = @ViewBag.Name })
-
-
-
-
-
-                @Html.LabelFor(f => f.Password)
-                @Html.PasswordFor(f => f.Password, new { title = "Kullanıcı şifrenizi giriniz.", @Value = @ViewBag.Password })
-
-
-
+                @Html.LabelFor(f => f.Password): &emsp;&emsp;&emsp;
+                @Html.PasswordFor(f => f.Password, new { title = "Kullanıcı şifrenizi giriniz.", @Value = @ViewBag.Password })<br />
 
                 @*@Html.LabelFor(m => m.RememberMe)
                 @if (@ViewBag.remember == true)
@@ -100,8 +95,6 @@
                 else
                 {@Html.CheckBoxFor(m => m.RememberMe)}*@
                 <button type="submit" class="small fr">Giriş</button><br class="cl" />
-
-
 
             </div>
 
