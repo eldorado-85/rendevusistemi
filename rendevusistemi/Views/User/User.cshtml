@@ -1,0 +1,52 @@
+﻿@model rendevusistemi.Database.Data.Login
+
+
+
+
+
+<div class="container">
+    <div class="card card-register mx-auto mt-5" style="background-color:#646262">
+        <div class="card-header">
+            <span class="label label-default" style="color:#ffffff"> <h5 style="text-align:center"><i class="fa fa-spinner fa-pulse fa-x fa-fw"></i>&emsp;Kullanıcı Kaydet</h5></span>
+            @* Sistem tarihi bu kodlarla çekilip gösterilecek ve hangi saatte hangi tarihte kayıt edildi bilgisi tutulacak.
+                labelID.Text = DateTime.Now.ToLongTimeString();
+                labelID.Text = DateTime.Now.ToShortDateString();*@
+        </div>
+        <div class="card-body">
+            @using (@Html.BeginForm())
+            {
+
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @id = "exampleInputLastName", @type = "text", @placeholder = "İsim" })
+                        </div>
+                        <div class="col-md-6">
+                            @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @id = "exampleInputLastName", @type = "text", @placeholder = "Şifre" })
+                        </div>
+                    </div>
+                </div>
+             
+            
+        
+                <div class="container">
+                    <div class="alert alert-danger alert-dismissible ">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Lütfen isim ve şifre alanlarını boş bırakmayınız!</strong>
+                        @Html.ValidationSummary(false)
+                    </div>
+                </div>
+                <input type="submit" value="KAYDET" class="btn btn-primary btn-block" />
+            }
+            <div class="text-center">
+                <a class="d-block small mt-3" style="color:gold" href="@Url.Action("index","Home")"><i class="fa fa-home fa-2x" aria-hidden="true"></i>&emsp;Ana Sayfa</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin Java1Script-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>

@@ -30,10 +30,12 @@
 
 
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="RANDEVULAR">
-                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
-                            <i class="fa fa-flag pull-left"></i>
-                            <span class="nav-link-text" style="color:aliceblue">RANDEVULAR</span>
-                        </a>
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+                        <i class="fa fa-flag "></i>
+                        <span class="nav-link-text" style="color:aliceblue">RANDEVULAR</span>
+                    </a>
+   
+                  
                         <ul class="sidenav-second-level collapse" id="collapseComponents">
                             <li>
                                 <a class="nav-link" style="color:aliceblue" href="@Url.Action("Appointment", "Appointment")">
@@ -92,6 +94,31 @@
                             </li>
                         </ul>
                     </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="KULLANICILAR">
+
+
+
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents4" data-parent="#exampleAccordion">
+                        <i class="fa fa-fw  fa-child "></i>
+                        <span class="nav-link-text" style="color:aliceblue">KULLANICILAR</span>
+                    </a>
+                   
+                    <ul class="sidenav-second-level collapse" id="collapseComponents4">
+                        <li>
+                            <a class="nav-link" style="color:aliceblue" href="@Url.Action("User", "User")">
+                                <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+                                <span class="nav-link-text">Kullanıcı Ekle </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" style="color:aliceblue" href="@Url.Action("UserView", "User")">
+                                <i class="fa fa-th-list" aria-hidden="true"></i>
+                                <span class="nav-link-text">Kullanıcı Listesi </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                
                 @*<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
                     <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
