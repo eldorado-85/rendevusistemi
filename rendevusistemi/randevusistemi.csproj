@@ -209,6 +209,7 @@
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Database\Data\Appointments.cs" />
     <Compile Include="Database\Data\Login.cs" />
     <Compile Include="Database\Data\Emploies.cs" />
@@ -446,6 +447,10 @@
     <Content Include="Views\Appointment\AppointmentEdit.cshtml" />
     <Content Include="Views\Appointment\AppointmentView.cshtml" />
     <Content Include="Views\Appointment\AppointmentDel.cshtml" />
+    <Content Include="Views\User\User.cshtml" />
+    <Content Include="Views\User\UserView.cshtml" />
+    <Content Include="Views\User\UserEdit.cshtml" />
+    <Content Include="Views\User\UserDel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

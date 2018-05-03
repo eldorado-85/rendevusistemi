@@ -1,0 +1,40 @@
+﻿@model rendevusistemi.Database.Data.Login
+
+
+@{
+    ViewBag.Title = "Kullanıcı Sil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content-wrapper">
+    <div class="container-fluid">
+        <h4>Silmek İstediğinizden Emin Misiniz?</h4>
+        <div>
+
+
+            <dl class="dl-horizontal">
+                <hr />
+
+
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <hr />
+
+             
+
+              
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="SİL" class="btn btn-danger" /> |
+                    @Html.ActionLink("Geri Dön", "UserView")
+                </div>
+            }
+        </div>
+    </div>
+</div>
