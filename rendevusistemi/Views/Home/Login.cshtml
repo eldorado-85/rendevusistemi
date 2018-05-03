@@ -22,6 +22,7 @@
     <link href="~/content/bootstraptemple/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
     <!-- Custom styles for this template-->
     <link rel="shortcut icon" href="~/Content/Image/icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
             background: #fffcfc;
@@ -84,6 +85,7 @@
                     @Html.TextBoxFor(f => f.Name, new { title = "Kullanıcı adınızı giriniz.", @Value = @ViewBag.Name })<br />
                 </div>
                  
+
                 
 
                 @Html.LabelFor(f => f.Password): &emsp;&emsp;&emsp;
@@ -94,7 +96,7 @@
                 {@Html.CheckBoxFor(m => m.RememberMe, new { @checked = "checked" })}
                 else
                 {@Html.CheckBoxFor(m => m.RememberMe)}*@
-                <button type="submit" class="small fr">Giriş</button><br class="cl" />
+                <button style="background-color:rgba(255, 252, 252, 0.00);border:0" type="submit"  class="small fr">Giriş <img src="~/Content/Image/enter.png" width="50" /><br class="cl" />
 
             </div>
 
