@@ -210,6 +210,7 @@
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Database\Data\Appointments.cs" />
+    <Compile Include="Database\Data\Login.cs" />
     <Compile Include="Database\Data\Emploies.cs" />
     <Compile Include="Database\Data\Job.cs" />
     <Compile Include="Database\Data\ViewModel.cs" />
