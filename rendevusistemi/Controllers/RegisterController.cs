@@ -80,6 +80,7 @@ namespace rendevusistemi.Controllers
             update.Firstname = UpdEmp.Firstname;
             update.Adress = UpdEmp.Adress;
             update.Phone = UpdEmp.Phone;
+            update.Description = UpdEmp.Description;
 
             db.SaveChanges();
             return RedirectToAction("RegisterView");

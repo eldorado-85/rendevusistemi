@@ -18,7 +18,7 @@ namespace rendevusistemi.Database.Data
         public string Adress { get; set; }
         [DataType(DataType.PhoneNumber, ErrorMessage = "Telefon Numarası Giriniz")]
         public string Phone { get; set; }
-
+        public string Description { get; set; }
 
 
 
