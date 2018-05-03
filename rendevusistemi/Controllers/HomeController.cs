@@ -7,7 +7,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Web.Security;
 
 namespace rendevusistemi.Controllers
 {
@@ -53,11 +53,42 @@ namespace rendevusistemi.Controllers
 
         public ActionResult Login()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            if (String.IsNullOrEmpty(HttpContext.User.Identity.Name))
+            {
+                FormsAuthentication.SignOut();
+                return View();
+            }
+            return Redirect("/Index/Home");
+            
 
             
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public ActionResult Login(Login model, string returnurl)
+        {
+            if (ModelState.IsValid)
+            { MyDbContext db = new MyDbContext();
+
+                
+               
+
+                var kullanici = db.Logins.Where(ww => ww.Name == model.Name && ww.Password == model.Password);
+                //RepositoryPortal<AdminUser> rptryadmn = new RepositoryPortal<AdminUser>();
+                //Aşağıdaki if komutu gönderilen mail ve şifre doğrultusunda kullanıcı kontrolu yapar. Eğer kullanıcı var ise login olur.
+                if (kullanici.Count()> 0)
+                {
+                    FormsAuthentication.SetAuthCookie(model.Name, true);
+                    return RedirectToAction("Index", "Home");
+                }
+
+                else
+                {
+                    ModelState.AddModelError("", "Kullanıcı Adı veya Şifre Hatalı!");
+                }
+            }
+            return View(model);
         }
 
         public ActionResult Giris()

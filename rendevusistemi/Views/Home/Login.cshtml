@@ -1,4 +1,5 @@
-﻿
+﻿@model rendevusistemi.Database.Data.Login
+
 @{
     Layout = null;
 }
@@ -73,7 +74,39 @@
 </head>
 <body>
     <div class="wrapper">
-        <form class="form-signin">
+
+        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+        {
+
+            <div class="form col">
+
+
+                @Html.LabelFor(f => f.Name)
+                @Html.TextBoxFor(f => f.Name, new { title = "Kullanıcı adınızı giriniz.", @Value = @ViewBag.Name })
+
+
+
+
+
+                @Html.LabelFor(f => f.Password)
+                @Html.PasswordFor(f => f.Password, new { title = "Kullanıcı şifrenizi giriniz.", @Value = @ViewBag.Password })
+
+
+
+
+                @*@Html.LabelFor(m => m.RememberMe)
+                @if (@ViewBag.remember == true)
+                {@Html.CheckBoxFor(m => m.RememberMe, new { @checked = "checked" })}
+                else
+                {@Html.CheckBoxFor(m => m.RememberMe)}*@
+                <button type="submit" class="small fr">Giriş</button><br class="cl" />
+
+
+
+            </div>
+
+        }                   
+        @*<form class="form-signin">
             
             <h2 class="form-signin-heading"></h2><br />
             <input type="text" class="form-control" name="username" placeholder="Kullanıcı adınızı yazınız" required="" autofocus="" /><br />
@@ -90,7 +123,7 @@
                 Giriş
             </button>
 
-        </form>
+        </form>*@
     </div>
 </body>
 </html>
