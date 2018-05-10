@@ -20,6 +20,7 @@
 </head>
 <body class="fixed-nav sticky-footer " id="page-top">
     <!-- Navigation-->
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top" id="mainNav">
         <a class="navbar-brand" href="@Url.Action("Index", "Home")">Randevu Sistemi</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -230,6 +231,7 @@
                 </li>*@
                
             </ul>
+
             <ul class="navbar-nav sidenav-toggler">
                 <li class="nav-item">
                     <a class="nav-link text-center" id="sidenavToggler">
@@ -325,14 +327,16 @@
                     
                 </li>
 
+
             </ul>
             
         </div>
     </nav>
+
     <footer class="sticky-footer">
         <div class="container">
             <div class="text-center">
-                <small>Copyright © Your Website 2018</small>
+                <small>Copyright © Ceylin Güzellik Salonu 2018</small>
             </div>
         </div>
     </footer>
@@ -353,7 +357,7 @@
 
 
 
-    @Html.DevExpress().GetStyleSheets(
+    @*@Html.DevExpress().GetStyleSheets(
         new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
         new StyleSheet { ExtensionSuite = ExtensionSuite.Editors },
         new StyleSheet { ExtensionSuite = ExtensionSuite.Scheduler },
@@ -364,7 +368,7 @@
         new Script { ExtensionSuite = ExtensionSuite.Editors },
         new Script { ExtensionSuite = ExtensionSuite.Scheduler },
           new Script { ExtensionSuite = ExtensionSuite.GridView }
-    )
+    )*@
 
 
 

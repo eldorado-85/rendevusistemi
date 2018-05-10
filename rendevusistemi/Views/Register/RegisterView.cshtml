@@ -1,100 +1,118 @@
 ﻿@model IEnumerable<rendevusistemi.Database.Data.Emploies>
 
 
-       
-       
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Kayıt Edilen Müşteriler</a>
+                </li>
+                <li class="breadcrumb-item active">@Html.ActionLink("Yeni Oluştur", "Register")</li>
+            </ol>
+            <h2></h2>
 
-<div class="container">
-  <h2>Filterable Table</h2>
-  <p>Type something in the input field to search the table for first names, last names or emails:</p>  
-  <input class="form-control" id="myInput" type="text" placeholder="Search..">
-  <br>
-  <table class="table table-bordered table-striped">
-      <thead>
-          <tr>
-              <th>İsim</th>
-              <th>Soyisim</th>
-              <th>Adres</th>
-              <th>Telefon</th>
-              <th>Açıklama</th>
-              <th>Onay</th>
+            <p>
 
+            </p>
 
-          </tr>
-      </thead>
-      <tfoot>
-          <tr>
-              <th>İsim</th>
-              <th>Soyisim</th>
-              <th>Adres</th>
-              <th>Telefon</th>
-              <th>Açıklama</th>
-              <th>Onay</th>
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fa fa-table"></i> Müşteri Listesi
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover" id="dataTable" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>İsim</th>
+                                    <th>Soyisim</th>
+                                    <th>Adres</th>
+                                    <th>Telefon</th>
+                                    <th>Açıklama</th>
+                                    <th>Onay</th>
+                                   
 
-          </tr>
-      </tfoot>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>İsim</th>
+                                    <th>Soyisim</th>
+                                    <th>Adres</th>
+                                    <th>Telefon</th>
+                                    <th>Açıklama</th>
+                                    <th>Onay</th>
+                                  
+                                </tr>
+                            </tfoot>
 
-      @foreach (var item in Model)
-      {
-          <tr>
-              <td>
-                  @Html.DisplayFor(modelItem => item.Firstname)
-                  @Html.ValidationMessageFor(modelItem => item.Firstname)
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Firstname)
+                                    @Html.ValidationMessageFor(modelItem => item.Firstname)
 
-              </td>
-              <td>
-                  @Html.DisplayFor(modelItem => item.Lastname)
-              </td>
-              <td>
-                  @Html.DisplayFor(modelItem => item.Adress)
-              </td>
-              <td>
-                  @Html.DisplayFor(modelItem => item.Phone)
-                  @Html.ValidationMessageFor(modelItem => item.Phone)
-              </td>
-              <td>
-                  @Html.DisplayFor(modelItem => item.Description)
-                  @Html.ValidationMessageFor(modelItem => item.Description)
-              </td>
-              <td>
-                  @Html.DisplayFor(modelItem => item.IsOk)
-                  @Html.ValidationMessageFor(modelItem => item.IsOk)
-              </td>
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Lastname)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Adress)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Phone)
+                                    @Html.ValidationMessageFor(modelItem => item.Phone)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                    @Html.ValidationMessageFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.IsOk)
+                                    @Html.ValidationMessageFor(modelItem => item.IsOk)
+                                </td>
+                             
+                                <td style="width:100%">
+                                    <i class="fa fa-fw fa-edit" style="font-size:15px"></i>
+                                    @Html.ActionLink("Düzenle", "RegisterEdit", new { id = item.Id }) |
+                                    @*<i class="fa fa-fw fa-address-card-o" style="font-size:15px"></i>
+                                    @Html.ActionLink("Detay", "Details", new { id = item.Id }) |*@
+                                    <i class="fa fa-fw fa-close" style="font-size:15px;color:red"></i>
+                                    @Html.ActionLink("Sil", "RegisterDel", new { id = item.Id })
+                                </td>
+                            </tr>
+                            }
 
-              <td>
-                  <i class="fa fa-fw fa-edit" style="font-size:15px"></i>
-                  @Html.ActionLink("Düzenle", "RegisterEdit", new { id = item.Id }) |
-                  @*<i class="fa fa-fw fa-address-card-o" style="font-size:15px"></i>
-                    @Html.ActionLink("Detay", "Details", new { id = item.Id }) |*@
-                  <i class="fa fa-fw fa-close" style="font-size:15px;color:red"></i>
-                  @Html.ActionLink("Sil", "RegisterDel", new { id = item.Id })
-              </td>
-          </tr>
-      }
-  </table>
-  
- 
+                        </table>
+                    </div>
+                </div>
+           
 
-    <script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-});
-    </script>
+            </div>
 
 
+        </div>
+    </div>
+
+    
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
