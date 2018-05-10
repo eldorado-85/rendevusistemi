@@ -196,7 +196,7 @@ namespace rendevusistemi.Controllers
             foreach (var appointment in newAppointments)
             {
                 var isim = db.Employes.Where(a => a.Id == appointment.EmployeId).FirstOrDefault();
-                string aa = string.Concat(isim.Fullname, appointment.Description);
+                string aa = string.Concat(isim.Fullname," ", appointment.Description);
                 appointment.Description = aa;
                 appointmentContext.Appointmenties.Add(appointment);
             }

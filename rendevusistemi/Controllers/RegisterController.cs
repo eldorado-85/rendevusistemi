@@ -82,6 +82,7 @@ namespace rendevusistemi.Controllers
             update.Adress = UpdEmp.Adress;
             update.Phone = UpdEmp.Phone;
             update.Description = UpdEmp.Description;
+            update.IsOk = UpdEmp.IsOk;
 
             db.SaveChanges();
             return RedirectToAction("RegisterView");

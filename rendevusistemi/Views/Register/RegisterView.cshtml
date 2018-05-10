@@ -29,6 +29,7 @@
                                     <th>Adres</th>
                                     <th>Telefon</th>
                                     <th>Açıklama</th>
+                                    <th>Onay</th>
                                    
 
                                 </tr>
@@ -40,6 +41,7 @@
                                     <th>Adres</th>
                                     <th>Telefon</th>
                                     <th>Açıklama</th>
+                                    <th>Onay</th>
                                   
                                 </tr>
                             </tfoot>
@@ -66,7 +68,10 @@
                                     @Html.DisplayFor(modelItem => item.Description)
                                     @Html.ValidationMessageFor(modelItem => item.Description)
                                 </td>
-
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.IsOk)
+                                    @Html.ValidationMessageFor(modelItem => item.IsOk)
+                                </td>
                              
                                 <td>
                                     <i class="fa fa-fw fa-edit" style="font-size:15px"></i>
