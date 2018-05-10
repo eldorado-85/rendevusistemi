@@ -442,7 +442,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\Register\RegisterEdit.cshtml" />
-    <None Include="Views\Register\RegisterView.cshtml" />
+    <None Include="Views\Register\RegisterView__.cshtml" />
     <Content Include="Views\Job\JobEdit.cshtml" />
     <Content Include="Views\Job\Job.cshtml" />
     <Content Include="Views\Job\JobView.cshtml" />
@@ -459,7 +459,7 @@
     <Content Include="Views\User\UserView.cshtml" />
     <Content Include="Views\User\UserEdit.cshtml" />
     <Content Include="Views\User\UserDel.cshtml" />
-    <Content Include="Views\Register\RegisterView_..cshtml" />
+    <Content Include="Views\Register\RegisterView.cshtml" />
     <Content Include="Views\Register\_GridViewPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
