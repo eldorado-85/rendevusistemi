@@ -34,11 +34,23 @@
                             <div class="card-body-icon">
                                 <i class="fa fa-fw fa-paste"></i>
                             </div>
-                            <div class="mr-5"><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalRandevuEkleme">Randevu İstekleri</button></div>
+                            <div class="mr-5">
+                                <a class="btn btn-primary btn-lg" style="color:aliceblue" href="@Url.Action("Appointment", "Appointment")">
+                                    <i class="fa fa-plus-square" aria-hidden="true"></i>
+
+                                    <span class="nav-link-text">Randevu Ekle </span>
+                                </a>
+                                @*<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ModalRandevuEkleme">Randevu İstekleri</button>*@
+                            </div>
                         </div>
                         <a class="card-footer text-white clearfix small z-1" href="#">
 
-                            <span class="float-left">Randevu Sıralama</span>
+                            <span class="float-left">
+                                <a class="nav-link" style="color:aliceblue" href="@Url.Action("AppointmentView", "Appointment")">
+                                    <i class="fa fa-th-list" aria-hidden="true"></i>
+                                    <span class="nav-link-text">Randevu Listesi </span>
+                                </a>
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -46,12 +58,24 @@
                     <div class="card text-white bg-warning o-hidden h-100">
                         <div class="card-body">
                             <div class="card-body-icon">
-                                <i class="fa fa-fw fa-bell"></i>
+                                <i class="fa fa-fw fa-address-card"></i>
                             </div>
-                            <div class="mr-5"><button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#ModalRandevuEkleme">Görüntüle</button></div>
+                            <div class="mr-5">
+                                <a class="btn btn-warning btn-lg" style="color:aliceblue" href="@Url.Action("Register", "Register")">
+                                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+
+                                    <span class="nav-link-text">Müşteri Ekle </span>
+                                </a>
+                                @*<button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#ModalRandevuEkleme">Görüntüle</button>*@
+                            </div>
                         </div>
                         <a class="card-footer text-white clearfix small z-1" href="#">
-                            <span class="float-left">Yaklaşan Randevular</span>
+                            <span class="float-left">
+                                <a class="nav-link" style="color:aliceblue" href="@Url.Action("RegisterView", "Register")">
+                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                    <span class="nav-link-text">Müşteri Listesi </span>
+                                </a>
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -61,10 +85,22 @@
                             <div class="card-body-icon">
                                 <i class="fa fa-fw fa-medkit"></i>
                             </div>
-                            <div class="mr-5"><button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#ModalRandevuEkleme">Randevu Ekle</button></div>                            
+                            <div class="mr-5">
+                                <a class="btn btn-success btn-lg" style="color:aliceblue" href="@Url.Action("Job", "Job")">
+                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+                                    <span class="nav-link-text">Operasyon Ekle </span>
+                                </a>
+                                @*<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#ModalRandevuEkleme">Randevu Ekle</button>*@
+                            </div>
                         </div>
                         <a class="card-footer text-white clearfix small z-1" href="#">
-                            <span class="float-left">Yeni Randevu</span>
+                            <span class="float-left">
+                                <a class="nav-link" style="color:aliceblue" href="@Url.Action("JobView", "Job")">
+                                    <i class="fa fa-list" aria-hidden="true"></i>
+                                    <span class="nav-link-text">Operasyon Listesi </span>
+                                </a>
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -72,12 +108,24 @@
                     <div class="card text-white bg-danger o-hidden h-100">
                         <div class="card-body">
                             <div class="card-body-icon">
-                                <i class="fa fa-fw fa-ban"></i>
+                                <i class="fa fa-fw fa-user-secret"></i>
                             </div>
-                            <div class="mr-5"><button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#ModalRandevuSilme">Randevu İptal</button></div>
+                            <div class="mr-5">
+                                <a class="btn btn-danger btn-lg" style="color:aliceblue" href="@Url.Action("User", "User")">
+                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+
+                                    <span class="nav-link-text">Kullanıcı Ekle </span>
+                                </a>
+                                @*<button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#ModalRandevuSilme">Randevu İptal</button>*@
+                            </div>
                         </div>
                         <a class="card-footer text-white clearfix small z-1" href="#">
-                            <span class="float-left">Randevu Silme</span>
+                            <span class="float-left">
+                                <a class="nav-link" style="color:aliceblue" href="@Url.Action("UserView", "User")">
+                                    <i class="fa fa-th-list" aria-hidden="true"></i>
+                                    <span class="nav-link-text">Kullanıcı Listesi </span>
+                                </a>
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -158,98 +206,98 @@
         </div>
 
         <script>
-                /*global console*/
-                //calender
-                //month
-                //prev
-                //next
-                //weeks
-                //days
+            /*global console*/
+            //calender
+            //month
+            //prev
+            //next
+            //weeks
+            //days
 
-                //punblic variables
-                var calender = document.querySelector(".calender"),//container of calender
-                    topDiv = document.querySelector('.month'),
-                    monthDiv = calender.querySelector("h1"),//h1 of monthes
-                    yearDiv = calender.querySelector('h2'),//h2 for years
-                    weekDiv = calender.querySelector(".weeks"),//week container
-                    dayNames = weekDiv.querySelectorAll("li"),//dayes name
-                    dayItems = calender.querySelector(".days"),//date of day container
-                    prev = calender.querySelector(".prev"),
-                    next = calender.querySelector(".next"),
+            //punblic variables
+            var calender = document.querySelector(".calender"),//container of calender
+                topDiv = document.querySelector('.month'),
+                monthDiv = calender.querySelector("h1"),//h1 of monthes
+                yearDiv = calender.querySelector('h2'),//h2 for years
+                weekDiv = calender.querySelector(".weeks"),//week container
+                dayNames = weekDiv.querySelectorAll("li"),//dayes name
+                dayItems = calender.querySelector(".days"),//date of day container
+                prev = calender.querySelector(".prev"),
+                next = calender.querySelector(".next"),
 
-                    // date variables
-                    years = new Date().getFullYear(),
-                    monthes = new Date(new Date().setFullYear(years)).getMonth(),
-                    lastDayOfMonth = new Date(new Date(new Date().setMonth(monthes + 1)).setDate(0)).getDate(),
-                    dayOfFirstDateOfMonth = new Date(new Date(new Date().setMonth(monthes)).setDate(1)).getDay(),
+                // date variables
+                years = new Date().getFullYear(),
+                monthes = new Date(new Date().setFullYear(years)).getMonth(),
+                lastDayOfMonth = new Date(new Date(new Date().setMonth(monthes + 1)).setDate(0)).getDate(),
+                dayOfFirstDateOfMonth = new Date(new Date(new Date().setMonth(monthes)).setDate(1)).getDay(),
 
-                    // array to define name of monthes
-                    monthNames = ["January", "February", "March", "April", "May", "June",
-                                  "July", "August", "September", "October", "November", "December"],
-                    colors = ['#FFA549', '#ABABAB', '#1DABB8', '#953163', '#E7DF86', '#E01931', '#92F22A', '#FEC606', '#563D28', '#9E58DC', '#48AD01', '#0EBB9F'],
-                    i,//counter for day before month first day in week
-                    x,//counter for prev , next
-                    counter;//counter for day of month  days;
-
-
-                //display dayes of month in items
-                function days(x) {
-                    'use strict';
-                    dayItems.innerHTML = "";
-                    monthes = monthes + x;
-
-                    /////////////////////////////////////////////////
-                    //test for last month useful while prev ,max prevent go over array
-                    if (monthes > 11) {
-                        years = years + 1;
-                        monthes = new Date(new Date(new Date().setFullYear(years)).setMonth(0)).getMonth();
-                    }
-                    if (monthes < 0) {
-                        years = years - 1;
-                        monthes = new Date(new Date(new Date().setFullYear(years)).setMonth(11)).getMonth();
-                    }
-
-                    lastDayOfMonth = new Date(new Date(new Date(new Date().setFullYear(years)).setMonth(monthes + 1)).setDate(0)).getDate();
-                    dayOfFirstDateOfMonth = new Date(new Date(new Date(new Date().setFullYear(years)).setMonth(monthes)).setDate(1)).getDay();
-                    /////////////////////////////////////////////////
-                    yearDiv.innerHTML = years;
-                    monthDiv.innerHTML = monthNames[monthes];
-                    for (i = 0; i <= dayOfFirstDateOfMonth; i = i + 1) {
-                        if (dayOfFirstDateOfMonth === 6) { break; }
-                        dayItems.innerHTML += "<li> - </li>";
-                    }
-                    for (counter = 1; counter <= lastDayOfMonth; counter = counter + 1) {
-                        dayItems.innerHTML += "<li>" + (counter) + "</li>";
+                // array to define name of monthes
+                monthNames = ["January", "February", "March", "April", "May", "June",
+                              "July", "August", "September", "October", "November", "December"],
+                colors = ['#FFA549', '#ABABAB', '#1DABB8', '#953163', '#E7DF86', '#E01931', '#92F22A', '#FEC606', '#563D28', '#9E58DC', '#48AD01', '#0EBB9F'],
+                i,//counter for day before month first day in week
+                x,//counter for prev , next
+                counter;//counter for day of month  days;
 
 
-                    }
-                    topDiv.style.background = colors[monthes];
-                    dayItems.style.background = colors[monthes];
+            //display dayes of month in items
+            function days(x) {
+                'use strict';
+                dayItems.innerHTML = "";
+                monthes = monthes + x;
 
-                    if (monthes === new Date().getMonth() && years === new Date().getFullYear()) {
-
-                        dayItems.children[new Date().getDate() + dayOfFirstDateOfMonth].style.background = "#2ecc71";
-                    }
+                /////////////////////////////////////////////////
+                //test for last month useful while prev ,max prevent go over array
+                if (monthes > 11) {
+                    years = years + 1;
+                    monthes = new Date(new Date(new Date().setFullYear(years)).setMonth(0)).getMonth();
                 }
-                prev.onclick = function () {
-                    'use strict';
-                    days(-1);//decrement monthes
-                };
-                next.onclick = function () {
-                    'use strict';
-                    days(1);//increment monthes
-                };
-                days(0);
+                if (monthes < 0) {
+                    years = years - 1;
+                    monthes = new Date(new Date(new Date().setFullYear(years)).setMonth(11)).getMonth();
+                }
 
-                //end
+                lastDayOfMonth = new Date(new Date(new Date(new Date().setFullYear(years)).setMonth(monthes + 1)).setDate(0)).getDate();
+                dayOfFirstDateOfMonth = new Date(new Date(new Date(new Date().setFullYear(years)).setMonth(monthes)).setDate(1)).getDay();
+                /////////////////////////////////////////////////
+                yearDiv.innerHTML = years;
+                monthDiv.innerHTML = monthNames[monthes];
+                for (i = 0; i <= dayOfFirstDateOfMonth; i = i + 1) {
+                    if (dayOfFirstDateOfMonth === 6) { break; }
+                    dayItems.innerHTML += "<li> - </li>";
+                }
+                for (counter = 1; counter <= lastDayOfMonth; counter = counter + 1) {
+                    dayItems.innerHTML += "<li>" + (counter) + "</li>";
+
+
+                }
+                topDiv.style.background = colors[monthes];
+                dayItems.style.background = colors[monthes];
+
+                if (monthes === new Date().getMonth() && years === new Date().getFullYear()) {
+
+                    dayItems.children[new Date().getDate() + dayOfFirstDateOfMonth].style.background = "#2ecc71";
+                }
+            }
+            prev.onclick = function () {
+                'use strict';
+                days(-1);//decrement monthes
+            };
+            next.onclick = function () {
+                'use strict';
+                days(1);//increment monthes
+            };
+            days(0);
+
+            //end
         </script>
     </div>
 
-        <!-- /.container-fluid-->
-        <!-- /.content-wrapper-->
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fa fa-angle-up"></i>
-        </a>
-    </body>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</body>
 </html>
