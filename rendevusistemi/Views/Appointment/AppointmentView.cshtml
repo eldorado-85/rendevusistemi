@@ -38,6 +38,7 @@
                                 <th>Operasyon</th>
                                 <th>Açıklama</th>
                                 <th>Tarih-Saat</th>
+                                <th>Personel</th>
 
                             </tr>
                         </thead>
@@ -49,6 +50,8 @@
                                 <th>Operasyon</th>
                                 <th>Açıklama</th>
                                 <th>Tarih-Saat</th>
+                                <th>Personel</th>
+
 
                             </tr>
                         </tfoot>
@@ -84,8 +87,18 @@
                                 <td>
                                     @Html.DisplayFor(modelItem => item.DateTimeStart)
                                 </td>
+                              
+                                <td>
+                                    @{
+                                        int deger2 = item.UserId + 1;
+                                        string user = Model.kullanicilar.Where(a => a.Id == deger2).Select(a => a.UserName).FirstOrDefault();
 
+                                    }
 
+                                    <h6>@user</h6>
+
+                                </td>
+                                
 
                                 <td>
                                     

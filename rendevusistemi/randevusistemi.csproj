@@ -211,13 +211,21 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Database\Data\Appointments.cs" />
-    <Compile Include="Database\Data\Login.cs" />
+    <Compile Include="Database\Data\Users..cs" />
     <Compile Include="Database\Data\Emploies.cs" />
     <Compile Include="Database\Data\Job.cs" />
     <Compile Include="Database\Data\ViewModel.cs" />
     <Compile Include="Database\MyDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805100049541_newdb.cs" />
+    <Compile Include="Migrations\201805100049541_newdb.Designer.cs">
+      <DependentUpon>201805100049541_newdb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805100102508_newdb1.cs" />
+    <Compile Include="Migrations\201805100102508_newdb1.Designer.cs">
+      <DependentUpon>201805100102508_newdb1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -434,13 +442,13 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Register\Register.cshtml" />
     <Content Include="Views\Register\RegisterEdit.cshtml" />
-    <Content Include="Views\Register\RegisterView.cshtml" />
+    <None Include="Views\Register\RegisterView.cshtml" />
     <Content Include="Views\Job\JobEdit.cshtml" />
     <Content Include="Views\Job\Job.cshtml" />
     <Content Include="Views\Job\JobView.cshtml" />
     <Content Include="Views\Appointment\Appointment.cshtml" />
     <Content Include="Views\Appointment\_Scheduler1Partial.cshtml" />
-    <Content Include="Views\AppointmentManuel\AppointmentManuView.cshtml" />
+    <Content Include="Views\Home\AppointmentManuView.cshtml" />
     <Content Include="Views\Job\JobDel.cshtml" />
     <Content Include="Views\Register\RegisterDel.cshtml" />
     <Content Include="Views\Home\Entry.cshtml" />
@@ -451,11 +459,14 @@
     <Content Include="Views\User\UserView.cshtml" />
     <Content Include="Views\User\UserEdit.cshtml" />
     <Content Include="Views\User\UserDel.cshtml" />
+    <Content Include="Views\Register\RegisterView_..cshtml" />
+    <Content Include="Views\Register\_GridViewPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="startbootstrap-sb-admin-gh-pages\" />
+    <Folder Include="Views\AppointmentManuel\" />
     <Folder Include="Views\test\" />
   </ItemGroup>
   <ItemGroup>
@@ -468,6 +479,14 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805100049541_newdb.resx">
+      <DependentUpon>201805100049541_newdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805100102508_newdb1.resx">
+      <DependentUpon>201805100102508_newdb1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

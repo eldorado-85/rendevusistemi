@@ -1,4 +1,4 @@
-﻿@model rendevusistemi.Database.Data.Login
+﻿@model rendevusistemi.Database.Data.User
 
 @{
     Layout = null;
@@ -81,8 +81,8 @@
 
             <div class="form col" style="text-align:center">
                 <div >
-                    @Html.LabelFor(f => f.Name):
-                    @Html.TextBoxFor(f => f.Name, new { title = "Kullanıcı adınızı giriniz.", @Value = @ViewBag.Name })<br />
+                    @Html.LabelFor(f => f.UserName):
+                    @Html.TextBoxFor(f => f.UserName, new { title = "Kullanıcı adınızı giriniz.", @Value = @ViewBag.Name })<br />
                 </div>
                  
 

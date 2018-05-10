@@ -19,14 +19,14 @@ namespace rendevusistemi.Controllers
         }
 
         [HttpPost]
-        public ActionResult User(Login usr)
+        public ActionResult User(User usr)
         {
 
             using (MyDbContext db = new MyDbContext())
             {
                 if (ModelState.IsValid)
                 {
-                    db.Logins.Add(usr);
+                    db.Users.Add(usr);
                     db.SaveChanges();
 
                     return RedirectToAction("UserView");
@@ -44,7 +44,7 @@ namespace rendevusistemi.Controllers
         public ActionResult UserView()
         {
             MyDbContext db = new MyDbContext();
-            List<Login> usr = db.Logins.ToList();
+            List<User> usr = db.Users.ToList();
 
 
             return View(usr);
@@ -53,16 +53,18 @@ namespace rendevusistemi.Controllers
         public ActionResult UserEdit(int id)
         {
             MyDbContext db = new MyDbContext();
-            var edit = db.Logins.Where(a => a.Id == id).FirstOrDefault();
+            var edit = db.Users.Where(a => a.Id == id).FirstOrDefault();
 
             return View(edit);
         }
         [HttpPost]
-        public ActionResult UserEdit(Login UpdUsr)
+        public ActionResult UserEdit(User UpdUsr)
         {
             MyDbContext db = new MyDbContext();
-            var update = db.Logins.Where(a => a.Id == UpdUsr.Id).FirstOrDefault();
-            update.Name = UpdUsr.Name;
+            var update = db.Users.Where(a => a.Id == UpdUsr.Id).FirstOrDefault();
+            update.UserName = UpdUsr.UserName;
+            update.FirstName = UpdUsr.FirstName;
+            update.LastName = UpdUsr.LastName;
             update.Password = UpdUsr.Password;
      
 
@@ -76,13 +78,13 @@ namespace rendevusistemi.Controllers
         public ActionResult UserDel(int id)
         {
             MyDbContext db = new MyDbContext();
-            var list = db.Logins.Where(a => a.Id == id).FirstOrDefault();
+            var list = db.Users.Where(a => a.Id == id).FirstOrDefault();
 
 
             return View(list);
         }
         [HttpPost]
-        public ActionResult UserDel(Login DelUser)
+        public ActionResult UserDel(User DelUser)
         {
             MyDbContext db = new MyDbContext();
 
@@ -90,8 +92,8 @@ namespace rendevusistemi.Controllers
             try
             {
 
-                Login DelUsr = db.Logins.Where(o => o.Id == DelUser.Id).FirstOrDefault();
-                db.Logins.Remove(DelUsr);
+                User DelUsr = db.Users.Where(o => o.Id == DelUser.Id).FirstOrDefault();
+                db.Users.Remove(DelUsr);
                 db.SaveChanges();
                 return RedirectToAction("UserView");
             }

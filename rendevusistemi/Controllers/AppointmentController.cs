@@ -25,7 +25,8 @@ namespace rendevusistemi.Controllers
             vm.randevular= db.Appointmenties.ToList();
             vm.müsteriler = db.Employes.ToList();
             vm.operasyonlar = db.Jobs.ToList();
-          
+            vm.kullanicilar = db.Users.ToList();
+
             return View(vm);
         }
 
@@ -48,6 +49,8 @@ namespace rendevusistemi.Controllers
             update.DateTimeEnd = UpdateApp.DateTimeEnd;
             update.EmployeId = UpdateApp.EmployeId;
             update.Id = UpdateApp.Id;
+            update.JobId = UpdateApp.JobId;        
+            update.UserId = UpdateApp.UserId;
             db.SaveChanges();
 
            
@@ -94,6 +97,8 @@ namespace rendevusistemi.Controllers
             var appointments = appointmentContext.Appointmenties;
             var resources = resourceContext.Employes;
             var aa = jobs.Jobs;
+            
+            
 
             ViewData["Appointments"] = appointments.ToList();
             ViewData["Resources"] = resources.ToList();
@@ -105,6 +110,8 @@ namespace rendevusistemi.Controllers
         {
             var appointments = appointmentContext.Appointmenties;
             var resources = resourceContext.Employes;
+           
+            
 
             try
             {
@@ -136,14 +143,14 @@ namespace rendevusistemi.Controllers
                     appointmentStorage.Mappings.Start = "DateTimeStart";
                     appointmentStorage.Mappings.End = "DateTimeEnd";
                     appointmentStorage.Mappings.Subject = "Name";
-                    appointmentStorage.Mappings.Description = "Description";
+                    appointmentStorage.Mappings.Description = "Description" ;
                     //appointmentStorage.Mappings.Location = "";
                     //appointmentStorage.Mappings.AllDay = "";
                     //appointmentStorage.Mappings.Type = "Id";
                     //appointmentStorage.Mappings.RecurrenceInfo = "";
                     //appointmentStorage.Mappings.ReminderInfo = "";
                     appointmentStorage.Mappings.Label = "JobId";
-                    //appointmentStorage.Mappings.Status = "";
+                    appointmentStorage.Mappings.Status = "UserName";
                     appointmentStorage.Mappings.ResourceId = "EmployeId";
                 }
                 return appointmentStorage;
@@ -176,13 +183,21 @@ namespace rendevusistemi.Controllers
 
         static void InsertAppointments(rendevusistemi.Database.MyDbContext appointmentContext, rendevusistemi.Database.MyDbContext resourceContext)
         {
-            var appointments = appointmentContext.Appointmenties.ToList();
+            var appointments = appointmentContext.Appointmenties.ToList();        
+            
             var resources = resourceContext.Employes.ToList();
 
             var newAppointments = DevExpress.Web.Mvc.SchedulerExtension.GetAppointmentsToInsert<rendevusistemi.Database.Data.Appointments>("Scheduler1", appointments, resources,
                 AppointmentStorage, ResourceStorage);
+
+            MyDbContext db = new MyDbContext();
+            
+           
             foreach (var appointment in newAppointments)
             {
+                var isim = db.Employes.Where(a => a.Id == appointment.EmployeId).FirstOrDefault();
+                string aa = string.Concat(isim.Fullname, appointment.Description);
+                appointment.Description = aa;
                 appointmentContext.Appointmenties.Add(appointment);
             }
             appointmentContext.SaveChanges();

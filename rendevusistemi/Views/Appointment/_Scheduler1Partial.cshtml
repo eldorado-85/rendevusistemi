@@ -21,6 +21,14 @@
             settings.Storage.Appointments.Labels.Add(item);
         }
 
+        settings.Storage.Appointments.Statuses.Clear();
+        var ab = (from a in db.Users select a.FirstName).ToList();
+
+        foreach (string item in ab)
+        {
+            settings.Storage.Appointments.Statuses.Add(item);
+        }
+
 
 
 

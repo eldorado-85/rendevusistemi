@@ -66,7 +66,7 @@ namespace rendevusistemi.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public ActionResult Login(Login model, string returnurl)
+        public ActionResult Login(User model, string returnurl)
         {
             if (ModelState.IsValid)
             { MyDbContext db = new MyDbContext();
@@ -74,12 +74,12 @@ namespace rendevusistemi.Controllers
                 
                
 
-                var kullanici = db.Logins.Where(ww => ww.Name == model.Name && ww.Password == model.Password);
+                var kullanici = db.Users.Where(ww => ww.UserName == model.UserName && ww.Password == model.Password);
                 //RepositoryPortal<AdminUser> rptryadmn = new RepositoryPortal<AdminUser>();
                 //Aşağıdaki if komutu gönderilen mail ve şifre doğrultusunda kullanıcı kontrolu yapar. Eğer kullanıcı var ise login olur.
                 if (kullanici.Count()> 0)
                 {
-                    FormsAuthentication.SetAuthCookie(model.Name, true);
+                    FormsAuthentication.SetAuthCookie(model.UserName, true);
                     return RedirectToAction("Index", "Home");
                 }
 

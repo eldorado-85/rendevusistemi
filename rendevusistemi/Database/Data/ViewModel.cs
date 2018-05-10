@@ -12,5 +12,6 @@ namespace rendevusistemi.Database.Data
         public IEnumerable <Emploies> müsteriler { get; set; }
 
         public IEnumerable<Job> operasyonlar { get; set; }
+        public IEnumerable<User> kullanicilar { get; set; }
     }
 }
