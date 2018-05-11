@@ -58,10 +58,13 @@ namespace rendevusistemi.Controllers
                 FormsAuthentication.SignOut();
                 return View();
             }
+            //BURASI URL KONTROLÜ İÇİN
+            //Session["username"] = @ViewBag.Name;
+            //return Redirect("/User/Home");
             return Redirect("/Index/Home");
-            
 
-            
+
+
         }
 
         [AllowAnonymous]

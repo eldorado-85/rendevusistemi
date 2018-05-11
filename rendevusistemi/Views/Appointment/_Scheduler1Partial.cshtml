@@ -11,7 +11,7 @@
         settings.Storage.Appointments.Assign(AppointmentControllerScheduler1Settings.AppointmentStorage);
         settings.Storage.Resources.Assign(AppointmentControllerScheduler1Settings.ResourceStorage);
         settings.Storage.Appointments.Labels.Clear();
-
+        
 
         rendevusistemi.Database.MyDbContext db = new rendevusistemi.Database.MyDbContext();
         var aa = (from a in db.Jobs select a.Name).ToList();
