@@ -1,48 +1,44 @@
+@{
+    var grid = Html.DevExpress().GridView(settings => {
+        settings.Name = "GridView";
+        settings.CallbackRouteValues = new { Controller = "Register", Action = "GridViewPartial" };
 
-    @{
+        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Register", Action = "GridViewPartialAddNew" };
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Register", Action = "GridViewPartialUpdate" };
+        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Register", Action = "GridViewPartialDelete" };
+        settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
+        settings.SettingsBehavior.ConfirmDelete = true;
 
-            var grid = Html.DevExpress().GridView(settings =>
-            {
+        settings.CommandColumn.Visible = true;
+        settings.CommandColumn.ShowNewButton = true;
+        settings.CommandColumn.ShowDeleteButton = true;
+        settings.CommandColumn.ShowEditButton = true;
 
-                settings.Name = "GridView";
-                settings.CallbackRouteValues = new { Controller = "Register", Action = "GridViewPartial" };
+        settings.KeyFieldName = "Id";
 
-                settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Register", Action = "register" };
-                settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Register", Action = "registeredit", ew { id = item.Id }
-            };
-            settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Register", Action = "GridViewPartialDelete" };
-            settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
-            settings.SettingsBehavior.ConfirmDelete = true;
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = true;
+        settings.Settings.ShowFilterRow = true;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
 
-            settings.CommandColumn.Visible = true;
-            settings.CommandColumn.ShowNewButton = true;
-            settings.CommandColumn.ShowDeleteButton = true;
-            settings.CommandColumn.ShowEditButton = true;
+        settings.SettingsAdaptivity.AdaptivityMode = GridViewAdaptivityMode.Off;
+        settings.SettingsAdaptivity.AdaptiveColumnPosition = GridViewAdaptiveColumnPosition.Right;
+        settings.SettingsAdaptivity.AdaptiveDetailColumnCount = 1;
+        settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = false;
+        settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
+        settings.Columns.Add("Id");
+        settings.Columns.Add("Firstname");
+        settings.Columns.Add("Lastname");
+        settings.Columns.Add("Adress");
+        settings.Columns.Add("Phone");
+        settings.Columns.Add("Description");
+        settings.Columns.Add("IsOk");
 
-            settings.KeyFieldName = "Id";
+      
 
-            settings.SettingsPager.Visible = true;
-            settings.Settings.ShowGroupPanel = true;
-            settings.Settings.ShowFilterRow = true;
-            settings.SettingsBehavior.AllowSelectByRowClick = true;
-
-            settings.SettingsAdaptivity.AdaptivityMode = GridViewAdaptivityMode.Off;
-            settings.SettingsAdaptivity.AdaptiveColumnPosition = GridViewAdaptiveColumnPosition.Right;
-            settings.SettingsAdaptivity.AdaptiveDetailColumnCount = 1;
-            settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = false;
-            settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
-
-            settings.Columns.Add("Firstname","AD");
-            settings.Columns.Add("Lastname","SOYAD");
-            settings.Columns.Add("Adress","ADRES");
-            settings.Columns.Add("Phone","TELEFON");
-            settings.Columns.Add("Description","AÇIKLAMA");
-        });
-        if (ViewData["EditError"] != null)
-        {
-            grid.SetEditErrorText((string)ViewData["EditError"]);
-        }
+    });
+    if (ViewData["EditError"] != null){
+        grid.SetEditErrorText((string)ViewData["EditError"]);
     }
-    @grid.Bind(Model).GetHtml()
-
-
+}
+@grid.Bind(Model).GetHtml()

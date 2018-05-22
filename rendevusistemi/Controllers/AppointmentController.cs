@@ -22,7 +22,7 @@ namespace rendevusistemi.Controllers
             MyDbContext db = new MyDbContext();
 
             ViewModel vm = new ViewModel();
-            vm.randevular= db.Appointmenties.ToList();
+            vm.randevular = db.Appointmenties.ToList();
             vm.müsteriler = db.Employes.ToList();
             vm.operasyonlar = db.Jobs.ToList();
             vm.kullanicilar = db.Users.ToList();
@@ -34,9 +34,9 @@ namespace rendevusistemi.Controllers
         {
             MyDbContext db = new MyDbContext();
             var list = db.Appointmenties.Where(a => a.Id == id).FirstOrDefault();
-            
+
             return View(list);
-          
+
         }
         [HttpPost]
         public ActionResult AppointmentEdit(Appointments UpdateApp)
@@ -49,11 +49,11 @@ namespace rendevusistemi.Controllers
             update.DateTimeEnd = UpdateApp.DateTimeEnd;
             update.EmployeId = UpdateApp.EmployeId;
             update.Id = UpdateApp.Id;
-            update.JobId = UpdateApp.JobId;        
+            update.JobId = UpdateApp.JobId;
             update.UserId = UpdateApp.UserId;
             db.SaveChanges();
 
-           
+
 
             return RedirectToAction("AppointmentView");
         }
@@ -97,8 +97,8 @@ namespace rendevusistemi.Controllers
             var appointments = appointmentContext.Appointmenties;
             var resources = resourceContext.Employes;
             var aa = jobs.Jobs;
-            
-            
+
+
 
             ViewData["Appointments"] = appointments.ToList();
             ViewData["Resources"] = resources.ToList();
@@ -110,8 +110,8 @@ namespace rendevusistemi.Controllers
         {
             var appointments = appointmentContext.Appointmenties;
             var resources = resourceContext.Employes;
-           
-            
+
+
 
             try
             {
@@ -126,6 +126,85 @@ namespace rendevusistemi.Controllers
             ViewData["Resources"] = resources.ToList();
 
             return PartialView("_Scheduler1Partial");
+        }
+
+        rendevusistemi.Database.MyDbContext db = new rendevusistemi.Database.MyDbContext();
+
+        [ValidateInput(false)]
+        public ActionResult GridViewPartial()
+        {
+            var model = db.Appointmenties;
+           Emploies aa = db.Employes.Where(a => a.Id == 32).FirstOrDefault();
+
+           ViewData["Appointments"] = aa.Fullname;
+
+            
+            return PartialView("_GridViewPartial", model.ToList());
+        }
+
+        [HttpPost, ValidateInput(false)]
+        public ActionResult GridViewPartialAddNew([ModelBinder(typeof(DevExpressEditorsBinder))] rendevusistemi.Database.Data.Appointments item)
+        {
+            var model = db.Appointmenties;
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    model.Add(item);
+                    db.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    ViewData["EditError"] = e.Message;
+                }
+            }
+            else
+                ViewData["EditError"] = "Please, correct all errors.";
+            return PartialView("_GridViewPartial", model.ToList());
+        }
+        [HttpPost, ValidateInput(false)]
+        public ActionResult GridViewPartialUpdate([ModelBinder(typeof(DevExpressEditorsBinder))] rendevusistemi.Database.Data.Appointments item)
+        {
+            var model = db.Appointmenties;
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var modelItem = model.FirstOrDefault(it => it.Id == item.Id);
+                    if (modelItem != null)
+                    {
+                        this.UpdateModel(modelItem);
+                        db.SaveChanges();
+                    }
+                }
+                catch (Exception e)
+                {
+                    ViewData["EditError"] = e.Message;
+                }
+            }
+            else
+                ViewData["EditError"] = "Please, correct all errors.";
+            return PartialView("_GridViewPartial", model.ToList());
+        }
+        [HttpPost, ValidateInput(false)]
+        public ActionResult GridViewPartialDelete(System.Int32 Id)
+        {
+            var model = db.Appointmenties;
+            if (Id >= 0)
+            {
+                try
+                {
+                    var item = model.FirstOrDefault(it => it.Id == Id);
+                    if (item != null)
+                        model.Remove(item);
+                    db.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    ViewData["EditError"] = e.Message;
+                }
+            }
+            return PartialView("_GridViewPartial", model.ToList());
         }
     }
     public class AppointmentControllerScheduler1Settings
@@ -143,7 +222,7 @@ namespace rendevusistemi.Controllers
                     appointmentStorage.Mappings.Start = "DateTimeStart";
                     appointmentStorage.Mappings.End = "DateTimeEnd";
                     appointmentStorage.Mappings.Subject = "Name";
-                    appointmentStorage.Mappings.Description = "Description" ;
+                    appointmentStorage.Mappings.Description = "Description";
                     //appointmentStorage.Mappings.Location = "";
                     //appointmentStorage.Mappings.AllDay = "";
                     //appointmentStorage.Mappings.Type = "Id";
@@ -183,20 +262,20 @@ namespace rendevusistemi.Controllers
 
         static void InsertAppointments(rendevusistemi.Database.MyDbContext appointmentContext, rendevusistemi.Database.MyDbContext resourceContext)
         {
-            var appointments = appointmentContext.Appointmenties.ToList();        
-            
+            var appointments = appointmentContext.Appointmenties.ToList();
+
             var resources = resourceContext.Employes.ToList();
 
             var newAppointments = DevExpress.Web.Mvc.SchedulerExtension.GetAppointmentsToInsert<rendevusistemi.Database.Data.Appointments>("Scheduler1", appointments, resources,
                 AppointmentStorage, ResourceStorage);
 
             MyDbContext db = new MyDbContext();
-            
-           
+
+
             foreach (var appointment in newAppointments)
             {
                 var isim = db.Employes.Where(a => a.Id == appointment.EmployeId).FirstOrDefault();
-                string aa = string.Concat(isim.Fullname," ", appointment.Description);
+                string aa = string.Concat(isim.Fullname, " ", appointment.Description);
                 appointment.Description = aa;
                 appointmentContext.Appointmenties.Add(appointment);
             }

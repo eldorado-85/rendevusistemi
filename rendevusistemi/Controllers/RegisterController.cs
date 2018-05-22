@@ -119,7 +119,6 @@ namespace rendevusistemi.Controllers
             }
         }
 
-
         rendevusistemi.Database.MyDbContext db = new rendevusistemi.Database.MyDbContext();
 
         [ValidateInput(false)]
@@ -150,19 +149,26 @@ namespace rendevusistemi.Controllers
             return PartialView("_GridViewPartial", model.ToList());
         }
         [HttpPost, ValidateInput(false)]
-        public ActionResult GridViewPartialUpdate([ModelBinder(typeof(DevExpressEditorsBinder))] rendevusistemi.Database.Data.Emploies item)
+        public ActionResult GridViewPartialUpdate([ModelBinder(typeof(DevExpressEditorsBinder))] rendevusistemi.Database.Data.Emploies UpdEmp)
         {
             var model = db.Employes;
             if (ModelState.IsValid)
             {
                 try
                 {
-                    var modelItem = model.FirstOrDefault(it => it.Id == item.Id);
-                    if (modelItem != null)
-                    {
-                        this.UpdateModel(modelItem);
-                        db.SaveChanges();
-                    }
+                    MyDbContext db = new MyDbContext();
+                    var update = db.Employes.Where(a => a.Id == UpdEmp.Id).FirstOrDefault();
+                    update.Lastname = UpdEmp.Lastname;
+                    update.Firstname = UpdEmp.Firstname;
+                    update.Adress = UpdEmp.Adress;
+                    update.Phone = UpdEmp.Phone;
+                    update.Description = UpdEmp.Description;
+                    update.IsOk = UpdEmp.IsOk;
+
+                    db.SaveChanges();
+                    return RedirectToAction("RegisterView");
+                   
+                  
                 }
                 catch (Exception e)
                 {
@@ -174,17 +180,18 @@ namespace rendevusistemi.Controllers
             return PartialView("_GridViewPartial", model.ToList());
         }
         [HttpPost, ValidateInput(false)]
-        public ActionResult GridViewPartialDelete(System.Int32 Id)
+        public ActionResult GridViewPartialDelete([ModelBinder(typeof(DevExpressEditorsBinder))] rendevusistemi.Database.Data.Emploies DelEmp)
         {
             var model = db.Employes;
-            if (Id >= 0)
+            if (DelEmp != null)
             {
                 try
                 {
-                    var item = model.FirstOrDefault(it => it.Id == Id);
-                    if (item != null)
-                        model.Remove(item);
+                    Emploies Emp = db.Employes.Where(o => o.Id == DelEmp.Id).FirstOrDefault();
+                    db.Employes.Remove(Emp);
                     db.SaveChanges();
+                   
+                   
                 }
                 catch (Exception e)
                 {
@@ -194,4 +201,5 @@ namespace rendevusistemi.Controllers
             return PartialView("_GridViewPartial", model.ToList());
         }
     }
+
 }

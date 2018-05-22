@@ -9,7 +9,7 @@ namespace rendevusistemi.Database.Data
     public class Emploies
     {
         [Key]
-        public int Id { get; set; }
+        public Int32 Id { get; set; }
         [Required(ErrorMessage = "Lütfen bir ad giriniz")]
         public string Firstname { get; set; }
         [Required(ErrorMessage = "Lütfen bir soyad giriniz")]
